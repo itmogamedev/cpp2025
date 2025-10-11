@@ -39,3 +39,9 @@
 
 # debug information files
 *.dwo
+# Visual Studio cache
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
