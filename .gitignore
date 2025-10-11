@@ -45,3 +45,17 @@
 *.user
 *.userosscache
 *.sln.docstates
+# Visual Studio files to ignore
+.vs/
+x64/
+Debug/
+Release/
+*.obj
+*.pdb
+*.exe
+*.log
+*.suo
+*.user
+*.vcxproj.user
+*.sdf
+*.opensdf
