@@ -5,9 +5,10 @@ float SquareZone(float s)
     }
 int main() 
     {
+        setlocale(LC_ALL, "RU");
         float s;
-        std::cout << "Введите длину стороны квадрата: ";
+        std::cout << "Add a side of square: ";
         std::cin >> s;
-        std::cout << "Площадь квадрата: " << SquareZone(s) << std::endl;
+        std::cout << "Square area: " << SquareZone(s) << std::endl;
         return 0;
     }
