@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041F\u041A\\source\\repos\\hm2.1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55680109-E0DF-40BB-B0D1-FFF91AAA9F71}|hm2.1\\hm2.1.vcxproj|C:\\Users\\\u041F\u041A\\source\\repos\\hm2.1\\hm2.1\\hm2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{55680109-E0DF-40BB-B0D1-FFF91AAA9F71}|hm2.1\\hm2.1.vcxproj|solutionrelative:hm2.1\\hm2.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "hm2.1.cpp",
+              "DocumentMoniker": "C:\\Users\\\u041F\u041A\\source\\repos\\hm2.1\\hm2.1\\hm2.1.cpp",
+              "RelativeDocumentMoniker": "hm2.1\\hm2.1.cpp",
+              "ToolTip": "C:\\Users\\\u041F\u041A\\source\\repos\\hm2.1\\hm2.1\\hm2.1.cpp",
+              "RelativeToolTip": "hm2.1\\hm2.1.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-12T11:01:13.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
