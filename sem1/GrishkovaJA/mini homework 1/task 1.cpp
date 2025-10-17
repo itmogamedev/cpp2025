@@ -1,8 +1,7 @@
 ﻿#include <iostream>
 
-namespace geometry {
-double SquareArea(double side) { return side * side; }
-}  // namespace geometry
+
+double squareArea(double side) { return side * side; }
 
 int main() {
   double length_side = 0.0;
@@ -17,7 +16,7 @@ int main() {
     }
   }
 
-  double area = geometry::SquareArea(length_side);
+  double area = squareArea(length_side);
   std::cout << "Square area: " << area << std::endl;
   return 0;
 }

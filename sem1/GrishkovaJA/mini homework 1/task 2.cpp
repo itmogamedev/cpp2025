@@ -1,12 +1,8 @@
 ﻿#include <iostream>
 
-namespace geometry {
-
-double Area(double base1, double base2, double height) {
+double area(double base1, double base2, double height) {
   return (base1 + base2) * height / 2.0;
 }
-
-}  // namespace geometry
 
 int main() {
   double base1 = 0.0;
@@ -28,8 +24,8 @@ int main() {
     }
   }
 
-  double area = geometry::Area(base1, base2, height);
-  std::cout << "Area trapezoid: " << area << std::endl;
+  double trapezoid_area = area(base1, base2, height);
+  std::cout << "Area trapezoid: " << trapezoid_area << std::endl;
 
   return 0;
 }
