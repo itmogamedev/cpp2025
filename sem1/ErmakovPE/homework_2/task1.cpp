@@ -1,17 +1,14 @@
 ﻿#include <cmath>
 #include <iostream>
-// nu karoche, ia etot kod pisal v 10m klasse, i on ne tolko v 8 i 16 perevodit, a vo vse sistemy do 16.
+// OKAK
 void malenkayaBukvaVNachaleDTS(long long int n1, int b) {
   long long int k, l, c = 0;
-
   if (n1 < 0) {
     n1 = -n1;
     std::cout << "-";
   }
-
   k = n1;
   l = n1;
-
   while (l >= b) {
     l /= b;
     k = l;
@@ -88,5 +85,15 @@ void malenkayaBukvaVNachaleDTS(long long int n1, int b) {
 int main() {
   long long int n, b;
   std::cin >> n >> b;
-  malenkayaBukvaVNachaleDTS(n, b);
+  if (b == 8) {
+    std::cout << "oct: ";
+    malenkayaBukvaVNachaleDTS(n, 8);
+  }
+  else if (b == 16) {
+    std::cout << "hex: ";
+    malenkayaBukvaVNachaleDTS(n, 16);
+  } else {
+    std::cout << "error!";
+  }
+  
 }
