@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\cpp2025\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\cpp2025\\sem1\\BelyaevNA\\homework_1\\task1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sem1\\BelyaevNA\\homework_1\\task1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\cpp2025\\sem1\\BelyaevNA\\homework_1\\task2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sem1\\BelyaevNA\\homework_1\\task2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "task2.cpp",
+              "DocumentMoniker": "D:\\cpp2025\\sem1\\BelyaevNA\\homework_1\\task2.cpp",
+              "RelativeDocumentMoniker": "sem1\\BelyaevNA\\homework_1\\task2.cpp",
+              "ToolTip": "D:\\cpp2025\\sem1\\BelyaevNA\\homework_1\\task2.cpp",
+              "RelativeToolTip": "sem1\\BelyaevNA\\homework_1\\task2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-17T17:36:04.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "task1.cpp",
+              "DocumentMoniker": "D:\\cpp2025\\sem1\\BelyaevNA\\homework_1\\task1.cpp",
+              "RelativeDocumentMoniker": "sem1\\BelyaevNA\\homework_1\\task1.cpp",
+              "ToolTip": "D:\\cpp2025\\sem1\\BelyaevNA\\homework_1\\task1.cpp",
+              "RelativeToolTip": "sem1\\BelyaevNA\\homework_1\\task1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-17T17:33:34.353Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
