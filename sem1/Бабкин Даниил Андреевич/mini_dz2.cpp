@@ -25,11 +25,25 @@ string decimalToOct (int decimal) {
     }
     return octResult.empty() ? "0" : octResult;
 }
+string decimalToOne (int decimal){
+    while (decimal != 1) {
+        if (decimal % 2 == 0){
+            decimal /= 2;
+            cout << decimal << endl;
+        }
+        else {
+            decimal = decimal * 3 + 1;
+            cout << decimal << endl;
+        }
+    }
+    return "Из данного числа получился 1";
+    
+}
 
 int main() {
     while (start == 1) {
         int choise;
-        cout << "1. Перевод из 10-ой сис в 16-ую.\n2. Перевод из 10-ой в 8-ую.\n3. Выйти.\n";
+        cout << "1. Перевод из 10-ой сис в 16-ую.\n2. Перевод из 10-ой в 8-ую.\n3. Гипотеза Сиракуз.\n4. Выйти.\n";
         cin >> choise;
         switch (choise) {
             case 1: {
@@ -47,6 +61,13 @@ int main() {
                 break;
             }
             case 3: {
+                int decimal;
+                cout << "Введите число: ";
+                cin >> decimal;
+                cout << decimalToOne(decimal) << endl;
+                break;
+            }
+            case 4: {
                 start = 0;
                 break;
             }
