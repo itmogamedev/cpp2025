@@ -5,7 +5,12 @@
 void toOthersSystems(int a){
     std::string octopus = "";
     std::string hexik = "";
-    int forHexik = a; 
+    int forHexik = a;
+    
+    if (a == 0){
+        std::cout << "Enter something except null (-vibe)";
+        return;
+    }
 
     if (a > 0){
         while (a > 0){
@@ -32,11 +37,10 @@ int main(){
     std::cout << "Enter your num: ";
 
     if (!(std::cin >> a)){
-        std::cout << "Greeetings! You have been banned!" << std::endl;
+        std::cout << "Greeetings! You have been banned! (+vibe)" << std::endl;
         return 1;
     }
     
     toOthersSystems(a);
-
     return 0;
 }

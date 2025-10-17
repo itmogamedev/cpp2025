@@ -23,6 +23,7 @@ int main (){
         }
 
         else {
+
             natural = (natural * 3 + 1) / 2; 
             std::cout << natural << std::endl;
         }
