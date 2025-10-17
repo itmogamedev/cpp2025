@@ -1,6 +1,5 @@
 ﻿#include <cmath>
 #include <iostream>
-// OKAK
 void malenkayaBukvaVNachaleDTS(long long int n1, int b) {
   long long int k, l, c = 0;
   if (n1 < 0) {
