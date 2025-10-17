@@ -1,34 +1,32 @@
 ﻿//#include <iostream>
-//using namespace std;
 //
 //double getSquareArea() {
 //    double side;
-//    cout << "Write a side of square: ";
-//    cin >> side;
+//    std::cout << "Write a side of square: ";
+//    std::cin >> side;
 //    return side * side;
 //}
 //
 //int main() {
 //    double area = getSquareArea();
-//    cout << "Square of square (Lmao): " << area << endl;
+//    std::cout << "Square of square (lol): " << area << std::endl;
 //    return 0;
-//}
+}
 #include <iostream>
-using namespace std;
 
 double parallelogramArea() {
     double base, height;
 
-    cout << "Write the side of paralelograma: ";
-    cin >> base;
-    cout << "Write the side of height: ";
-    cin >> height;
+    std::cout << "Write a side of paralelogram: ";
+    std::cin >> base;
+    std::cout << "Write a height of paralelogram: ";
+    std::cin >> height;
 
     return base * height;
 }
 
 int main() {
     double area = parallelogramArea();
-    cout << "Square of paralelograma: " << area << endl;
+    std::cout << "Square of paralelograma: " << area << std::endl;
     return 0;
 }
