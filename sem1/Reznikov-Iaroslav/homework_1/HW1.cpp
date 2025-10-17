@@ -1,24 +1,24 @@
 #include <iostream>
 
-float SquareArea(float);
-float TrapezoidArea(float);
-void InteractSquareArea();
-void InteractTrapezoidArea();
+float squareArea(float);
+float trapezoidArea(float);
+void interactSquareArea();
+void interactTrapezoidArea();
 
 int main()
 {
-   InteractSquareArea();
+   interactSquareArea();
    std::cout << "---" << std::endl;
-   InteractTrapezoidArea();
+   interactTrapezoidArea();
    return 0;
 }
 
 
-float SquareArea(float a) {
+float squareArea(float a) {
     return a * a;
 }
 
-void InteractSquareArea() {
+void interactSquareArea() {
     float aSide = 0;
     float bSide = 0;
 
@@ -26,15 +26,15 @@ void InteractSquareArea() {
     std::cout << "Input side: ";
     std::cin >> aSide;
 
-    std::cout << "Rect area is " << SquareArea(aSide) << std::endl;
+    std::cout << "Rect area is " << squareArea(aSide) << std::endl;
 }
 
 // Задача 2 Площадь трапеции
-float TrapezoidArea(float a, float b, float h) {
+float trapezoidArea(float a, float b, float h) {
     return ((a + b) / 2.0) * h;
 }
 
-void InteractTrapezoidArea() {
+void interactTrapezoidArea() {
     float aSide = 0;
     float bSide = 0;
     float hSize = 0;
@@ -49,6 +49,6 @@ void InteractTrapezoidArea() {
     std::cout << "Input trapezoid height: ";
     std::cin >> hSize;
 
-    std::cout << "Trapezoid area is " << TrapezoidArea(aSide, bSide, hSize) << std::endl;
+    std::cout << "Trapezoid area is " << trapezoidArea(aSide, bSide, hSize) << std::endl;
 }
 
