@@ -13,9 +13,9 @@ int main() {
   int base_a, base_b, height;
   std::cin >> base_a >> base_b >> height;
 
-  float res;
-  res = Trapeze(base_a, base_b, height);
-  std::cout << res;
+  float result;
+  result = Trapeze(base_a, base_b, height);
+  std::cout << result;
 
   return 0;
 }

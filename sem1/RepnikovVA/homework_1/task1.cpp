@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-float Square(float a) { return a * a; }
+float Square(float square_side) { return square_side * square_side; }
 
 int main() {
   setlocale(LC_ALL, "Russian");
@@ -10,8 +10,8 @@ int main() {
   std::cout << "Введите длину стороны квадрата: ";
   std::cin >> square_side;
 
-  float res = Square(square_side);
-  std::cout << "Площадь квадрата: " << res << std::endl;
+  float result = Square(square_side);
+  std::cout << "Площадь квадрата: " << result << std::endl;
 
   return 0;
 }
