@@ -1,42 +1,21 @@
 #include <iostream>
-#include <string>
 
-float trapeze(float a, float b, float h) {
-	return 0.5 * (a + b) * h;
-}
-
-float* separate(char input[100]) {
-	std::string el;
-	float data[3];
-	int i = 0, c = 0;
-	while (c != 3) {
-		if (input[i] != ' ') {
-			el += input[i];
-		}
-		else {
-			data[c] = stof(el);
-			c++;
-			el.clear();
-		}
-		i++;
-	}
-	return data;
+float Trapeze(float base_a, float base_b, float height) {
+  return 0.5 * (base_a + base_b) * height;
 }
 
 int main() {
+  setlocale(LC_ALL, "Russian");
 
-	setlocale(LC_ALL, "Russian");
+  std::cout << "Введите длины оснований трапеции и высоту соответственно "
+               "(через Enter): ";
 
-	char input[100];
-	std::cout << "Введите длины оснований трапеции и высоту соответственно (через пробел): ";
-	std::cin.getline(input, 100);
+  int base_a, base_b, height;
+  std::cin >> base_a >> base_b >> height;
 
-	float* s;
-	s = separate(input);
-	float res2;
-	res2 = trapeze(s[0], s[1], s[2]);
+  float res;
+  res = Trapeze(base_a, base_b, height);
+  std::cout << res;
 
-	std::cout << res2;
-
-	return 0;
+  return 0;
 }
