@@ -8,15 +8,13 @@ void sirakus(int n){
             n = n / 2;
             std::cout<<n<<" ";
         }
-        else
-        {
+        else {
             n = (n*3 + 1)/2;
             std::cout<<n<<" ";
         }
     }
     
 }
-
 int main(){
     sirakus(71);
     return 0;
