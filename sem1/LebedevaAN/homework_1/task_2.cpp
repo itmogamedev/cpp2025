@@ -1,6 +1,4 @@
 #include <iostream>
-using namespace std;
-
 double getTrapezoidArea(double trapezoid_base_first, 
                         double trapezoid_base_second,
                         double trapezoid_height) {

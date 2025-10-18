@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 double getSquareArea(double square_side) {
     return square_side * square_side;
