@@ -14,6 +14,7 @@ int s8(int a) {
   return res;
 }
 
+
 int main() {
   setlocale(LC_ALL, "RU");
   int num;
