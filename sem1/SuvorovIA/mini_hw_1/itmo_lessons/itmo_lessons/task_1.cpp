@@ -3,15 +3,15 @@ using namespace std;
 
 float SquareArea()
 {
-	int side = 0;
+  int side = 0;
 
-	cout << "Input your side: ";
-	cin >> side;
+  cout << "Input your side: ";
+  cin >> side;
 
-	return side * side;
+  return side * side;
 }
 
 int main()
 {
-	cout << SquareArea() << endl;
+  cout << SquareArea() << endl;
 }
