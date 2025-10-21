@@ -2,7 +2,7 @@
 #include <string>
 #include <locale.h>
 
-int CyrakusCheck(int val) {
+int CyrakusCheck(int val) { //проверка на гипотезу
     while (val > 1) {
         if (val % 2 == 0) val /= 2;
         else val = (val * 3 + 1) / 2;

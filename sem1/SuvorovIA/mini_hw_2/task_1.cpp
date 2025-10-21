@@ -2,7 +2,7 @@
 #include <string>
 #include <locale.h>
 
-std::string ConvertToAnother(int ten, int to_another)
+std::string ConvertToAnother(int ten, int to_another) //перевод в другую систему счисления, вплоть до 16-ричной включительно
 {
   std::string alph = "0123456789ABCDEF";
   std::string new_valu = "";
