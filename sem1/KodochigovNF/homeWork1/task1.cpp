@@ -6,13 +6,14 @@ double calculateSquareArea(double side_length) {
 }
 
 int main() {
-    std::setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "");  
 
-    double side;
+    double side_length;
     std::cout << "Введите сторону квадрата: ";
-    std::cin >> side;
+    std::cin >> side_length;
 
-    std::cout << "Площадь квадрата = " << calculateSquareArea(side) << std::endl;
+    std::cout << "Площадь квадрата = " << calculateSquareArea(side_length)
+        << std::endl;
 
     return 0;
 }
