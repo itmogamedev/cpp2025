@@ -8,7 +8,8 @@ int main() {
   int a;
   std::cout << "Введите длину стороны: ";
   std::cin >> a;
-  std::cout << std::endl << "Площадь квадрата: " << computeSquareArea(a) << endl;
+  std::cout << std::endl << "Площадь квадрата: "
+    << computeSquareArea(a) << std::endl;
 
   return 0;
 }
