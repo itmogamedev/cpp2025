@@ -39,3 +39,6 @@
 
 # debug information files
 *.dwo
+
+
+.DS_Store
