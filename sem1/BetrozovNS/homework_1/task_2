@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main() {
+  double first_osn = 0.0;
+  double second_osn = 0.0;
+  double height = 0.0;
+
+  std::cout << "Длина 1-го основания трапеции: ";
+  std::cin >> first_osn;
+  std::cout << "Длина 2-го основания трапеции: ";
+  std::cin >> second_osn;
+  std::cout << "Высота трапеции: ";
+  std::cin >> height;
+
+  double plos = (first_osn + second_osn) * height / 2.0;
+  std::cout << "Тогда площадь трапеции - " << plos << std::endl;
+
+  return 0;
+}
