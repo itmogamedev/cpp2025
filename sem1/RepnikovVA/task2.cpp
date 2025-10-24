@@ -1,21 +1,21 @@
 #include <iostream>
 
-float Trapeze(float base_a, float base_b, float height) {
+float trapeze(float base_a, float base_b, float height) {
   return 0.5 * (base_a + base_b) * height;
 }
 
 int main() {
   setlocale(LC_ALL, "Russian");
 
-  std::cout << "Ââåäèòå äëèíû îñíîâàíèé òğàïåöèè è âûñîòó ñîîòâåòñòâåííî "
-               "(÷åğåç Enter): ";
+  std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã«Ã¨Ã­Ã» Ã®Ã±Ã­Ã®Ã¢Ã Ã­Ã¨Ã© Ã²Ã°Ã Ã¯Ã¥Ã¶Ã¨Ã¨ Ã¨ Ã¢Ã»Ã±Ã®Ã²Ã³ Ã±Ã®Ã®Ã²Ã¢Ã¥Ã²Ã±Ã²Ã¢Ã¥Ã­Ã­Ã® "
+               "(Ã·Ã¥Ã°Ã¥Ã§ Enter): ";
 
   int base_a, base_b, height;
   std::cin >> base_a >> base_b >> height;
 
   float res;
-  res = Trapeze(base_a, base_b, height);
-  std::cout << "Ïëîùàäü òğàïåöèè: " << res;
+  res = trapeze(base_a, base_b, height);
+  std::cout << "ÃÃ«Ã®Ã¹Ã Ã¤Ã¼ Ã²Ã°Ã Ã¯Ã¥Ã¶Ã¨Ã¨: " << res;
 
   return 0;
 }
