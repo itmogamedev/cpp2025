@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cmath>
 
-float compute_trapezoid_area(int a, int b, int c, int d) {
+float computeTrapezoidArea(int a, int b, int c, int d) {
   int p = a + b + c + d;
   float h = std::sqrt(
     (p - 2 * a) * (p - 2 * b) * (p - 2 * b - 2 * d) * (p - 2 * b - 2 * c)
@@ -18,7 +18,7 @@ int main() {
   std::cout << "Введите длины сторон: " << std::endl;
   std::cin >> c >> d;
   std::cout << std::endl << "Площадь трапеции: "
-    << compute_trapezoid_area(a, b, c, d) << std::endl;
+    << computeTrapezoidArea(a, b, c, d) << std::endl;
 
   return 0;
 }
