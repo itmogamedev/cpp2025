@@ -1,14 +1,14 @@
 #include <iostream>
 
-float Square(float side) { return side * side; }
+float square(float side) { return side * side; }
 
 int main() {
   setlocale(LC_ALL, "Russian");
 
   float side;
-  std::cout << "Ââåäèòå äëèíó ñòîğîíû êâàäğàòà: ";
+  std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã«Ã¨Ã­Ã³ Ã±Ã²Ã®Ã°Ã®Ã­Ã» ÃªÃ¢Ã Ã¤Ã°Ã Ã²Ã : ";
   std::cin >> side;
 
-  float result = Square(side);
-  std::cout << "Ïëîùàäü êâàäğàòà: " << result;
+  float result = square(side);
+  std::cout << "ÃÃ«Ã®Ã¹Ã Ã¤Ã¼ ÃªÃ¢Ã Ã¤Ã°Ã Ã²Ã : " << result;
 }
