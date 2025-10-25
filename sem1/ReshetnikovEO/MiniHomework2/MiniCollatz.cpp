@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 int collatz(int numb) {
   if (numb == 1) return 1;
@@ -11,13 +10,13 @@ int collatz(int numb) {
 
 int main() {
   int numb;
-  cout << "Type the number you want to check for Collatz conjecture" << endl;
+  std::cout << "Type the number you want to check for Collatz conjecture" << std::endl;
   while (true) {
-    cin >> numb;
+    std::cin >> numb;
     if (numb > 0) break;
-    cout << "Please type something more then 0" << endl;
+    std::cout << "Please type something more then 0" << std::endl;
   }
 
-  cout << "Your number = " << collatz(numb) << endl;
+  std::cout << "Your number = " << collatz(numb) << std::endl;
   return 0;
 }
