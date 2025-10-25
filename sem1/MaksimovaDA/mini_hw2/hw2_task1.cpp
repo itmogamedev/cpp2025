@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 
-std::string to_oct(int number) {
+std::string toOct(int number) {
   std::string res_oct = "";
   if (number == 0) return "0";
 
@@ -14,7 +14,7 @@ std::string to_oct(int number) {
   return res_oct;
 }
 
-std::string to_hex(int number) {
+std::string toHex(int number) {
   std::string res_hex = "";
   std::string hex_digits = "0123456789ABCDEF";
 
@@ -34,6 +34,6 @@ int main() {
   std::cout << "enter the number in decimal: ";
   std::cin >> number;
 
-  std::cout << "octal: " << to_oct(number) << std::endl;
-  std::cout << "hexadecimal: " << to_hex(number) << std::endl;
+  std::cout << "octal: " << toOct(number) << std::endl;
+  std::cout << "hexadecimal: " << toHex(number) << std::endl;
 }
