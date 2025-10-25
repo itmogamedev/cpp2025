@@ -1,54 +1,46 @@
 #include <iostream>
 
-float squareArea(float);
-float trapezoidArea(float);
+float squareArea(float a);
+float trapezoidArea(float a, float b, float h);
 void interactSquareArea();
 void interactTrapezoidArea();
 
-int main()
-{
-   interactSquareArea();
-   std::cout << "---" << std::endl;
-   interactTrapezoidArea();
-   return 0;
+int main() {
+  interactSquareArea();
+  std::cout << "---" << std::endl;
+  interactTrapezoidArea();
+  return 0;
 }
 
-
-float squareArea(float a) {
-    return a * a;
-}
+float squareArea(float a) { return a * a; }
 
 void interactSquareArea() {
-    float aSide = 0;
-    float bSide = 0;
+  float a_side = 0;
 
-    std::cout << "-Square area-" << std::endl;
-    std::cout << "Input side: ";
-    std::cin >> aSide;
+  std::cout << "Square area" << std::endl;
+  std::cout << "Input side: ";
+  std::cin >> a_side;
 
-    std::cout << "Rect area is " << squareArea(aSide) << std::endl;
+  std::cout << "Square area is " << squareArea(a_side) << std::endl;
 }
 
-// Задача 2 Площадь трапеции
-float trapezoidArea(float a, float b, float h) {
-    return ((a + b) / 2.0) * h;
-}
+float trapezoidArea(float a, float b, float h) { return ((a + b) / 2.0) * h; }
 
 void interactTrapezoidArea() {
-    float aSide = 0;
-    float bSide = 0;
-    float hSize = 0;
+  float a_side = 0;
+  float b_side = 0;
+  float h_size = 0;
 
-    std::cout << "-Trapezoid area-" << std::endl;
-    std::cout << "Input first basis: ";
-    std::cin >> aSide;
+  std::cout << "Trapezoid area" << std::endl;
+  std::cout << "Input first basis: ";
+  std::cin >> a_side;
 
-    std::cout << "Input second basis: ";
-    std::cin >> bSide;
+  std::cout << "Input second basis: ";
+  std::cin >> b_side;
 
-    std::cout << "Input trapezoid height: ";
-    std::cin >> hSize;
+  std::cout << "Input trapezoid height: ";
+  std::cin >> h_size;
 
-    std::cout << "Trapezoid area is " << trapezoidArea(aSide, bSide, hSize) << std::endl;
+  std::cout << "Trapezoid area is " << trapezoidArea(a_side, b_side, h_size)
+            << std::endl;
 }
-
