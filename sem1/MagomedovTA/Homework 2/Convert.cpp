@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 
-void to_16(int num) {
+void toHex(int num) {
   if (num == 0) return;
-  to_16(num / 16);
+  toHex(num / 16);
 
   int ost = num % 16;
   if (ost < 10)
@@ -10,9 +10,9 @@ void to_16(int num) {
   else
     std::cout << char('A' + (ost - 10));
 }
-void to_8(int num) {
+void toOct(int num) {
   if (num == 0) return;
-  to_8(num / 8);
+  toOct(num / 8);
   std::cout << (num % 8);
 }
 int main() {
@@ -22,10 +22,10 @@ int main() {
   std::cin >> num;
 
   std::cout << "Hex: ";
-  to_16(num);
+  toHex(num);
   std::cout << std::endl;
   std::cout << "Oct: ";
-  to_8(num);
+  toOct(num);
 
   return 0;
 }
