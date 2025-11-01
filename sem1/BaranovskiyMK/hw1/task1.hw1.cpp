@@ -1,6 +1,6 @@
 #include <iostream>
 
-float S_sq(int a) 
+float SquareArae(int a) 
 {
   return a*a;
 }
@@ -10,6 +10,6 @@ int main() {
   std::cout << "Type side length: ";
   std::cin >> input;
 
-  std::cout << "\nS = " << S_sq(input) << "\n";
+  std::cout << "\nS = " << SquareArae(input) << "\n";
   return 0;
 }
