@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-void area_square(int a) {
+void areaSquare(int a) {
   int area = a * a;
   std::cout << area;
 }
@@ -12,7 +12,7 @@ int main() {
   std::cin >> a;
 
   std::cout << "Area: ";
-  area_square(a);
+  areaSquare(a);
 
   return 0;
 }

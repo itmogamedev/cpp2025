@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-void area_trapezoid(float a, float a2, float h) {
+void areaTrapezoid(float a, float a2, float h) {
   float area = ((a + a2) / 2.0f) * h;
   std::cout << area;
 }
@@ -18,7 +18,7 @@ int main() {
   std::cin >> h;
 
   std::cout << "Area: ";
-  area_trapezoid(a, a2, h);
+  areaTrapezoid(a, a2, h);
 
   return 0;
 }
