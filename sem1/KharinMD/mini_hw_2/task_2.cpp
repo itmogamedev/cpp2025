@@ -26,20 +26,20 @@ bool сheckSyracuseHypothesis(int number) {
 }
 
 int main() {
-    int user_number;
-    std::cout << "Введите свое натуральное число для проверки гипотезы: ";
-    std::cin >> user_number;
+  int user_number;
+  std::cout << "Введите свое натуральное число для проверки гипотезы: ";
+  std::cin >> user_number;
 
-    bool user_res = сheckSyracuseHypothesis(user_number);
+  bool user_res = сheckSyracuseHypothesis(user_number);
 
-    std::string res;
+  std::string res;
 
-    if (user_res == 1){
-      res = "Да";
-    } else {
-      res = "Нет";
-    }
+  if (user_res == 1){
+    res = "Да";
+  } else {
+    res = "Нет";
+  }
 
-    std::cout << "Выполнилась ли гипотеза? : " << res << std::endl;
-    return 0;
+  std::cout << "Выполнилась ли гипотеза? : " << res << std::endl;
+  return 0;
 }
