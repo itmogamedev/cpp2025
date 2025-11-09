@@ -1,19 +1,18 @@
 #include <iostream>
-using namespace std;
 
 int trapetzarea(int height, int a, int b) { return height * ((a + b) / 2); }
 
 int main() {
   float height, a, b, area;
-  cout << "this program calculates the area of your trapezoid!";
-  cout << "\nheight: ";
-  cin >> height;
-  cout << "\na: ";
-  cin >> a;
-  cout << "\nb: ";
-  cin >> b;
+  std::cout << "this program calculates the area of your trapezoid!";
+  std::cout << "\nheight: ";
+  std::cin >> height;
+  std::cout << "\na: ";
+  std::cin >> a;
+  std::cout << "\nb: ";
+  std::cin >> b;
   area = trapetzarea(height, a, b);
-  cout << "\narea = " << area;
-  cout << endl;
+  std::cout << "\narea = " << area;
+  std::cout << std::endl;
   return 0;
 }
