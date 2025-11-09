@@ -2,6 +2,8 @@
 #include <string>
 #include <algorithm>
 
+
+
 void toOthersSystems(int a){
   std::string octopus = "";
   std::string hexik = "";

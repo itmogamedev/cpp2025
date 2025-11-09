@@ -1,5 +1,7 @@
 #include <iostream>
 
+
+
 int main (){
   long long int natural = 0;
 
