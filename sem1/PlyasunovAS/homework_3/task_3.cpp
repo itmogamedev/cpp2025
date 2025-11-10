@@ -1,29 +1,74 @@
 #include <iostream>
+#include <string>
 
 int main() {
   int number;
-  
-  std::cout << "Enter a natural number: ";
+  std::cout << "Chislo:";
   std::cin >> number;
-  
-  if (number <= 0) {
-    std::cout << "Error! Please enter a natural number (greater than 0)." << std::endl;
-    return 1;
-  }
-  
-  std::cout << "Sequence of numbers:" << std::endl;
-  
-  while (number != 1) {
-    std::cout << number << " ";
-    
-    if (number % 2 == 0) {
-      number = number / 2;
-    } else {
-      number = (number * 3 + 1) / 2;
+
+  std::cout << "Vosmerichnoe:";
+  int temp = number;
+
+  if (temp == 0) {
+    std::cout << "0";
+  } else if (temp > 0) {
+    std::string octal = "";
+    while (temp > 0) {
+      int ostatok = temp % 8;
+      octal = std::to_string(ostatok) + octal;
+      temp = temp / 8;
     }
+    std::cout << octal;
+  } else {
+    temp = -temp;
+    std::string octal = "";
+    while (temp > 0) {
+      int ostatok = temp % 8;
+      octal = std::to_string(ostatok) + octal;
+      temp = temp / 8;
+    }
+    std::cout << "-" << octal;
   }
-  
-  std::cout << number << std::endl;
-  
+
+  std::cout << std::endl;
+
+  std::cout << "Shestnatherichnoe:";
+  temp = number;
+
+  if (temp == 0) {
+    std::cout << "0";
+  } else if (temp > 0) {
+    std::string hex = "";
+    while (temp > 0) {
+      int ostatok = temp % 16;
+      char hexChar;
+      if (ostatok < 10) {
+        hexChar = '0' + ostatok;
+      } else {
+        hexChar = 'A' + (ostatok - 10);
+      }
+      hex = hexChar + hex;
+      temp = temp / 16;
+    }
+    std::cout << hex;
+  } else {
+    temp = -temp;
+    std::string hex = "";
+    while (temp > 0) {
+      int ostatok = temp % 16;
+      char hexChar;
+      if (ostatok < 10) {
+        hexChar = '0' + ostatok;
+      } else {
+        hexChar = 'A' + (ostatok - 10);
+      }
+      hex = hexChar + hex;
+      temp = temp / 16;
+    }
+    std::cout << "-" << hex;
+  }
+
+  std::cout << std::endl;
+
   return 0;
 }
