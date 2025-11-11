@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 float calculateTrapezoidArea(float a, float b, float h) {
   return 0.5 * (a + b) * h;

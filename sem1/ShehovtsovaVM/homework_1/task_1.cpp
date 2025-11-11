@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+
 
 float calculateSquareArea(float a) {
   return a * a;

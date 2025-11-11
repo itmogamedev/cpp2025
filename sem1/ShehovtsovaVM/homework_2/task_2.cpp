@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 void chechHypothesis(int a) {
   while (a != 1) {

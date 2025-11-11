@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 void convertFromDecimalToOctal(int a) {
   int oct[1000];
