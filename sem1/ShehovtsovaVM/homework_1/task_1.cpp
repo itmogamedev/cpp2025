@@ -2,12 +2,12 @@
 
 
 float calculateSquareArea(float a) {
-	return a * a;
+  return a * a;
 }
 
 int main()
 {
-	float a;
-	std::cin >> a;
-	std::cout << calculateSquareArea(a);
+  float a;
+  std::cin >> a;
+  std::cout << calculateSquareArea(a);
 }
