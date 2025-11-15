@@ -1,0 +1,66 @@
+3
+MagicWand
+Wand of Fire
+150.5
+0.3
+85
+MagicWand
+Wand of Ice
+120.0
+0.25
+90
+Potion
+Health Potion
+50.0
+0.1
+Healing
+Scroll
+Fireball Scroll
+200.0
+0.05
+Damage
+MagicWand
+Wand of Lightning
+180.0
+0.35
+88
+Potion
+Mana Potion
+60.0
+0.15
+Mana Restoration
+Scroll
+Teleport Scroll
+250.0
+0.08
+Utility
+MagicWand
+Storm Wand
+220.0
+0.4
+92
+Potion
+Strength Potion
+70.0
+0.12
+Buff
+Scroll
+Invisibility Scroll
+300.0
+0.06
+Stealth
+MagicWand
+Nature Wand
+130.0
+0.28
+82
+Potion
+Invisibility Potion
+90.0
+0.18
+Stealth
+Scroll
+Light Scroll
+150.0
+0.04
+Illumination
