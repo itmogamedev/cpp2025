@@ -1,19 +1,36 @@
-﻿// ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается
+﻿// ConsoleApplication5.cpp : Этот файл содержит функцию "main". Здесь начинается
 // и заканчивается выполнение программы.
 //
 
 #include <iostream>
-int main() {
-  int a, b, h;
+#include <string>
 
-  std::cout << "What's the length of a 1st base of the trapezoid?" << std::endl;
+int main() {
+  int n, a;
+  std::string b;
+  std::string symbols[7] = {"A", "B", "C", "D", "E", "F", "G"};
+
+  std::cout << "16 or 8 number system?" << std::endl;
+  std::cin >> n;
+  std::cout << "Write a number" << std::endl;
   std::cin >> a;
-  std::cout << "And what about second?" << std::endl;
-  std::cin >> b;
-  std::cout << "What's the length of height of the trapezoid?" << std::endl;
-  std::cin >> h;
-  std::cout << "The square of the trapezoid is -->" << ((a + b) / 2) * h
-            << std::endl;
+  if (n == 8) {
+    while (a > 0) {
+      b += std::to_string(a % n);
+      a = a / n;
+    }
+  } else if (n == 16) {
+    while (a > 0) {
+      if (a % n > 9) {
+        b += symbols[a - 10];
+      } else {
+        b += std::to_string(a % n);
+      }
+      a = a / n;
+    }
+  }
+  std::reverse(b.begin(), b.end());
+  std::cout << "Converted number => " << b << std::endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

@@ -1,19 +1,27 @@
-﻿// ConsoleApplication1.cpp : Этот файл содержит функцию "main". Здесь начинается
+﻿// ConsoleApplication5.cpp : Этот файл содержит функцию "main". Здесь начинается
 // и заканчивается выполнение программы.
 //
 
 #include <iostream>
-int main() {
-  int a, b, h;
 
-  std::cout << "What's the length of a 1st base of the trapezoid?" << std::endl;
+int main() {
+  int a;
+  std::cout << "Write a number" << std::endl;
   std::cin >> a;
-  std::cout << "And what about second?" << std::endl;
-  std::cin >> b;
-  std::cout << "What's the length of height of the trapezoid?" << std::endl;
-  std::cin >> h;
-  std::cout << "The square of the trapezoid is -->" << ((a + b) / 2) * h
-            << std::endl;
+
+  while (a > 1) {
+    if (a % 2 == 0) {
+      a /= 2;
+      std::cout << "Divide in half and we get >> " << a << std::endl;
+    } else {
+      a *= 3;
+      a++;
+      std::cout << "Multiply in 3 times and add 1 and we get >> " << a
+                << std::endl;
+    }
+  }
+
+  std::cout << "Result is >> " << a;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
