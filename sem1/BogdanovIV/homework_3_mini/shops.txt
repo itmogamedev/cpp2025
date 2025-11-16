@@ -1,0 +1,5 @@
+МАГАЗИН test
+
+WEAPONE wp1 15 5 15
+WEAPONE wp2 15 5 15
+WEAPONE wp3 15 5 15
