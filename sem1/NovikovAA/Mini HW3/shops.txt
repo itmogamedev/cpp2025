@@ -1,0 +1,10 @@
+Shop: Inconvenience_Store
+Items: 3
+Weapon Moonlight_Greatsword 2000 5.5 85
+Armor Wooden_Shield 500 2.3 30
+Potion Health_Potion 200 0.1 60.0
+
+Shop: Lunar_Bazaar
+Items: 2
+Weapon Shadow_Bow 1400 3.1 75
+Scroll Fireball_Spell 450 0.5 Fireball_Blast
