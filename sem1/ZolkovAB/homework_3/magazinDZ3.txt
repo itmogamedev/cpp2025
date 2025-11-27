@@ -1,0 +1,16 @@
+Magazine: Dragon_store
+Item: 5
+Weapon Fire_iron_sword 100 5.0 200
+Armor Black_armor 60 10.0 100
+Weapon Fire_iron_sword 100 5.0 200
+Weapon Fire_iron_sword 100 5.0 200
+Potion Health 10 0.5 55.5
+
+Magazine: Dragon
+Item: 5
+Weapon Fire_iron_sword 100 5.0 200
+Armor Black_armor 60 10.0 100
+Weapon Fire_iron_sword 100 5.0 200
+Weapon Fire_iron_sword 100 5.0 200
+Weapon Fire_iron_sword 100 5.0 200
+
