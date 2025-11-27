@@ -1,10 +1,24 @@
 Shop: Inconvenience_Store
-Items: 3
+Items: 5
 Weapon Moonlight_Greatsword 2000 5.5 85
 Armor Wooden_Shield 500 2.3 30
+Potion Mana_Potion 250 0.1 40.0
 Potion Health_Potion 200 0.1 60.0
+Scroll Analyze_Spell 300 0.2 Analyze
+
 
 Shop: Lunar_Bazaar
-Items: 2
+Items: 5
 Weapon Shadow_Bow 1400 3.1 75
+Weapon Schimitar_of_the_Seven 1500 4.9 65
+Armor Tunic_of_Fire 700 2.1 25
+Potion Stealth_Potion 300 0.1 30.0
 Scroll Fireball_Spell 450 0.5 Fireball_Blast
+
+Shop: Beedle's_Goods
+Items: 5
+Weapon Staff_of_Consort 1200 2.1 40
+Weapon Slingshot 600 1.5 20
+Armor Diamond_Helmet 1500 3.5 70 
+Potion Speed_Boost 350 0.1 120.0
+Scroll Lens_of_Truth 650 0.3 Truth_Reveal
