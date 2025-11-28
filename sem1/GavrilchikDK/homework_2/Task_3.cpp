@@ -1,28 +1,23 @@
 #include <iostream>
 #include <string>
-using namespace std;
-string To_base(int num, int base)
-{
-    string digits = "0123456789ABCDEF";
-    string result = "";
-    if (num == 0) return "0";
-    
-    while (num > 0)
-    {
-        int ost = num % base;
-        result = digits[ost] + result;
-        num /= base;
-        
-    }
-    return result;
+
+std::string toBase(int num, int base) {
+  std::string digits = "0123456789ABCDEF";
+  std::string result = "";
+  if (num == 0) return "0";
+  while (num > 0) {
+    int remainder = num % base;
+    result = digits[remainder] + result;
+    num /= base;
+  }
+  return result;
 }
+
 int main() {
-    int number; 
-    cout << "Your number" ;
-    cin >> number;
-    cout << "Oct base :" << To_base(number,8)<< endl;
-    cout << "Hex base :" << To_base(number,16)<< endl;
-    return 0;
+  int number;
+  std::cout << "Your number: ";
+  std::cin >> number;
+  std::cout << "Oct base: " << toBase(number, 8) << std::endl;
+  std::cout << "Hex base: " << toBase(number, 16) << std::endl;
+  return 0;
 }
-
-
