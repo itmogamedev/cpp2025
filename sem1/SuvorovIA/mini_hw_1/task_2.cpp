@@ -1,6 +1,6 @@
 ﻿﻿#include <iostream>
 
-float trapezoid_area()
+float TrapezoidArea()
 {
   float side_1 = 0;
   float side_2 = 0;
@@ -22,5 +22,5 @@ float trapezoid_area()
 
 int main()
 {
-  std::cout << trapezoid_area() << std::endl;
+  std::cout << TrapezoidArea() << std::endl;
 }

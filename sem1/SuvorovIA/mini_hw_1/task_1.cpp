@@ -1,6 +1,6 @@
 #include <iostream>
 
-int square_area()
+int SquareArea()
 {
   int side = 0;
 
@@ -12,5 +12,5 @@ int square_area()
 
 int main()
 {
-  std::cout << square_area() << std::endl;
+  std::cout << SquareArea() << std::endl;
 }
