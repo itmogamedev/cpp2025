@@ -2,7 +2,7 @@
 #include <string>
 #include <locale.h>
 
-int cyrakus_check(int val) { //проверка на гипотезу
+int CyrakusCheck(int val) { //проверка на гипотезу
   while (val > 1) {
     if (val % 2 == 0) val /= 2;
     else val = (val * 3 + 1) / 2;
@@ -16,5 +16,5 @@ int main() {
   int val = 0;
   std::cout << "Введите число: ";
   std::cin >> val;
-  std::cout << cyrakus_check(val);
+  std::cout << CyrakusCheck(val);
 }
