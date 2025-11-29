@@ -1,37 +1,37 @@
 #include <iostream>
 #include <string>
 
-std::string Dec2Oct(int Number)
-{
-    std::string OctResult;
-    for (; Number; Number /= 8)
-        OctResult = char('0' + Number % 8) + OctResult;
+std::string decToOct(int number) {
+  std::string oct_result;
+  for (; number; number /= 8) {
+    oct_result = char('0' + number % 8) + oct_result;
+  }
 
-	return OctResult.empty() ? "0" : OctResult;
+  return oct_result.empty() ? "0" : oct_result;
 }
 
-std::string Dec2Hex(int Number)
-{
-    std::string HexChars = "0123456789ABCDEF";
-    std::string HexResult;
+std::string decToHex(int number) {
+  const std::string kHexChars = "0123456789ABCDEF";
+  std::string hex_result;
 
-    while (Number > 0) {
-        HexResult = HexChars[Number % 16] + HexResult;
-        Number /= 16;
-    }
+  while (number > 0) {
+    hex_result = kHexChars[number % 16] + hex_result;
+    number /= 16;
+  }
 
-    return HexResult.empty() ? "0" : HexResult;
+  return hex_result.empty() ? "0" : hex_result;
 }
 
 int main() {
-    int Number;
+  int number;
 
-    std::cout << "Enter a number to convert it from Dec to Oct: ";
-	std::cin >> Number;
-    std::cout << Number << " -> " << Dec2Oct(Number) << std::endl;
-	std::cout << "Enter a number to convert it from Dec to Hex: ";
-    std::cin >> Number;
-    std::cout << Number << " -> " << Dec2Hex(Number) << std::endl;;
+  std::cout << "Enter a number to convert it from Dec to Oct: ";
+  std::cin >> number;
+  std::cout << number << " -> " << decToOct(number) << std::endl;
 
-	return 0;
+  std::cout << "Enter a number to convert it from Dec to Hex: ";
+  std::cin >> number;
+  std::cout << number << " -> " << decToHex(number) << std::endl;
+
+  return 0;
 }

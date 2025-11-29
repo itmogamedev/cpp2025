@@ -1,199 +1,191 @@
-// MiniHomeWork3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+Ôªø// MiniHomeWork3.cpp : This file contains the 'main' function. Program execution
+// begins and ends there.
 //
 
-#include <iostream>
 #include <fstream>
-#include <string>
-#include <vector>
-#include <memory>
-#include <unordered_map>
 #include <iomanip>
+#include <iostream>
+#include <memory>
+#include <string>
+#include <unordered_map>
+#include <vector>
 
 #include "MagicItem.h"
 
 struct Shop {
-    std::string name;
-    std::vector<std::unique_ptr<MagicItem>> items;
+  std::string name;
+  std::vector<std::unique_ptr<MagicItem>> items;
 };
 
 void printShopStats(const Shop& shop) {
-    std::cout << "=== Ã‡„‡ÁËÌ: " << shop.name << " ===\n";
+  std::cout << "=== –ú–∞–≥–∞–∑–∏–Ω: " << shop.name << " ===\n";
 
-    std::size_t totalItems = shop.items.size();
-    std::cout << "¬ÒÂ„Ó ÔÂ‰ÏÂÚÓ‚: " << totalItems << "\n";
+  std::size_t totalItems = shop.items.size();
+  std::cout << "–í—Å–µ–≥–æ –ø—Ä–µ–¥–º–µ—Ç–æ–≤: " << totalItems << "\n";
 
-    double sumPrice = 0.0;
-    double sumWeight = 0.0;
+  double sumPrice = 0.0;
+  double sumWeight = 0.0;
 
-    long long weaponSum = 0;
-    int weaponCount = 0;
+  long long weaponSum = 0;
+  int weaponCount = 0;
 
-    long long armorSum = 0;
-    int armorCount = 0;
+  long long armorSum = 0;
+  int armorCount = 0;
 
-    double potionSum = 0.0;
-    int potionCount = 0;
+  double potionSum = 0.0;
+  int potionCount = 0;
 
-    std::unordered_map<std::string, int> scrollFreq;
-    int scrollCount = 0;
+  std::unordered_map<std::string, int> scrollFreq;
+  int scrollCount = 0;
 
-    for (const auto& itemPtr : shop.items) {
-        sumPrice += itemPtr->getPrice();
-        sumWeight += itemPtr->getWeight();
+  for (const auto& itemPtr : shop.items) {
+    sumPrice += itemPtr->getPrice();
+    sumWeight += itemPtr->getWeight();
 
-        std::string type = itemPtr->getTypeName();
-        auto spec = itemPtr->getSpecParam();
+    std::string type = itemPtr->getTypeName();
+    auto spec = itemPtr->getSpecParam();
 
-        if (type == "ŒÛÊËÂ") {
-            int dmg = std::get<int>(spec);
-            weaponSum += dmg;
-            weaponCount++;
-        }
-        else if (type == "¡ÓÌˇ") {
-            int def = std::get<int>(spec);
-            armorSum += def;
-            armorCount++;
-        }
-        else if (type == "«ÂÎ¸Â") {
-            double dur = std::get<double>(spec);
-            potionSum += dur;
-            potionCount++;
-        }
-        else if (type == "—‚ËÚÓÍ") {
-            std::string eff = std::get<std::string>(spec);
-            scrollFreq[eff]++;
-            scrollCount++;
-        }
+    if (type == "–û—Ä—É–∂–∏–µ") {
+      int dmg = std::get<int>(spec);
+      weaponSum += dmg;
+      weaponCount++;
+    } else if (type == "–ë—Ä–æ–Ω—è") {
+      int def = std::get<int>(spec);
+      armorSum += def;
+      armorCount++;
+    } else if (type == "–ó–µ–ª—å–µ") {
+      double dur = std::get<double>(spec);
+      potionSum += dur;
+      potionCount++;
+    } else if (type == "–°–≤–∏—Ç–æ–∫") {
+      std::string eff = std::get<std::string>(spec);
+      scrollFreq[eff]++;
+      scrollCount++;
     }
+  }
 
-    std::cout << std::fixed << std::setprecision(2);
+  std::cout << std::fixed << std::setprecision(2);
 
-    if (totalItems > 0) {
-        double avgPrice = sumPrice / static_cast<double>(totalItems);
-        double avgWeight = sumWeight / static_cast<double>(totalItems);
-        std::cout << "—Â‰Ìˇˇ ˆÂÌ‡: " << avgPrice << " ÁÓÎÓÚ‡\n";
-        std::cout << "—Â‰ÌËÈ ‚ÂÒ: " << avgWeight << " Í„\n";
-    }
-    else {
-        std::cout << "—Â‰Ìˇˇ ˆÂÌ‡: 0.00 ÁÓÎÓÚ‡\n";
-        std::cout << "—Â‰ÌËÈ ‚ÂÒ: 0.00 Í„\n";
-    }
+  if (totalItems > 0) {
+    double avgPrice = sumPrice / static_cast<double>(totalItems);
+    double avgWeight = sumWeight / static_cast<double>(totalItems);
+    std::cout << "–°—Ä–µ–¥–Ω—è—è —Ü–µ–Ω–∞: " << avgPrice << " –∑–æ–ª–æ—Ç–∞\n";
+    std::cout << "–°—Ä–µ–¥–Ω–∏–π –≤–µ—Å: " << avgWeight << " –∫–≥\n";
+  } else {
+    std::cout << "–°—Ä–µ–¥–Ω—è—è —Ü–µ–Ω–∞: 0.00 –∑–æ–ª–æ—Ç–∞\n";
+    std::cout << "–°—Ä–µ–¥–Ω–∏–π –≤–µ—Å: 0.00 –∫–≥\n";
+  }
 
-    std::cout << "\n—Ú‡ÚËÒÚËÍ‡ ÔÓ ÔÂ‰ÏÂÚ‡Ï:\n";
+  std::cout << "\n–°—Ç–∞—Ç–∏—Å—Ç–∏–∫–∞ –ø–æ –ø—Ä–µ–¥–º–µ—Ç–∞–º:\n";
 
-    std::cout << "- ŒÛÊËÂ: ";
-    if (weaponCount > 0) {
-        double avgDamage = static_cast<double>(weaponSum) / weaponCount;
-        std::cout << "ÒÂ‰ÌËÈ ÛÓÌ = " << avgDamage << "\n";
-    }
-    else {
-        std::cout << "ÌÂÚ ‚ Ì‡ÎË˜ËË\n";
-    }
+  std::cout << "- –û—Ä—É–∂–∏–µ: ";
+  if (weaponCount > 0) {
+    double avgDamage = static_cast<double>(weaponSum) / weaponCount;
+    std::cout << "—Å—Ä–µ–¥–Ω–∏–π —É—Ä–æ–Ω = " << avgDamage << "\n";
+  } else {
+    std::cout << "–Ω–µ—Ç –≤ –Ω–∞–ª–∏—á–∏–∏\n";
+  }
 
-    std::cout << "- ¡ÓÌˇ: ";
-    if (armorCount > 0) {
-        double avgDefense = static_cast<double>(armorSum) / armorCount;
-        std::cout << "ÒÂ‰Ìˇˇ Á‡˘ËÚ‡ = " << avgDefense << "\n";
-    }
-    else {
-        std::cout << "ÌÂÚ ‚ Ì‡ÎË˜ËË\n";
-    }
+  std::cout << "- –ë—Ä–æ–Ω—è: ";
+  if (armorCount > 0) {
+    double avgDefense = static_cast<double>(armorSum) / armorCount;
+    std::cout << "—Å—Ä–µ–¥–Ω—è—è –∑–∞—â–∏—Ç–∞ = " << avgDefense << "\n";
+  } else {
+    std::cout << "–Ω–µ—Ç –≤ –Ω–∞–ª–∏—á–∏–∏\n";
+  }
 
-    std::cout << "- «ÂÎ¸ˇ: ";
-    if (potionCount > 0) {
-        double avgDuration = potionSum / potionCount;
-        std::cout << "ÒÂ‰Ìˇˇ ‰ÎËÚÂÎ¸ÌÓÒÚ¸ = " << avgDuration << "\n";
-    }
-    else {
-        std::cout << "ÌÂÚ ‚ Ì‡ÎË˜ËË\n";
-    }
+  std::cout << "- –ó–µ–ª—å—è: ";
+  if (potionCount > 0) {
+    double avgDuration = potionSum / potionCount;
+    std::cout << "—Å—Ä–µ–¥–Ω—è—è –¥–ª–∏—Ç–µ–ª—å–Ω–æ—Å—Ç—å = " << avgDuration << "\n";
+  } else {
+    std::cout << "–Ω–µ—Ç –≤ –Ω–∞–ª–∏—á–∏–∏\n";
+  }
 
-    std::cout << "- —‚ËÚÍË: ";
-    if (scrollCount > 0) {
-        std::string bestEffect;
-        int bestCount = 0;
-        for (const auto& pair : scrollFreq) {
-            if (pair.second > bestCount) {
-                bestCount = pair.second;
-                bestEffect = pair.first;
-            }
-        }
-        std::cout << "Ò‡Ï˚È ˜‡ÒÚ˚È ˝ÙÙÂÍÚ " << bestEffect << "\n";
+  std::cout << "- –°–≤–∏—Ç–∫–∏: ";
+  if (scrollCount > 0) {
+    std::string bestEffect;
+    int bestCount = 0;
+    for (const auto& pair : scrollFreq) {
+      if (pair.second > bestCount) {
+        bestCount = pair.second;
+        bestEffect = pair.first;
+      }
     }
-    else {
-        std::cout << "ÌÂÚ ‚ Ì‡ÎË˜ËË\n";
-    }
+    std::cout << "—Å–∞–º—ã–π —á–∞—Å—Ç—ã–π —ç—Ñ—Ñ–µ–∫—Ç " << bestEffect << "\n";
+  } else {
+    std::cout << "–Ω–µ—Ç –≤ –Ω–∞–ª–∏—á–∏–∏\n";
+  }
 
-    std::cout << "\n";
+  std::cout << "\n";
 }
 
-int main()
-{
-    std::setlocale(LC_ALL, "Russian");
-    std::ifstream inShops("shops.txt");
-    if (!inShops.is_open()) {
-        std::cerr << "Can't open shops.txt\n";
-        return 1;
+int main() {
+  std::setlocale(LC_ALL, "Russian");
+  std::ifstream inShops("shops.txt");
+  if (!inShops.is_open()) {
+    std::cerr << "Can't open shops.txt\n";
+    return 1;
+  }
+
+  std::vector<Shop> shops;
+  std::string token;
+
+  while (inShops >> token) {
+    if (token != "–ú–∞–≥–∞–∑–∏–Ω:") {
+      continue;
     }
 
-    std::vector<Shop> shops;
-    std::string token;
-
-    while (inShops >> token) {
-        if (token != "Ã‡„‡ÁËÌ:") {
-            continue;
-        }
-
-        Shop shop;
-        if (!(inShops >> shop.name)) {
-            break;
-        }
-
-        std::string itemsLabel;
-        int itemsCount = 0;
-        if (!(inShops >> itemsLabel >> itemsCount)) {
-            break;
-        }
-
-        for (int i = 0; i < itemsCount; ++i) {
-            std::string type;
-            std::string itemName;
-            int price;
-            double weight;
-
-            if (!(inShops >> type >> itemName >> price >> weight)) {
-                break;
-            }
-
-            if (type == "ŒÛÊËÂ") {
-                int damage;
-                inShops >> damage;
-                shop.items.push_back(std::make_unique<Weapon>(itemName, price, weight, damage));
-            }
-            else if (type == "¡ÓÌˇ") {
-                int defense;
-                inShops >> defense;
-                shop.items.push_back(std::make_unique<Armor>(itemName, price, weight, defense));
-            }
-            else if (type == "«ÂÎ¸Â") {
-                double duration;
-                inShops >> duration;
-                shop.items.push_back(std::make_unique<Potion>(itemName, price, weight, duration));
-            }
-            else if (type == "—‚ËÚÓÍ") {
-                std::string effect;
-                inShops >> effect;
-                shop.items.push_back(std::make_unique<Scroll>(itemName, price, weight, effect));
-            }
-        }
-
-        shops.push_back(std::move(shop));
+    Shop shop;
+    if (!(inShops >> shop.name)) {
+      break;
     }
 
-    for (const auto& shop : shops) {
-        printShopStats(shop);
+    std::string itemsLabel;
+    int itemsCount = 0;
+    if (!(inShops >> itemsLabel >> itemsCount)) {
+      break;
     }
 
-    return 0;
+    for (int i = 0; i < itemsCount; ++i) {
+      std::string type;
+      std::string itemName;
+      int price;
+      double weight;
+
+      if (!(inShops >> type >> itemName >> price >> weight)) {
+        break;
+      }
+
+      if (type == "–û—Ä—É–∂–∏–µ") {
+        int damage;
+        inShops >> damage;
+        shop.items.push_back(
+            std::make_unique<Weapon>(itemName, price, weight, damage));
+      } else if (type == "–ë—Ä–æ–Ω—è") {
+        int defense;
+        inShops >> defense;
+        shop.items.push_back(
+            std::make_unique<Armor>(itemName, price, weight, defense));
+      } else if (type == "–ó–µ–ª—å–µ") {
+        double duration;
+        inShops >> duration;
+        shop.items.push_back(
+            std::make_unique<Potion>(itemName, price, weight, duration));
+      } else if (type == "–°–≤–∏—Ç–æ–∫") {
+        std::string effect;
+        inShops >> effect;
+        shop.items.push_back(
+            std::make_unique<Scroll>(itemName, price, weight, effect));
+      }
+    }
+
+    shops.push_back(std::move(shop));
+  }
+
+  for (const auto& shop : shops) {
+    printShopStats(shop);
+  }
+
+  return 0;
 }
-

@@ -1,16 +1,13 @@
 #include <iostream>
 
-int SquareArea(int a)
-{
-	return a * a;
-}
+int squareArea(int a) { return a * a; }
 
 int main() {
-	int SquareSide;
+  int square_side;
 
-	std::cout << "Enter the side of the square: ";
-	std::cin >> SquareSide;
-	std::cout << SquareArea(SquareSide);
+  std::cout << "Enter the side of the square: ";
+  std::cin >> square_side;
+  std::cout << squareArea(square_side) << std::endl;
 
-	return 0;
+  return 0;
 }

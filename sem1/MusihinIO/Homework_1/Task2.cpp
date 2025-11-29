@@ -1,22 +1,21 @@
 #include <iostream>
 
-float TrapezoidArea(float a, float b, float h)
-{
-	return (a + b) / 2 * h;
-}
+float trapezoidArea(float a, float b, float h) { return (a + b) / 2 * h; }
 
 int main() {
-	float TrapezoidSide1;
-	float TrapezoidSide2;
-	float TrapezoidHeight;
+  float trapezoid_side_top;
+  float trapezoid_side_bottom;
+  float trapezoid_height;
 
-	std::cout << "Enter the top side of the trapezoid: ";
-	std::cin >> TrapezoidSide1;
-	std::cout << "Enter the bottom side of the trapezoid: ";
-	std::cin >> TrapezoidSide2;
-	std::cout << "Enter the height: ";
-	std::cin >> TrapezoidHeight;
-	std::cout << TrapezoidArea(TrapezoidSide1, TrapezoidSide2, TrapezoidHeight);
+  std::cout << "Enter the top side of the trapezoid: ";
+  std::cin >> trapezoid_side_top;
+  std::cout << "Enter the bottom side of the trapezoid: ";
+  std::cin >> trapezoid_side_bottom;
+  std::cout << "Enter the height: ";
+  std::cin >> trapezoid_height;
+  std::cout << trapezoidArea(trapezoid_side_top, trapezoid_side_bottom,
+                             trapezoid_height)
+            << std::endl;
 
-	return 0;
+  return 0;
 }

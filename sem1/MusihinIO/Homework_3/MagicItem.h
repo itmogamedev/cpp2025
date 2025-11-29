@@ -1,95 +1,81 @@
-#pragma once
+Ôªø#pragma once
 #include <string>
 #include <variant>
 
 class MagicItem {
-protected:
-    std::string name;
-    int price;
-    double weight;
-public:
-    MagicItem(const std::string& n, int p, double w)
-        : name(n), price(p), weight(w) {
-    }
+ protected:
+  std::string name;
+  int price;
+  double weight;
 
-    virtual ~MagicItem() = default;
+ public:
+  MagicItem(const std::string& n, int p, double w)
+      : name(n), price(p), weight(w) {}
 
-    int getPrice() const {
-        return price;
-    }
+  virtual ~MagicItem() = default;
 
-    double getWeight() const {
-        return weight;
-    }
+  int getPrice() const { return price; }
 
-    const std::string& getName() const {
-        return name;
-    }
+  double getWeight() const { return weight; }
 
-    virtual std::variant<int, double, std::string> getSpecParam() const = 0;
-    virtual std::string getTypeName() const = 0;
+  const std::string& getName() const { return name; }
+
+  virtual std::variant<int, double, std::string> getSpecParam() const = 0;
+  virtual std::string getTypeName() const = 0;
 };
 
 class Weapon : public MagicItem {
-    int damage;
-public:
-    Weapon(const std::string& n, int p, double w, int d)
-        : MagicItem(n, p, w), damage(d) {
-    }
+  int damage;
 
-    std::variant<int, double, std::string> getSpecParam() const override {
-        return damage;
-    }
+ public:
+  Weapon(const std::string& n, int p, double w, int d)
+      : MagicItem(n, p, w), damage(d) {}
 
-    std::string getTypeName() const override {
-        return "ŒÛÊËÂ";
-    }
+  std::variant<int, double, std::string> getSpecParam() const override {
+    return damage;
+  }
+
+  std::string getTypeName() const override { return "–û—Ä—É–∂–∏–µ"; }
 };
 
 class Armor : public MagicItem {
-    int defense;
-public:
-    Armor(const std::string& n, int p, double w, int d)
-        : MagicItem(n, p, w), defense(d) {
-    }
+  int defense;
 
-    std::variant<int, double, std::string> getSpecParam() const override {
-        return defense;
-    }
+ public:
+  Armor(const std::string& n, int p, double w, int d)
+      : MagicItem(n, p, w), defense(d) {}
 
-    std::string getTypeName() const override {
-        return "¡ÓÌˇ";
-    }
+  std::variant<int, double, std::string> getSpecParam() const override {
+    return defense;
+  }
+
+  std::string getTypeName() const override { return "–ë—Ä–æ–Ω—è"; }
 };
 
 class Potion : public MagicItem {
-    double duration;
-public:
-    Potion(const std::string& n, int p, double w, double d)
-        : MagicItem(n, p, w), duration(d) {
-    }
+  double duration;
 
-    std::variant<int, double, std::string> getSpecParam() const override {
-        return duration;
-    }
+ public:
+  Potion(const std::string& n, int p, double w, double d)
+      : MagicItem(n, p, w), duration(d) {}
 
-    std::string getTypeName() const override {
-        return "«ÂÎ¸Â";
-    }
+  std::variant<int, double, std::string> getSpecParam() const override {
+    return duration;
+  }
+
+  std::string getTypeName() const override { return "–ó–µ–ª—å–µ"; }
 };
 
 class Scroll : public MagicItem {
-    std::string effect;
-public:
-    Scroll(const std::string& n, int p, double w, const std::string& e)
-        : MagicItem(n, p, w), effect(e) {
-    }
+  std::string effect;
 
-    std::variant<int, double, std::string> getSpecParam() const override {
-        return effect;
-    }
+ public:
+  Scroll(const std::string& n, int p, double w, const std::string& e)
+      : MagicItem(n, p, w), effect(e) {}
 
-    std::string getTypeName() const override {
-        return "—‚ËÚÓÍ";
-    }
+  std::variant<int, double, std::string> getSpecParam() const override {
+    return effect;
+  }
+
+  std::string getTypeName() const override { return "–°–≤–∏—Ç–æ–∫"; }
 };
