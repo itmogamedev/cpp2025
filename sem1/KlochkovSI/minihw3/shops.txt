@@ -1,0 +1,23 @@
+Shop: The_Red_Lion
+Предметы: 5
+Weapon Flame_Sword 1500 3.5 85
+Armor Valkyrie_Shield 800 5.2 60
+Potion Life_Elixir 300 0.1 45.0
+Scroll Lightning_Scroll 450 0.3 Chain_Lightning
+Scroll Fireball_Scroll 420 0.3 Fireball
+
+Shop: From_Dusk_till_Dawn
+Предметы: 5
+Weapon Shadow_Bow 1200 2.1 70
+Weapon Dagger_of_Night 600 1.0 40
+Armor Moonlight_Armor 900 4.0 55
+Potion Invisibility_Potion 700 0.2 30.0
+Scroll Frost_Nova 380 0.25 Frost_Nova
+
+Shop: Mos_Eisley_Cantina
+Предметы: 5
+Armor Crystal_Shield 1100 6.0 75
+Armor Mage_Robe 500 1.5 20
+Potion Mana_Potion 250 0.15 20.0
+Potion Greater_Mana 450 0.2 40.0
+Scroll Arcane_Blast 500 0.25 Arcane_Blast
