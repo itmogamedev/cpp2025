@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-std::string convertToOctal(int num) {
+std::string convertToOctal(int num) {  // перевод в восьмеричную систему
   std::string str = "";
   while (num != 0) {
     str = (char)(num % 8 + 48) + str;
@@ -9,7 +9,8 @@ std::string convertToOctal(int num) {
   }
   return str;
 }
-std::string convertToHexadecimal(int num) {
+std::string convertToHexadecimal(
+    int num) {  // перевод в шестнадцатиричную систему
   std::string str = "";
   std::string symbol = "";
   while (num != 0) {
