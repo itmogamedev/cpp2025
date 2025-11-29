@@ -8,9 +8,9 @@ std::string convert_to_another(int ten, int to_another) //перевод в др
   std::string new_valu = "";
     
   while (ten > 0) {
-      int ost = ten % to_another;
-      new_valu = alph[ost] + new_valu;
-      ten /= to_another;
+    int ost = ten % to_another;
+    new_valu = alph[ost] + new_valu;
+    ten /= to_another;
   }
 
   return new_valu;
