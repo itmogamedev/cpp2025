@@ -9,7 +9,7 @@ class Weapon : public MagicItem {
     int damage;
 
   public:
-    Weapon(const std::string& n, int p, double w, int d);
+    Weapon(const std::string& name, int price, double weight, int damage);
     std::variant<int, double, std::string> getSpecParam() const override;
     std::string getType() const override;
 };
@@ -19,27 +19,27 @@ class Armor : public MagicItem {
     int defense;
 
   public:
-    Armor(const std::string& n, int p, double w, int d);
+    Armor(const std::string& name, int price, double weight, int defense);
     std::variant<int, double, std::string> getSpecParam() const override;
     std::string getType() const override;
 };
 
-class Scroll : public MagicItem {
+class Brace : public MagicItem {
   private:
     std::string effect;
 
   public:
-    Scroll(const std::string& n, int p, double w, const std::string& e);
+    Brace(const std::string& name, int price, double weight, const std::string& effect);
     std::variant<int, double, std::string> getSpecParam() const override;
     std::string getType() const override;
 };
 
 class Mushroom : public MagicItem {
   private:
-    std::string potency;
+    std::string roaring;
 
   public:
-    Mushroom(const std::string& n, int p, double w, const std::string& pot);
+    Mushroom(const std::string& name, int price, double weight, const std::string& roaring);
     std::variant<int, double, std::string> getSpecParam() const override;
     std::string getType() const override;
 };

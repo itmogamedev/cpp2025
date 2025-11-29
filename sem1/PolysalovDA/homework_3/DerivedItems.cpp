@@ -1,7 +1,7 @@
 #include "DerivedItems.h"
 
-Weapon::Weapon(const std::string& n, int p, double w, int d)
-    : MagicItem(n, p, w), damage(d) {}
+Weapon::Weapon(const std::string& name, int price, double weight, int damage)
+    : MagicItem(name, price, weight), damage(damage) {}
 
 std::variant<int, double, std::string> Weapon::getSpecParam() const {
   return damage;
@@ -9,8 +9,8 @@ std::variant<int, double, std::string> Weapon::getSpecParam() const {
 
 std::string Weapon::getType() const { return "оружие"; }
 
-Armor::Armor(const std::string& n, int p, double w, int d)
-    : MagicItem(n, p, w), defense(d) {}
+Armor::Armor(const std::string& name, int price, double weight, int defense)
+    : MagicItem(name, price, weight), defense(defense) {}
 
 std::variant<int, double, std::string> Armor::getSpecParam() const {
   return defense;
@@ -18,21 +18,22 @@ std::variant<int, double, std::string> Armor::getSpecParam() const {
 
 std::string Armor::getType() const { return "защита"; }
 
-Scroll::Scroll(const std::string& n, int p, double w, const std::string& e)
-    : MagicItem(n, p, w), effect(e) {}
+Brace::Brace(const std::string& name, int price, double weight,
+             const std::string& effect)
+    : MagicItem(name, price, weight), effect(effect) {}
 
-std::variant<int, double, std::string> Scroll::getSpecParam() const {
+std::variant<int, double, std::string> Brace::getSpecParam() const {
   return effect;
 }
 
-std::string Scroll::getType() const { return "скрепы"; }
+std::string Brace::getType() const { return "скрепы"; }
 
-Mushroom::Mushroom(const std::string& n, int p, double w,
-                   const std::string& pot)
-    : MagicItem(n, p, w), potency(pot) {}
+Mushroom::Mushroom(const std::string& name, int price, double weight,
+                   const std::string& roaring)
+    : MagicItem(name, price, weight), roaring(roaring) {}
 
 std::variant<int, double, std::string> Mushroom::getSpecParam() const {
-  return potency;
+  return roaring;
 }
 
 std::string Mushroom::getType() const { return "грибы"; }

@@ -1,7 +1,7 @@
 #include "MagicItem.h"
 
-MagicItem::MagicItem(const std::string& n, int p, double w)
-    : name(n), price(p), weight(w) {}
+MagicItem::MagicItem(const std::string& name, int price, double weight)
+    : name(name), price(price), weight(weight) {}
 
 std::string MagicItem::getName() const { return name; }
 

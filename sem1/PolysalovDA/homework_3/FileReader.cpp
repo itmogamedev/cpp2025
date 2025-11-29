@@ -13,7 +13,7 @@ MagicItem* createItem(const std::string& type, const std::string& name,
   } else if (type == "защита") {
     return new Armor(name, price, weight, std::stoi(specParam));
   } else if (type == "скрепы") {
-    return new Scroll(name, price, weight, specParam);
+    return new Brace(name, price, weight, specParam);
   } else if (type == "грибы") {
     return new Mushroom(name, price, weight, specParam);
   }

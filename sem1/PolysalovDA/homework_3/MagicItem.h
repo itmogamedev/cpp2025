@@ -11,7 +11,7 @@ class MagicItem {
     double weight;
 
   public:
-    MagicItem(const std::string& n, int p, double w);
+    MagicItem(const std::string& name, int price, double weight);
     virtual ~MagicItem() = default;
 
     virtual std::variant<int, double, std::string> getSpecParam() const = 0;

@@ -35,23 +35,23 @@ double Shop::getAverageWeight() const {
 
 void Shop::printSpecParamStats() const {
   std::map<std::string, std::vector<std::variant<int, double, std::string>>>
-      typeParams;
+      type_params;
 
   for (const auto& item : items) {
-    typeParams[item->getType()].push_back(item->getSpecParam());
+    type_params[item->getType()].push_back(item->getSpecParam());
   }
 
-  std::vector<std::string> allTypes = {"оружие", "защита", "скрепы", "грибы"};
+  std::vector<std::string> all_types = {"оружие", "защита", "скрепы", "грибы"};
 
-  for (const auto& type : allTypes) {
+  for (const auto& type : all_types) {
     std::cout << "- " << type << ": ";
 
-    if (typeParams.find(type) == typeParams.end()) {
+    if (type_params.find(type) == type_params.end()) {
       std::cout << "нет в наличии" << std::endl;
       continue;
     }
 
-    const auto& params = typeParams[type];
+    const auto& params = type_params[type];
 
     if (type == "оружие" || type == "защита") {
       double sum = 0;
@@ -71,19 +71,19 @@ void Shop::printSpecParamStats() const {
         frequency[std::get<std::string>(param)]++;
       }
 
-      std::string mostCommon;
-      int maxCount = 0;
+      std::string most_common;
+      int max_count = 0;
       for (const auto& [effect, count] : frequency) {
-        if (count > maxCount) {
-          maxCount = count;
-          mostCommon = effect;
+        if (count > max_count) {
+          max_count = count;
+          most_common = effect;
         }
       }
 
       if (type == "скрепы") {
-        std::cout << "самый частый эффект " << mostCommon;
+        std::cout << "самый частый эффект " << most_common;
       } else {
-        std::cout << "самая частая сила " << mostCommon;
+        std::cout << "самая частая рыгучесть " << most_common;
       }
     }
     std::cout << std::endl;
