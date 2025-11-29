@@ -1,3 +1,0 @@
-﻿  itmo_lessons.cpp
-C:\Users\OMEN\source\repos\itmo_lessons\itmo_lessons\itmo_lessons.cpp(11,17): warning C4244: return: преобразование "int" в "float", возможна потеря данных
-  itmo_lessons.vcxproj -> C:\Users\OMEN\source\repos\itmo_lessons\x64\Debug\itmo_lessons.exe
