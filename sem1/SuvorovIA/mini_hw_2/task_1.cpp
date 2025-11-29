@@ -2,7 +2,7 @@
 #include <string>
 #include <locale.h>
 
-std::string ConvertToAnother(int ten, int to_another) //перевод в другую систему счисления, вплоть до 16-ричной включительно
+std::string convert_to_another(int ten, int to_another) //перевод в другую систему счисления, вплоть до 16-ричной включительно
 {
   std::string alph = "0123456789ABCDEF";
   std::string new_valu = "";
@@ -28,5 +28,5 @@ int main()
   std::cout << "Введите новую систему счисления: ";
   std::cin >> to_another;
   std::cout << "Ваше число в новой системе счисления: ";
-  std::cout << ConvertToAnother(ten, to_another) << std::endl;
+  std::cout << convert_to_another(ten, to_another) << std::endl;
 }
