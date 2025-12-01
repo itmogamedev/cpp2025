@@ -17,8 +17,8 @@ class EnchantedObject {
   double mass;
 
  public:
-  EnchantedObject(const std::string& n, int c, double m)
-      : itemName(n), cost(c), mass(m) {}
+  EnchantedObject(const std::string& name, int c, double m)
+      : itemName(name), cost(c), mass(m) {}
   virtual ~EnchantedObject() = default;
 
   virtual ItemProperty getUniqueProperty() const = 0;
@@ -33,11 +33,10 @@ class CombatGear : public EnchantedObject {
   int attack;
 
  public:
-  CombatGear(const std::string& n, int c, double m, int a)
-      : EnchantedObject(n, c, m), attack(a) {}
+  CombatGear(const std::string& name, int c, double m, int a)
+      : EnchantedObject(name, c, m), attack(a) {}
 
   ItemProperty getUniqueProperty() const override { return attack; }
-
   std::string getCategory() const override { return "CombatGear"; }
 };
 
@@ -45,11 +44,10 @@ class ProtectiveWear : public EnchantedObject {
   int armor;
 
  public:
-  ProtectiveWear(const std::string& n, int c, double m, int a)
-      : EnchantedObject(n, c, m), armor(a) {}
+  ProtectiveWear(const std::string& name, int c, double m, int a)
+      : EnchantedObject(name, c, m), armor(a) {}
 
   ItemProperty getUniqueProperty() const override { return armor; }
-
   std::string getCategory() const override { return "ProtectiveWear"; }
 };
 
@@ -57,11 +55,10 @@ class MysticBrew : public EnchantedObject {
   double timeActive;
 
  public:
-  MysticBrew(const std::string& n, int c, double m, double t)
-      : EnchantedObject(n, c, m), timeActive(t) {}
+  MysticBrew(const std::string& name, int c, double m, double t)
+      : EnchantedObject(name, c, m), timeActive(t) {}
 
   ItemProperty getUniqueProperty() const override { return timeActive; }
-
   std::string getCategory() const override { return "MysticBrew"; }
 };
 
@@ -69,11 +66,10 @@ class ArcaneDocument : public EnchantedObject {
   std::string magicalEffect;
 
  public:
-  ArcaneDocument(const std::string& n, int c, double m, const std::string& e)
-      : EnchantedObject(n, c, m), magicalEffect(e) {}
+  ArcaneDocument(const std::string& name, int c, double m, const std::string& e)
+      : EnchantedObject(name, c, m), magicalEffect(e) {}
 
   ItemProperty getUniqueProperty() const override { return magicalEffect; }
-
   std::string getCategory() const override { return "ArcaneDocument"; }
 };
 
@@ -81,6 +77,58 @@ struct TradingPost {
   std::string postName;
   std::vector<std::unique_ptr<EnchantedObject>> inventory;
 };
+
+template <typename ValueType>
+ValueType extractValue(const ItemProperty& property) {
+  if (std::holds_alternative<ValueType>(property)) {
+    return std::get<ValueType>(property);
+  }
+  return ValueType{};
+}
+
+void createSampleData() {
+  std::ofstream dataFile("trading_posts.txt");
+
+  dataFile << "–ú–∞–≥–∞–∑–∏–Ω: –ì–Ω–æ–º—å–∏_–°–æ–∫—Ä–æ–≤–∏—â–Ω–∏—Ü—ã\n";
+  dataFile << "–ü—Ä–µ–¥–º–µ—Ç—ã: 6\n";
+  dataFile << "–û—Ä—É–∂–∏–µ –ì—Ä–æ–º–æ–≤–æ–π_–¢–æ–ø–æ—Ä 1700 4.2 95\n";
+  dataFile << "–û—Ä—É–∂–∏–µ –ú–æ–ª–æ—Ç_–í–∞–ª—å–∫–∏—Ä–∏–π 1400 5.8 80\n";
+  dataFile << "–ë—Ä–æ–Ω—è –°—Ç–∞–ª—å–Ω–æ–π_–î–æ—Å–ø–µ—Ö 900 8.5 75\n";
+  dataFile << "–ë—Ä–æ–Ω—è –®–ª–µ–º_–ù–µ–≤–∏–¥–∏–º–∫–∏ 750 2.3 40\n";
+  dataFile << "–ó–µ–ª—å–µ –°–∏–ª–æ–≤–æ–π_–û—Ç–≤–∞—Ä 400 0.25 35.5\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –ë–ª–∞–≥–æ—Å–ª–æ–≤–ª—è—é—â–∏–π_–°–≤–∏—Ç–æ–∫ 500 0.15 –ë–æ–∂–µ—Å—Ç–≤–µ–Ω–Ω–∞—è_–ó–∞—â–∏—Ç–∞\n";
+
+  dataFile << "–ú–∞–≥–∞–∑–∏–Ω: –ú–∞–≥–∏—á–µ—Å–∫–∞—è_–ë–∞—à–Ω—è\n";
+  dataFile << "–ü—Ä–µ–¥–º–µ—Ç—ã: 7\n";
+  dataFile << "–û—Ä—É–∂–∏–µ –í–æ–ª—à–µ–±–Ω—ã–π_–ü–æ—Å–æ—Ö 2000 2.2 110\n";
+  dataFile << "–ë—Ä–æ–Ω—è –ú–∞–Ω—Ç–∏—è_–ú—É–¥—Ä–µ—Ü–∞ 1200 1.5 30\n";
+  dataFile << "–ó–µ–ª—å–µ –≠–ª–∏–∫—Å–∏—Ä_–ó–Ω–∞–Ω–∏–π 800 0.3 90.0\n";
+  dataFile << "–ó–µ–ª—å–µ –ù–∞—Å—Ç–æ–π_–õ–æ–≤–∫–æ—Å—Ç–∏ 550 0.28 45.5\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –°–≤–∏—Ç–æ–∫_–û–≥–Ω–µ–Ω–Ω–æ–≥–æ_–®—Ç–æ—Ä–º–∞ 600 0.22 –û–≥–Ω–µ–Ω–Ω—ã–π_–®—Ç–æ—Ä–º\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –°–≤–∏—Ç–æ–∫_–õ–µ–¥—è–Ω–æ–π_–ë—É—Ä–∏ 580 0.26 –õ–µ–¥—è–Ω–∞—è_–ë—É—Ä—è\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –°–≤–∏—Ç–æ–∫_–¢–µ–ª–µ–ø–æ—Ä—Ç–∞—Ü–∏–∏ 620 0.19 –¢–µ–ª–µ–ø–æ—Ä—Ç–∞—Ü–∏—è\n";
+
+  dataFile << "–ú–∞–≥–∞–∑–∏–Ω: –¢–µ–Ω–µ–≤–æ–π_–ë–∞–∑–∞—Ä\n";
+  dataFile << "–ü—Ä–µ–¥–º–µ—Ç—ã: 8\n";
+  dataFile << "–û—Ä—É–∂–∏–µ –ö–ª–∏–Ω–æ–∫_–¢–µ–Ω–∏ 1300 1.8 65\n";
+  dataFile << "–û—Ä—É–∂–∏–µ –ü—Ä–∏–∑—Ä–∞—á–Ω—ã–π_–õ—É–∫ 1600 2.4 85\n";
+  dataFile << "–ë—Ä–æ–Ω—è –¢–µ–Ω–µ–≤–∞—è_–ö–æ–ª—å—á—É–≥–∞ 1100 6.2 55\n";
+  dataFile << "–ë—Ä–æ–Ω—è –ü–µ—Ä—á–∞—Ç–∫–∏_–ù–∏–Ω–¥–∑—è 950 1.1 25\n";
+  dataFile << "–ó–µ–ª—å–µ –Ø–¥_–ì–∞–¥—é–∫–∏ 350 0.12 20.0\n";
+  dataFile << "–ó–µ–ª—å–µ –û—Ç–≤–∞—Ä_–ù–µ–≤–∏–¥–∏–º–æ—Å—Ç–∏ 480 0.21 60.5\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –°–≤–∏—Ç–æ–∫_–¢–µ–Ω–µ–≤–æ–≥–æ_–ó–º–µ—è 520 0.17 –¢–µ–Ω–µ–≤–æ–π_–ó–º–µ–π\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –°–≤–∏—Ç–æ–∫_–¢–∏—à–∏–Ω—ã 440 0.14 –ü–æ–ª–Ω–∞—è_–¢–∏—à–∏–Ω–∞\n";
+
+  dataFile << "–ú–∞–≥–∞–∑–∏–Ω: –•—Ä–∞–º_–°–≤–µ—Ç–∞\n";
+  dataFile << "–ü—Ä–µ–¥–º–µ—Ç—ã: 5\n";
+  dataFile << "–û—Ä—É–∂–∏–µ –ú–µ—á_–°–ø—Ä–∞–≤–µ–¥–ª–∏–≤–æ—Å—Ç–∏ 1800 3.8 100\n";
+  dataFile << "–ë—Ä–æ–Ω—è –õ–∞—Ç—ã_–ü–∞–ª–∞–¥–∏–Ω–∞ 1500 9.2 90\n";
+  dataFile << "–ó–µ–ª—å–µ –°–ª–µ–∑—ã_–§–µ–Ω–∏–∫—Å–∞ 700 0.35 75.0\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –°–≤–∏—Ç–æ–∫_–ò—Å—Ü–µ–ª–µ–Ω–∏—è 400 0.16 –ò—Å—Ü–µ–ª–µ–Ω–∏–µ\n";
+  dataFile << "–°–≤–∏—Ç–æ–∫ –°–≤–∏—Ç–æ–∫_–°–≤—è—Ç–æ–≥–æ_–©–∏—Ç–∞ 450 0.18 –°–≤—è—Ç–æ–π_–©–∏—Ç\n";
+
+  dataFile.close();
+}
 
 std::vector<TradingPost> loadTradingPosts(const std::string& filename) {
   std::vector<TradingPost> posts;
@@ -90,11 +138,11 @@ std::vector<TradingPost> loadTradingPosts(const std::string& filename) {
   TradingPost* currentPost = nullptr;
 
   while (std::getline(inputFile, textLine)) {
-    if (textLine.find("Ã‡„‡ÁËÌ:") != std::string::npos) {
+    if (textLine.find("–ú–∞–≥–∞–∑–∏–Ω:") != std::string::npos) {
       posts.emplace_back();
       currentPost = &posts.back();
       currentPost->postName = textLine.substr(9);
-    } else if (textLine.find("œÂ‰ÏÂÚ˚:") != std::string::npos) {
+    } else if (textLine.find("–ü—Ä–µ–¥–º–µ—Ç—ã:") != std::string::npos) {
       continue;
     } else if (!textLine.empty() && currentPost) {
       std::istringstream lineStream(textLine);
@@ -104,22 +152,22 @@ std::vector<TradingPost> loadTradingPosts(const std::string& filename) {
 
       lineStream >> category >> name >> priceValue >> weightValue;
 
-      if (category == "ŒÛÊËÂ") {
+      if (category == "–û—Ä—É–∂–∏–µ") {
         int power;
         lineStream >> power;
         currentPost->inventory.push_back(
             std::make_unique<CombatGear>(name, priceValue, weightValue, power));
-      } else if (category == "¡ÓÌˇ") {
+      } else if (category == "–ë—Ä–æ–Ω—è") {
         int defenseValue;
         lineStream >> defenseValue;
         currentPost->inventory.push_back(std::make_unique<ProtectiveWear>(
             name, priceValue, weightValue, defenseValue));
-      } else if (category == "«ÂÎ¸Â") {
+      } else if (category == "–ó–µ–ª—å–µ") {
         double durationValue;
         lineStream >> durationValue;
         currentPost->inventory.push_back(std::make_unique<MysticBrew>(
             name, priceValue, weightValue, durationValue));
-      } else if (category == "—‚ËÚÓÍ") {
+      } else if (category == "–°–≤–∏—Ç–æ–∫") {
         std::string spellEffect;
         lineStream >> spellEffect;
         currentPost->inventory.push_back(std::make_unique<ArcaneDocument>(
@@ -129,14 +177,6 @@ std::vector<TradingPost> loadTradingPosts(const std::string& filename) {
   }
 
   return posts;
-}
-
-template <typename ValueType>
-ValueType extractValue(const ItemProperty& property) {
-  if (std::holds_alternative<ValueType>(property)) {
-    return std::get<ValueType>(property);
-  }
-  return ValueType{};
 }
 
 void generateMerchantReport(const std::vector<TradingPost>& posts) {
@@ -179,36 +219,36 @@ void generateMerchantReport(const std::vector<TradingPost>& posts) {
       }
     }
 
-    std::cout << ">>> “Ó„Ó‚˚È ÔÓÒÚ: " << post.postName << " <<<" << std::endl;
-    std::cout << "Œ·˘ÂÂ ÍÓÎË˜ÂÒÚ‚Ó ÚÓ‚‡Ó‚: " << post.inventory.size()
+    std::cout << ">>> –¢–æ—Ä–≥–æ–≤—ã–π –ø–æ—Å—Ç: " << post.postName << " <<<" << std::endl;
+    std::cout << "–û–±—â–µ–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —Ç–æ–≤–∞—Ä–æ–≤: " << post.inventory.size()
               << std::endl;
 
     std::cout << std::fixed << std::setprecision(2);
-    std::cout << "\n—Â‰Ìˇˇ ÒÚÓËÏÓÒÚ¸: " << sumCost / post.inventory.size()
-              << " ÁÓÎÓÚ˚ı" << std::endl;
-    std::cout << "—Â‰Ìˇˇ Ï‡ÒÒ‡: " << sumMass / post.inventory.size() << " Í„"
+    std::cout << "\n–°—Ä–µ–¥–Ω—è—è —Å—Ç–æ–∏–º–æ—Å—Ç—å: " << sumCost / post.inventory.size()
+              << " –∑–æ–ª–æ—Ç—ã—Ö" << std::endl;
+    std::cout << "–°—Ä–µ–¥–Ω—è—è –º–∞—Å—Å–∞: " << sumMass / post.inventory.size() << " –∫–≥"
               << std::endl;
 
-    std::cout << "\n¿Ì‡ÎËÁ Í‡ÚÂ„ÓËÈ ÚÓ‚‡Ó‚:" << std::endl;
+    std::cout << "\n–ê–Ω–∞–ª–∏–∑ –∫–∞—Ç–µ–≥–æ—Ä–∏–π —Ç–æ–≤–∞—Ä–æ–≤:" << std::endl;
 
     if (combatItems > 0)
-      std::cout << "- ¡ÓÂ‚ÓÂ ÒÌ‡ˇÊÂÌËÂ: ÒÂ‰Ìˇˇ ÒËÎ‡ = "
+      std::cout << "- –ë–æ–µ–≤–æ–µ —Å–Ω–∞—Ä—è–∂–µ–Ω–∏–µ: —Å—Ä–µ–¥–Ω—è—è —Å–∏–ª–∞ = "
                 << static_cast<int>(combatTotal / combatItems) << std::endl;
     else
-      std::cout << "- ¡ÓÂ‚ÓÂ ÒÌ‡ˇÊÂÌËÂ: ÓÚÒÛÚÒÚ‚ÛÂÚ" << std::endl;
+      std::cout << "- –ë–æ–µ–≤–æ–µ —Å–Ω–∞—Ä—è–∂–µ–Ω–∏–µ: –æ—Ç—Å—É—Ç—Å—Ç–≤—É–µ—Ç" << std::endl;
 
     if (protectionItems > 0)
-      std::cout << "- «‡˘ËÚÌ‡ˇ ˝ÍËÔËÓ‚Í‡: ÒÂ‰Ìˇˇ Á‡˘ËÚ‡ = "
+      std::cout << "- –ó–∞—â–∏—Ç–Ω–∞—è —ç–∫–∏–ø–∏—Ä–æ–≤–∫–∞: —Å—Ä–µ–¥–Ω—è—è –∑–∞—â–∏—Ç–∞ = "
                 << static_cast<int>(protectionTotal / protectionItems)
                 << std::endl;
     else
-      std::cout << "- «‡˘ËÚÌ‡ˇ ˝ÍËÔËÓ‚Í‡: ÓÚÒÛÚÒÚ‚ÛÂÚ" << std::endl;
+      std::cout << "- –ó–∞—â–∏—Ç–Ω–∞—è —ç–∫–∏–ø–∏—Ä–æ–≤–∫–∞: –æ—Ç—Å—É—Ç—Å—Ç–≤—É–µ—Ç" << std::endl;
 
     if (brewItems > 0)
-      std::cout << "- ÃËÒÚË˜ÂÒÍËÂ ÓÚ‚‡˚: ÒÂ‰ÌÂÂ ‚ÂÏˇ ‰ÂÈÒÚ‚Ëˇ = "
+      std::cout << "- –ú–∏—Å—Ç–∏—á–µ—Å–∫–∏–µ –æ—Ç–≤–∞—Ä—ã: —Å—Ä–µ–¥–Ω–µ–µ –≤—Ä–µ–º—è –¥–µ–π—Å—Ç–≤–∏—è = "
                 << brewTotal / brewItems << std::endl;
     else
-      std::cout << "- ÃËÒÚË˜ÂÒÍËÂ ÓÚ‚‡˚: ÓÚÒÛÚÒÚ‚Û˛Ú" << std::endl;
+      std::cout << "- –ú–∏—Å—Ç–∏—á–µ—Å–∫–∏–µ –æ—Ç–≤–∞—Ä—ã: –æ—Ç—Å—É—Ç—Å—Ç–≤—É—é—Ç" << std::endl;
 
     if (!documentEffects.empty()) {
       std::string mostPopularEffect;
@@ -220,61 +260,20 @@ void generateMerchantReport(const std::vector<TradingPost>& posts) {
           mostPopularEffect = effectPair.first;
         }
       }
-      std::cout << "- Ã‡„Ë˜ÂÒÍËÂ Ò‚ËÚÍË: ÔÓÔÛÎˇÌ˚È ˝ÙÙÂÍÚ '"
+      std::cout << "- –ú–∞–≥–∏—á–µ—Å–∫–∏–µ —Å–≤–∏—Ç–∫–∏: –ø–æ–ø—É–ª—è—Ä–Ω—ã–π —ç—Ñ—Ñ–µ–∫—Ç '"
                 << mostPopularEffect << "'" << std::endl;
     } else
-      std::cout << "- Ã‡„Ë˜ÂÒÍËÂ Ò‚ËÚÍË: ÓÚÒÛÚÒÚ‚Û˛Ú" << std::endl;
+      std::cout << "- –ú–∞–≥–∏—á–µ—Å–∫–∏–µ —Å–≤–∏—Ç–∫–∏: –æ—Ç—Å—É—Ç—Å—Ç–≤—É—é—Ç" << std::endl;
     std::cout << std::endl;
   }
 }
 
 int main() {
-  std::ofstream dataFile("trading_posts.txt");
-
-  dataFile << "Ã‡„‡ÁËÌ: √ÌÓÏ¸Ë_—ÓÍÓ‚Ë˘ÌËˆ˚\n";
-  dataFile << "œÂ‰ÏÂÚ˚: 6\n";
-  dataFile << "ŒÛÊËÂ √ÓÏÓ‚ÓÈ_“ÓÔÓ 1700 4.2 95\n";
-  dataFile << "ŒÛÊËÂ ÃÓÎÓÚ_¬‡Î¸ÍËËÈ 1400 5.8 80\n";
-  dataFile << "¡ÓÌˇ —Ú‡Î¸ÌÓÈ_ƒÓÒÔÂı 900 8.5 75\n";
-  dataFile << "¡ÓÌˇ ÿÎÂÏ_ÕÂ‚Ë‰ËÏÍË 750 2.3 40\n";
-  dataFile << "«ÂÎ¸Â —ËÎÓ‚ÓÈ_ŒÚ‚‡ 400 0.25 35.5\n";
-  dataFile << "—‚ËÚÓÍ ¡Î‡„ÓÒÎÓ‚Îˇ˛˘ËÈ_—‚ËÚÓÍ 500 0.15 ¡ÓÊÂÒÚ‚ÂÌÌ‡ˇ_«‡˘ËÚ‡\n";
-
-  dataFile << "Ã‡„‡ÁËÌ: Ã‡„Ë˜ÂÒÍ‡ˇ_¡‡¯Ìˇ\n";
-  dataFile << "œÂ‰ÏÂÚ˚: 7\n";
-  dataFile << "ŒÛÊËÂ ¬ÓÎ¯Â·Ì˚È_œÓÒÓı 2000 2.2 110\n";
-  dataFile << "¡ÓÌˇ Ã‡ÌÚËˇ_ÃÛ‰Âˆ‡ 1200 1.5 30\n";
-  dataFile << "«ÂÎ¸Â ›ÎËÍÒË_«Ì‡ÌËˇ 800 0.3 90.0\n";
-  dataFile << "«ÂÎ¸Â Õ‡ÒÚÓÈ_ÀÓ‚ÍÓÒÚË 550 0.28 45.5\n";
-  dataFile << "—‚ËÚÓÍ —‚ËÚÓÍ_Œ„ÌÂÌÌÓ„Ó_ÿÚÓÏ‡ 600 0.22 Œ„ÌÂÌÌ˚È_ÿÚÓÏ\n";
-  dataFile << "—‚ËÚÓÍ —‚ËÚÓÍ_ÀÂ‰ˇÌÓÈ_¡ÛË 580 0.26 ÀÂ‰ˇÌ‡ˇ_¡Ûˇ\n";
-  dataFile << "—‚ËÚÓÍ —‚ËÚÓÍ_“ÂÎÂÔÓÚ‡ˆËË 620 0.19 “ÂÎÂÔÓÚ‡ˆËˇ\n";
-
-  dataFile << "Ã‡„‡ÁËÌ: “ÂÌÂ‚ÓÈ_¡‡Á‡\n";
-  dataFile << "œÂ‰ÏÂÚ˚: 8\n";
-  dataFile << "ŒÛÊËÂ  ÎËÌÓÍ_“ÂÌË 1300 1.8 65\n";
-  dataFile << "ŒÛÊËÂ œËÁ‡˜Ì˚È_ÀÛÍ 1600 2.4 85\n";
-  dataFile << "¡ÓÌˇ “ÂÌÂ‚‡ˇ_ ÓÎ¸˜Û„‡ 1100 6.2 55\n";
-  dataFile << "¡ÓÌˇ œÂ˜‡ÚÍË_ÕËÌ‰Áˇ 950 1.1 25\n";
-  dataFile << "«ÂÎ¸Â ﬂ‰_√‡‰˛ÍË 350 0.12 20.0\n";
-  dataFile << "«ÂÎ¸Â ŒÚ‚‡_ÕÂ‚Ë‰ËÏÓÒÚË 480 0.21 60.5\n";
-  dataFile << "—‚ËÚÓÍ —‚ËÚÓÍ_“ÂÌÂ‚Ó„Ó_«ÏÂˇ 520 0.17 “ÂÌÂ‚ÓÈ_«ÏÂÈ\n";
-  dataFile << "—‚ËÚÓÍ —‚ËÚÓÍ_“Ë¯ËÌ˚ 440 0.14 œÓÎÌ‡ˇ_“Ë¯ËÌ‡\n";
-
-  dataFile << "Ã‡„‡ÁËÌ: ’‡Ï_—‚ÂÚ‡\n";
-  dataFile << "œÂ‰ÏÂÚ˚: 5\n";
-  dataFile << "ŒÛÊËÂ ÃÂ˜_—Ô‡‚Â‰ÎË‚ÓÒÚË 1800 3.8 100\n";
-  dataFile << "¡ÓÌˇ À‡Ú˚_œ‡Î‡‰ËÌ‡ 1500 9.2 90\n";
-  dataFile << "«ÂÎ¸Â —ÎÂÁ˚_‘ÂÌËÍÒ‡ 700 0.35 75.0\n";
-  dataFile << "—‚ËÚÓÍ —‚ËÚÓÍ_»ÒˆÂÎÂÌËˇ 400 0.16 »ÒˆÂÎÂÌËÂ\n";
-  dataFile << "—‚ËÚÓÍ —‚ËÚÓÍ_—‚ˇÚÓ„Ó_ŸËÚ‡ 450 0.18 —‚ˇÚÓÈ_ŸËÚ\n";
-
-  dataFile.close();
-
-  std::cout << "=== Œ“◊≈“ √»À‹ƒ»» “Œ–√Œ¬÷≈¬ Ã¿√»◊≈— »Ã» ¿–“≈‘¿ “¿Ã» ===\n"
+  std::cout << "___–û–¢–ß–ï–¢ –ì–ò–õ–¨–î–ò–ò –¢–û–†–ì–û–í–¶–ï–í –ú–ê–ì–ò–ß–ï–°–ö–ò–ú–ò –ê–†–¢–ï–§–ê–ö–¢–ê–ú–ò___"
             << std::endl;
-  std::cout << "¿Ì‡ÎËÁ ÚÓ‚‡Ó‚ Ì‡ ÚÓ„Ó‚˚ı ÔÓÒÚ‡ı\n" << std::endl;
+  std::cout << "–ê–Ω–∞–ª–∏–∑ —Ç–æ–≤–∞—Ä–æ–≤ –Ω–∞ —Ç–æ—Ä–≥–æ–≤—ã—Ö –ø–æ—Å—Ç–∞—Ö" << std::endl << std::endl;
 
+  createSampleData();
   auto tradingPosts = loadTradingPosts("trading_posts.txt");
   generateMerchantReport(tradingPosts);
 
