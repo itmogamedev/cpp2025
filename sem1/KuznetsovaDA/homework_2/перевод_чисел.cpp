@@ -8,7 +8,7 @@ void convert_number(int number){
    if (number == 0){
     number_oct = "0";
     number_hex = "0";
-  } 
+  }
   
   int temp_number = number;
   while (temp_number > 0){
@@ -40,3 +40,4 @@ int main(){
   
   return 0;
 }
+

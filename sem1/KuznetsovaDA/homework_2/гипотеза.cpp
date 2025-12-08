@@ -20,6 +20,6 @@ int main(){
     }
   }
 
-  std::cout << "The hypothesis is correct."; 
+  std::cout << "The hypothesis is correct.";
   return 0;
 }
