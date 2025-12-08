@@ -1,0 +1,22 @@
+Shop Wolfs'sFang
+Armor WolfArmor 1999 20.0 50
+Armor WolfHelmet 560 3.0 15
+Armor WolfBoots 430 4.0 10
+Armor WolfGloves 390 2.0 5
+Potion WolfHeal 799 0.5 Healing
+
+Shop EverythingForMagic
+MagicWand FireWand 1999 1.0 199
+MagicWand IceWand 750 1.0 56
+MagicWand ElectroWand 1000.0 99
+Potion FireResist 1500 0.5 FireResist
+Potion FireResist 2999 1.0 FireResist
+Potion IceResist 1500 0.5 IceResist
+Potion ElectroResist 1500 0.5 ElectroResist
+
+Shop ScrollForAll
+Scroll TeleportScroll 666 0.1 Teleport
+Scroll SignalScroll 600 0.1 Signall
+Scroll BarrierScroll 700 0.1 Barrier
+Scroll TeleportScroll 666 0.1 Teleport
+Scroll InvisibilityScroll 1000 0.1 Invisibility
