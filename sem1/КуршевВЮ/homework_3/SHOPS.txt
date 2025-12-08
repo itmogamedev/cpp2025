@@ -1,0 +1,30 @@
+Young_Ring 5
+Weapon Rivers_of_Blood 1200 3.5 10
+Weapon Hand_of_Malenia 3000 5 15
+Armor All-Knowing_Helm 1000 4.6 4.6
+Armor Divine_Beast_Head 5000 10.6 7
+Scroll Protection_of_the_Erdtree 500 0.1 Increase_damage_negation
+
+Kirose_Lights_Live_Onse 5
+Armor Loaded_Umbrella 1600 5 1000 
+Weapon Kusabimaru 10000 3 100
+Weapon Sabimaru 800 1 10
+Potion Mibu_Balloon_of_Soul 50 0.1 150
+Potion Mibu_Pilgrimage_Balloon 250 0.1 150
+
+Yourcraft 6
+Weapon Netherite_Sword 2000 10 100
+Armor Chainmail_Chestplate 300 5 5
+Armor Copper_Helmet 150 2 2
+Potion Potion_of_Fire_Resistance 50 0.1 180
+Potion Potion_of_Regeneration 50 0.1 45
+Potion Potion_of_Slow_Falling 50 0.1 90
+
+Boring_Scroll_Shop 7
+Scroll Fire 200 0.2 Burning
+Scroll Water 150 0.2 Drawning
+Scroll wtf 1000 0.1 Qwertying
+Scroll Stone 300 0.2 Stoning
+Scroll Qwerty 500 0.3 Qwertying
+Scroll Obviosly_Not_Water 100 0.1 Drawning
+Scroll Something_Strange 10 0.5 Qwertying
