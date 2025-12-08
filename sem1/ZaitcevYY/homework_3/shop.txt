@@ -1,0 +1,39 @@
+/*
+<shopName>
+<itemType> <itemName> <itemPrice> <itemWeight> <itemSpecific>
+ ------
+for weapon specific is damage (int)
+for armor specific is protection (int)
+for tech specific is quality (int)
+for power specific is description (string)
+*/
+
+У_Лешего
+weapon stick 3 1 10
+weapon rock 5 3 15
+weapon magicStick 90 1 100
+
+armor stickHelmet 100 10 50
+armor rockHelmet 200 20 110
+armor magicStickHelmet 500 10 1000
+
+Рыцарская_Лавка
+weapon sword 12 5 80
+weapon scythe 40 30 40
+
+armor ironHelmet 250 10 50
+armor ironChestplate 450 20 100
+
+tech pipBoy 50 0 100
+tech techBible 60 1 100
+
+power fireball 1000 0 Кастовать_ФАЕРБОЛ
+
+Майнкрафт_Шоп
+weapon stick 3 1 10
+weapon dirtBlock 999 1 1
+
+armor stickHelmet 100 10 50
+
+power magicMissile 1000 0 Кастовать_МажикМиссайл
+power fireball 1000 0 Кастовать_ФАЕРБОЛ
