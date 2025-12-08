@@ -6,249 +6,263 @@
 #include <variant>
 #include <vector>
 
-using namespace std;
-class MagicItem {
- public:
-  string name;
-  double price;
-  double weight;
+class magic_item {
+public:
+    std::string name;
+    double price;
+    double weight;
 
-  MagicItem(const string& n, int p, double w) : name(n), price(p), weight(w) {}
+    magic_item(const std::string& n, int p, double w) : name(n), price(p), weight(w) {}
 
-  virtual ~MagicItem() {}
+    virtual ~magic_item() {}
 
-  virtual string getType() const = 0;
+    virtual std::string get_type() const = 0;
 
-  virtual variant<int, double, string> getSpecParam() const = 0;
+    virtual std::variant<int, double, std::string> get_spec_param() const = 0;
 };
 
-class Weapon : public MagicItem {
- public:
-  int damage;
+class weapon : public magic_item {
+public:
+    int damage;
 
-  Weapon(const string& n, int p, double w, int d)
-      : MagicItem(n, p, w), damage(d) {}
-
-  string getType() const override { return "Weapon"; }
-
-  variant<int, double, string> getSpecParam() const override { return damage; }
-};
-
-class Armor : public MagicItem {
- public:
-  int defense;
-
-  Armor(const string& n, int p, double w, int def)
-      : MagicItem(n, p, w), defense(def) {}
-
-  string getType() const override { return "Armor"; }
-
-  variant<int, double, string> getSpecParam() const override { return defense; }
-};
-
-class Potion : public MagicItem {
- public:
-  double duration;
-
-  Potion(const string& n, int p, double w, double dur)
-      : MagicItem(n, p, w), duration(dur) {}
-
-  string getType() const override { return "Potion"; }
-
-  variant<int, double, string> getSpecParam() const override {
-    return duration;
-  }
-};
-
-class Scroll : public MagicItem {
- public:
-  string effect;
-
-  Scroll(const string& n, int p, double w, const string& eff)
-      : MagicItem(n, p, w), effect(eff) {}
-
-  string getType() const override { return "Scroll"; }
-
-  variant<int, double, string> getSpecParam() const override { return effect; }
-};
-
-struct Shop {
-  string name;
-  vector<MagicItem*> items;
-};
-
-void printShopStats(const Shop& shop) {
-  cout << "=== Магазин: " << shop.name << " ===" << endl;
-
-  int totalItems = (int)shop.items.size();
-  cout << "Всего предметов: " << totalItems << endl;
-
-  double sumPrice = 0;
-  double sumWeight = 0;
-
-  long long sumWeaponDamage = 0;
-  int countWeapon = 0;
-
-  long long sumArmorDefense = 0;
-  int countArmor = 0;
-
-  double sumPotionDuration = 0;
-  int countPotion = 0;
-
-  map<string, int> scrollEffects;
-  int countScroll = 0;
-
-  for (int i = 0; i < (int)shop.items.size(); i++) {
-    MagicItem* item = shop.items[i];
-
-    sumPrice += item->price;
-    sumWeight += item->weight;
-
-    string type = item->getType();
-    variant<int, double, string> param = item->getSpecParam();
-
-    if (type == "Weapon") {
-      int dmg = get<int>(param);
-      sumWeaponDamage += dmg;
-      countWeapon++;
-    } else if (type == "Armor") {
-      int def = get<int>(param);
-      sumArmorDefense += def;
-      countArmor++;
-    } else if (type == "Potion") {
-      double dur = get<double>(param);
-      sumPotionDuration += dur;
-      countPotion++;
-    } else if (type == "Scroll") {
-      string eff = get<string>(param);
-      scrollEffects[eff]++;
-      countScroll++;
-    }
-  }
-
-  cout << fixed << setprecision(2);
-
-  if (totalItems > 0) {
-    cout << "Средняя цена: " << sumPrice / totalItems << " золота" << endl;
-    cout << "Средний вес: " << sumWeight / totalItems << " кг" << endl;
-  }
-
-  cout << endl;
-  cout << "Статистика по типам:" << endl;
-
-  if (countWeapon > 0) {
-    double avgDamage = (double)sumWeaponDamage / countWeapon;
-    cout << "- Оружие: средний урон = " << avgDamage << endl;
-  } else {
-    cout << "- Оружие: нет в наличии" << endl;
-  }
-
-  if (countArmor > 0) {
-    double avgDefense = (double)sumArmorDefense / countArmor;
-    cout << "- Броня: средняя защита = " << avgDefense << endl;
-  } else {
-    cout << "- Броня: нет в наличии" << endl;
-  }
-
-  if (countPotion > 0) {
-    double avgDuration = sumPotionDuration / countPotion;
-    cout << "- Зелья: средняя длительность = " << avgDuration << endl;
-  } else {
-    cout << "- Зелья: нет в наличии" << endl;
-  }
-
-  if (countScroll > 0) {
-    string bestEffect = "";
-    int bestCount = 0;
-
-    for (auto it = scrollEffects.begin(); it != scrollEffects.end(); ++it) {
-      if (it->second > bestCount) {
-        bestCount = it->second;
-        bestEffect = it->first;
-      }
+    weapon(const std::string& n, int p, double w, int d)
+        : magic_item(n, p, w), damage(d) {
     }
 
-    cout << "- Свитки: самый частый эффект = " << bestEffect << endl;
-  } else {
-    cout << "- Свитки: нет в наличии" << endl;
-  }
+    std::string get_type() const override { return "Weapon"; }
 
-  cout << endl;
+    std::variant<int, double, std::string> get_spec_param() const override { return damage; }
+};
+
+class armor : public magic_item {
+public:
+    int defense;
+
+    armor(const std::string& n, int p, double w, int def)
+        : magic_item(n, p, w), defense(def) {
+    }
+
+    std::string get_type() const override { return "Armor"; }
+
+    std::variant<int, double, std::string> get_spec_param() const override { return defense; }
+};
+
+class potion : public magic_item {
+public:
+    double duration;
+
+    potion(const std::string& n, int p, double w, double dur)
+        : magic_item(n, p, w), duration(dur) {
+    }
+
+    std::string get_type() const override { return "Potion"; }
+
+    std::variant<int, double, std::string> get_spec_param() const override {
+        return duration;
+    }
+};
+
+class scroll : public magic_item {
+public:
+    std::string effect;
+
+    scroll(const std::string& n, int p, double w, const std::string& eff)
+        : magic_item(n, p, w), effect(eff) {
+    }
+
+    std::string get_type() const override { return "Scroll"; }
+
+    std::variant<int, double, std::string> get_spec_param() const override { return effect; }
+};
+
+struct shop_t {
+    std::string name;
+    std::vector<magic_item*> items;
+};
+
+void print_shop_stats(const shop_t& shop) {
+    std::cout << "=== Магазин: " << shop.name << " ===" << std::endl;
+
+    int total_items = (int)shop.items.size();
+    std::cout << "Всего предметов: " << total_items << std::endl;
+
+    double sum_price = 0;
+    double sum_weight = 0;
+
+    long long sum_weapon_damage = 0;
+    int count_weapon = 0;
+
+    long long sum_armor_defense = 0;
+    int count_armor = 0;
+
+    double sum_potion_duration = 0;
+    int count_potion = 0;
+
+    std::map<std::string, int> scroll_effects;
+    int count_scroll = 0;
+
+    for (int i = 0; i < (int)shop.items.size(); i++) {
+        magic_item* item = shop.items[i];
+
+        sum_price += item->price;
+        sum_weight += item->weight;
+
+        std::string type = item->get_type();
+        std::variant<int, double, std::string> param = item->get_spec_param();
+
+        if (type == "Weapon") {
+            int dmg = std::get<int>(param);
+            sum_weapon_damage += dmg;
+            count_weapon++;
+        }
+        else if (type == "Armor") {
+            int def = std::get<int>(param);
+            sum_armor_defense += def;
+            count_armor++;
+        }
+        else if (type == "Potion") {
+            double dur = std::get<double>(param);
+            sum_potion_duration += dur;
+            count_potion++;
+        }
+        else if (type == "Scroll") {
+            std::string eff = std::get<std::string>(param);
+            scroll_effects[eff]++;
+            count_scroll++;
+        }
+    }
+
+    std::cout << std::fixed << std::setprecision(2);
+
+    if (total_items > 0) {
+        std::cout << "Средняя цена: " << sum_price / total_items << " золота" << std::endl;
+        std::cout << "Средний вес: " << sum_weight / total_items << " кг" << std::endl;
+    }
+
+    std::cout << std::endl;
+    std::cout << "Статистика по типам:" << std::endl;
+
+    if (count_weapon > 0) {
+        double avg_damage = (double)sum_weapon_damage / count_weapon;
+        std::cout << "- Оружие: средний урон = " << avg_damage << std::endl;
+    }
+    else {
+        std::cout << "- Оружие: нет в наличии" << std::endl;
+    }
+
+    if (count_armor > 0) {
+        double avg_defense = (double)sum_armor_defense / count_armor;
+        std::cout << "- Броня: средняя защита = " << avg_defense << std::endl;
+    }
+    else {
+        std::cout << "- Броня: нет в наличии" << std::endl;
+    }
+
+    if (count_potion > 0) {
+        double avg_duration = sum_potion_duration / count_potion;
+        std::cout << "- Зелья: средняя длительность = " << avg_duration << std::endl;
+    }
+    else {
+        std::cout << "- Зелья: нет в наличии" << std::endl;
+    }
+
+    if (count_scroll > 0) {
+        std::string best_effect = "";
+        int best_count = 0;
+
+        for (auto it = scroll_effects.begin(); it != scroll_effects.end(); ++it) {
+            if (it->second > best_count) {
+                best_count = it->second;
+                best_effect = it->first;
+            }
+        }
+
+        std::cout << "- Свитки: самый частый эффект = " << best_effect << std::endl;
+    }
+    else {
+        std::cout << "- Свитки: нет в наличии" << std::endl;
+    }
+
+    std::cout << std::endl;
 }
 
 int main() {
-  setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "Russian");
 
-  ifstream fin("shops.txt");
-  if (!fin.is_open()) {
-    cout << "Не удалось открыть файл shops.txt" << endl;
-    return 1;
-  }
-
-  vector<Shop> shops;
-
-  while (true) {
-    string word;
-    if (!(fin >> word)) {
-      break;
+    std::ifstream fin("shops.txt");
+    if (!fin.is_open()) {
+        std::cout << "Не удалось открыть файл shops.txt" << std::endl;
+        return 1;
     }
 
-    if (word != "Shop:") {
-      break;
+    std::vector<shop_t> shops;
+
+    while (true) {
+        std::string word;
+        if (!(fin >> word)) {
+            break;
+        }
+
+        if (word != "Shop:") {
+            break;
+        }
+
+        std::string shop_name;
+        std::getline(fin, shop_name);
+        if (!shop_name.empty() && shop_name[0] == ' ') shop_name.erase(0, 1);
+
+        shop_t shop;
+        shop.name = shop_name;
+
+        std::string items_word;
+        int items_count;
+        fin >> items_word >> items_count;
+
+        for (int i = 0; i < items_count; i++) {
+            std::string type;
+            std::string item_name;
+            double price;
+            double weight;
+
+            fin >> type >> item_name >> price >> weight;
+
+            if (type == "Weapon") {
+                int damage;
+                fin >> damage;
+                shop.items.push_back(new weapon(item_name, price, weight, damage));
+            }
+            else if (type == "Armor") {
+                int defense;
+                fin >> defense;
+                shop.items.push_back(new armor(item_name, price, weight, defense));
+            }
+            else if (type == "Potion") {
+                double duration;
+                fin >> duration;
+                shop.items.push_back(new potion(item_name, price, weight, duration));
+            }
+            else if (type == "Scroll") {
+                std::string effect;
+                fin >> effect;
+                shop.items.push_back(new scroll(item_name, price, weight, effect));
+            }
+            else {
+                std::cout << "Неизвестный тип предмета: " << type << std::endl;
+            }
+        }
+
+        shops.push_back(shop);
     }
 
-    string shopName;
-    getline(fin, shopName);
-    if (!shopName.empty() && shopName[0] == ' ') shopName.erase(0, 1);
-
-    Shop shop;
-    shop.name = shopName;
-
-    string itemsWord;
-    int itemsCount;
-    fin >> itemsWord >> itemsCount;
-
-    for (int i = 0; i < itemsCount; i++) {
-      string type;
-      string itemName;
-      double price;
-      double weight;
-
-      fin >> type >> itemName >> price >> weight;
-
-      if (type == "Weapon") {
-        int damage;
-        fin >> damage;
-        shop.items.push_back(new Weapon(itemName, price, weight, damage));
-      } else if (type == "Armor") {
-        int defense;
-        fin >> defense;
-        shop.items.push_back(new Armor(itemName, price, weight, defense));
-      } else if (type == "Potion") {
-        double duration;
-        fin >> duration;
-        shop.items.push_back(new Potion(itemName, price, weight, duration));
-      } else if (type == "Scroll") {
-        string effect;
-        fin >> effect;
-        shop.items.push_back(new Scroll(itemName, price, weight, effect));
-      } else {
-        cout << "Неизвестный тип предмета: " << type << endl;
-      }
+    for (int i = 0; i < (int)shops.size(); i++) {
+        print_shop_stats(shops[i]);
     }
 
-    shops.push_back(shop);
-  }
-
-  for (int i = 0; i < (int)shops.size(); i++) {
-    printShopStats(shops[i]);
-  }
-
-  for (int i = 0; i < (int)shops.size(); i++) {
-    for (int j = 0; j < (int)shops[i].items.size(); j++) {
-      delete shops[i].items[j];
+    for (int i = 0; i < (int)shops.size(); i++) {
+        for (int j = 0; j < (int)shops[i].items.size(); j++) {
+            delete shops[i].items[j];
+        }
     }
-  }
 
-  return 0;
+    return 0;
 }
