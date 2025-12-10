@@ -9,24 +9,26 @@
 #include <variant>
 #include <vector>
 
-using namespace std;
-
 class MagicItem {
  public:
-  string name;
+  std::string name;
   int price;
   double weight;
 
-  MagicItem(string n, int p, double w) : name(n), price(p), weight(w) {}
+  MagicItem(std::string n, int p, double w) : name(n), price(p), weight(w) {}
   virtual ~MagicItem() = default;
-  virtual std::variant<int, double, string> getSpecParam() const = 0;
+
+  virtual std::variant<int, double, std::string> getSpecParam() const = 0;
 };
 
 class Weapon : public MagicItem {
  public:
   int damage;
-  Weapon(string n, int p, double w, int d) : MagicItem(n, p, w), damage(d) {}
-  std::variant<int, double, string> getSpecParam() const override {
+
+  Weapon(std::string n, int p, double w, int d)
+      : MagicItem(n, p, w), damage(d) {}
+
+  std::variant<int, double, std::string> getSpecParam() const override {
     return damage;
   }
 };
@@ -34,8 +36,11 @@ class Weapon : public MagicItem {
 class Armor : public MagicItem {
  public:
   int defense;
-  Armor(string n, int p, double w, int d) : MagicItem(n, p, w), defense(d) {}
-  std::variant<int, double, string> getSpecParam() const override {
+
+  Armor(std::string n, int p, double w, int d)
+      : MagicItem(n, p, w), defense(d) {}
+
+  std::variant<int, double, std::string> getSpecParam() const override {
     return defense;
   }
 };
@@ -43,47 +48,52 @@ class Armor : public MagicItem {
 class Potion : public MagicItem {
  public:
   double duration;
-  Potion(string n, int p, double w, double d)
+
+  Potion(std::string n, int p, double w, double d)
       : MagicItem(n, p, w), duration(d) {}
-  std::variant<int, double, string> getSpecParam() const override {
+
+  std::variant<int, double, std::string> getSpecParam() const override {
     return duration;
   }
 };
 
 class Scroll : public MagicItem {
  public:
-  string effect;
-  Scroll(string n, int p, double w, string e) : MagicItem(n, p, w), effect(e) {}
-  std::variant<int, double, string> getSpecParam() const override {
+  std::string effect;
+
+  Scroll(std::string n, int p, double w, std::string e)
+      : MagicItem(n, p, w), effect(e) {}
+
+  std::variant<int, double, std::string> getSpecParam() const override {
     return effect;
   }
 };
 
 struct Shop {
-  string name;
-  vector<shared_ptr<MagicItem>> items;
+  std::string name;
+  std::vector<std::shared_ptr<MagicItem>> items;
 };
 
-vector<Shop> readDataFromFile(const string& filename) {
-  ifstream file(filename);
-  vector<Shop> shops;
-  string line;
+std::vector<Shop> readDataFromFile(const std::string& filename) {
+  std::ifstream file(filename);
+  std::vector<Shop> shops;
+  std::string line;
 
-  while (getline(file, line)) {
+  while (std::getline(file, line)) {
     if (line.rfind("Shop: ", 0) == 0) {
-      string shopName = line.substr(line.find(":") + 2);
+      std::string shopName = line.substr(line.find(":") + 2);
 
-      getline(file, line);
-      int numItems = stoi(line.substr(line.find(":") + 2));
+      std::getline(file, line);
+      int numItems = std::stoi(line.substr(line.find(":") + 2));
 
       Shop shop;
       shop.name = shopName;
 
       for (int i = 0; i < numItems; i++) {
-        getline(file, line);
-        stringstream ss(line);
+        std::getline(file, line);
+        std::stringstream ss(line);
 
-        string type, name;
+        std::string type, name;
         int price;
         double weight;
 
@@ -93,22 +103,22 @@ vector<Shop> readDataFromFile(const string& filename) {
           int damage;
           ss >> damage;
           shop.items.push_back(
-              make_shared<Weapon>(name, price, weight, damage));
+              std::make_shared<Weapon>(name, price, weight, damage));
         } else if (type == "Armor") {
           int defense;
           ss >> defense;
           shop.items.push_back(
-              make_shared<Armor>(name, price, weight, defense));
+              std::make_shared<Armor>(name, price, weight, defense));
         } else if (type == "Potion") {
           double duration;
           ss >> duration;
           shop.items.push_back(
-              make_shared<Potion>(name, price, weight, duration));
+              std::make_shared<Potion>(name, price, weight, duration));
         } else if (type == "Scroll") {
-          string effect;
+          std::string effect;
           ss >> effect;
           shop.items.push_back(
-              make_shared<Scroll>(name, price, weight, effect));
+              std::make_shared<Scroll>(name, price, weight, effect));
         }
       }
       shops.push_back(shop);
@@ -118,18 +128,20 @@ vector<Shop> readDataFromFile(const string& filename) {
 }
 
 void printShopStats(const Shop& shop) {
-  cout << "\n=== Shop: " << shop.name << " ===\n";
-  cout << "Items: " << shop.items.size() << "\n";
+  std::cout << "\n=== Shop: " << shop.name << " ===\n";
+  std::cout << "Items: " << shop.items.size() << "\n";
 
-  double totalPrice = 0, totalWeight = 0;
+  double totalPrice = 0;
+  double totalWeight = 0;
 
-  map<string, vector<std::variant<int, double, string>>> stats;
+  std::map<std::string, std::vector<std::variant<int, double, std::string>>>
+      stats;
 
-  for (auto& item : shop.items) {
+  for (const auto& item : shop.items) {
     totalPrice += item->price;
     totalWeight += item->weight;
 
-    string type;
+    std::string type;
     if (dynamic_cast<Weapon*>(item.get()))
       type = "Weapon";
     else if (dynamic_cast<Armor*>(item.get()))
@@ -142,60 +154,60 @@ void printShopStats(const Shop& shop) {
     stats[type].push_back(item->getSpecParam());
   }
 
-  cout << "Average price: " << totalPrice / shop.items.size();
-  cout << " Average weight: " << totalWeight / shop.items.size();
+  std::cout << "Average price: " << totalPrice / shop.items.size();
+  std::cout << " Average weight: " << totalWeight / shop.items.size() << "\n";
 
-  cout << "\nItem Stats:\n";
+  std::cout << "Item Stats:\n";
 
-  if (stats["Weapon"].empty())
-    cout << "- Weapon: out of stock\n";
-  else {
+  if (stats["Weapon"].empty()) {
+    std::cout << "- Weapon: out of stock\n";
+  } else {
     int sum = 0;
-    for (auto& v : stats["Weapon"]) sum += get<int>(v);
-    cout << "- Weapon: average damage = " << sum / stats["Weapon"].size()
-         << "\n";
+    for (const auto& v : stats["Weapon"]) sum += std::get<int>(v);
+    std::cout << "- Weapon: average damage = " << sum / stats["Weapon"].size()
+              << "\n";
   }
 
-  if (stats["Armor"].empty())
-    cout << "- Armor: out of stock\n";
-  else {
+  if (stats["Armor"].empty()) {
+    std::cout << "- Armor: out of stock\n";
+  } else {
     int sum = 0;
-    for (auto& v : stats["Armor"]) sum += get<int>(v);
-    cout << "- Armor: average defense = " << sum / stats["Armor"].size()
-         << "\n";
+    for (const auto& v : stats["Armor"]) sum += std::get<int>(v);
+    std::cout << "- Armor: average defense = " << sum / stats["Armor"].size()
+              << "\n";
   }
 
-  if (stats["Potion"].empty())
-    cout << "- Potion: out of stock\n";
-  else {
+  if (stats["Potion"].empty()) {
+    std::cout << "- Potion: out of stock\n";
+  } else {
     double sum = 0;
-    for (auto& v : stats["Potion"]) sum += get<double>(v);
-    cout << "- Potion: average duration = " << sum / stats["Potion"].size()
-         << "\n";
+    for (const auto& v : stats["Potion"]) sum += std::get<double>(v);
+    std::cout << "- Potion: average duration = " << sum / stats["Potion"].size()
+              << "\n";
   }
 
-  if (stats["Scroll"].empty())
-    cout << "- Scroll: out of stock\n";
-  else {
-    map<string, int> freq;
-    for (auto& v : stats["Scroll"]) freq[get<string>(v)]++;
+  if (stats["Scroll"].empty()) {
+    std::cout << "- Scroll: out of stock\n";
+  } else {
+    std::map<std::string, int> freq;
+    for (const auto& v : stats["Scroll"]) freq[std::get<std::string>(v)]++;
 
-    string most;
+    std::string most;
     int best = 0;
-    for (auto& p : freq) {
+    for (const auto& p : freq) {
       if (p.second > best) {
         most = p.first;
         best = p.second;
       }
     }
-    cout << "- Scrolls: most common effect = " << most << "\n";
+    std::cout << "- Scrolls: most common effect = " << most << "\n";
   }
 }
 
 int main() {
-  vector<Shop> shops = readDataFromFile("shops.txt");
+  std::vector<Shop> shops = readDataFromFile("shops.txt");
 
-  for (auto& shop : shops) {
+  for (const auto& shop : shops) {
     printShopStats(shop);
   }
 
