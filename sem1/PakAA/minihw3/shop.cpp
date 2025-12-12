@@ -4,12 +4,10 @@
 #include <iomanip>
 #include <iostream>
 #include <map>
-#include <numeric>
-#include <variant>
+#include <vector>
 
 #include "items.h"
 
-// Устанавливаем кодировку консоли для корректного вывода русского текста
 #ifdef _WIN32
 #include <windows.h>
 void setUtf8Console() {
@@ -22,7 +20,7 @@ void setUtf8Console() {
 }
 #endif
 
-Shop::Shop(const std::string& shop_name) : name(shop_name) {
+Shop::Shop(const std::string& shop_name) : name_(shop_name) {
     static bool console_initialized = false;
     if (!console_initialized) {
         setUtf8Console();
@@ -31,25 +29,25 @@ Shop::Shop(const std::string& shop_name) : name(shop_name) {
 }
 
 void Shop::addItem(std::unique_ptr<MagicItem> item) {
-    items.push_back(std::move(item));
+    items_.push_back(std::move(item));
 }
 
 double Shop::calculateAveragePrice() const {
-    if (items.empty()) return 0.0;
-    double sum = std::accumulate(items.begin(), items.end(), 0.0,
-        [](double total, const auto& item) {
-            return total + item->price();
-        });
-    return sum / items.size();
+    if (items_.empty()) return 0.0;
+    double sum = 0.0;
+    for (const auto& item : items_) {
+        sum += item->getPrice();
+    }
+    return sum / items_.size();
 }
 
 double Shop::calculateAverageWeight() const {
-    if (items.empty()) return 0.0;
-    double sum = std::accumulate(items.begin(), items.end(), 0.0,
-        [](double total, const auto& item) {
-            return total + item->weight();
-        });
-    return sum / items.size();
+    if (items_.empty()) return 0.0;
+    double sum = 0.0;
+    for (const auto& item : items_) {
+        sum += item->getWeight();
+    }
+    return sum / items_.size();
 }
 
 void Shop::printItemStats() const {
@@ -58,17 +56,17 @@ void Shop::printItemStats() const {
     std::vector<const Potion*> potions;
     std::vector<const Scroll*> scrolls;
 
-    for (const auto& item : items) {
-        if (auto* w = dynamic_cast<Weapon*>(item.get())) {
+    for (const auto& item : items_) {
+        if (auto* w = dynamic_cast<const Weapon*>(item.get())) {
             weapons.push_back(w);
         }
-        else if (auto* a = dynamic_cast<Armor*>(item.get())) {
+        else if (auto* a = dynamic_cast<const Armor*>(item.get())) {
             armors.push_back(a);
         }
-        else if (auto* p = dynamic_cast<Potion*>(item.get())) {
+        else if (auto* p = dynamic_cast<const Potion*>(item.get())) {
             potions.push_back(p);
         }
-        else if (auto* s = dynamic_cast<Scroll*>(item.get())) {
+        else if (auto* s = dynamic_cast<const Scroll*>(item.get())) {
             scrolls.push_back(s);
         }
     }
@@ -76,34 +74,39 @@ void Shop::printItemStats() const {
     std::cout << "\nСтатистика по предметам:\n";
 
     if (!weapons.empty()) {
-        double avg = std::accumulate(weapons.begin(), weapons.end(), 0.0,
-            [](double total, const Weapon* w) {
-                return total + std::get<int>(w->getSpecParam());
-            }) / weapons.size();
-        std::cout << "- Оружие: средний урон = " << static_cast<int>(avg) << "\n";
+        double total_damage = 0.0;
+        for (const auto* w : weapons) {
+            total_damage += std::stoi(w->getSpecialParam());
+        }
+        double avg_damage = total_damage / weapons.size();
+        std::cout << "- Оружие: средний урон = " << static_cast<int>(avg_damage)
+            << "\n";
     }
     else {
         std::cout << "- Оружие: нет в наличии\n";
     }
 
     if (!armors.empty()) {
-        double avg = std::accumulate(armors.begin(), armors.end(), 0.0,
-            [](double total, const Armor* a) {
-                return total + std::get<int>(a->getSpecParam());
-            }) / armors.size();
-        std::cout << "- Броня: средняя защита = " << static_cast<int>(avg) << "\n";
+        double total_defense = 0.0;
+        for (const auto* a : armors) {
+            total_defense += std::stoi(a->getSpecialParam());
+        }
+        double avg_defense = total_defense / armors.size();
+        std::cout << "- Броня: средняя защита = " << static_cast<int>(avg_defense)
+            << "\n";
     }
     else {
         std::cout << "- Броня: нет в наличии\n";
     }
 
     if (!potions.empty()) {
-        double avg = std::accumulate(potions.begin(), potions.end(), 0.0,
-            [](double total, const Potion* p) {
-                return total + std::get<double>(p->getSpecParam());
-            }) / potions.size();
-        std::cout << "- Зелья: средняя длительность = "
-            << std::fixed << std::setprecision(1) << avg << "\n";
+        double total_duration = 0.0;
+        for (const auto* p : potions) {
+            total_duration += std::stod(p->getSpecialParam());
+        }
+        double avg_duration = total_duration / potions.size();
+        std::cout << "- Зелья: средняя длительность = " << std::fixed
+            << std::setprecision(1) << avg_duration << "\n";
     }
     else {
         std::cout << "- Зелья: нет в наличии\n";
@@ -112,11 +115,18 @@ void Shop::printItemStats() const {
     if (!scrolls.empty()) {
         std::map<std::string, int> effect_count;
         for (const auto* s : scrolls) {
-            effect_count[std::get<std::string>(s->getSpecParam())]++;
+            effect_count[s->getSpecialParam()]++;
         }
-        auto most_frequent = std::max_element(effect_count.begin(), effect_count.end(),
-            [](const auto& p1, const auto& p2) { return p1.second < p2.second; });
-        std::cout << "- Свитки: самый частый эффект " << most_frequent->first << "\n";
+
+        std::string most_common_effect;
+        int max_count = 0;
+        for (const auto& pair : effect_count) {
+            if (pair.second > max_count) {
+                max_count = pair.second;
+                most_common_effect = pair.first;
+            }
+        }
+        std::cout << "- Свитки: самый частый эффект " << most_common_effect << "\n";
     }
     else {
         std::cout << "- Свитки: нет в наличии\n";
@@ -124,8 +134,8 @@ void Shop::printItemStats() const {
 }
 
 void Shop::printReport() const {
-    std::cout << "=== Магазин: " << name << " ===\n";
-    std::cout << "Всего предметов: " << items.size() << "\n";
+    std::cout << "=== Магазин: " << name_ << " ===\n";
+    std::cout << "Всего предметов: " << items_.size() << "\n";
     std::cout << "Средняя цена: " << std::fixed << std::setprecision(2)
         << calculateAveragePrice() << " золота\n";
     std::cout << "Средний вес: " << std::fixed << std::setprecision(2)

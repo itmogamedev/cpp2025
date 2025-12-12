@@ -13,8 +13,8 @@ public:
 	void printReport() const;
 
 private:
-	std::string name;
-	std::vector<std::unique_ptr<MagicItem>> items;
+	std::string name_;
+	std::vector<std::unique_ptr<MagicItem>> items_;
 
 	double calculateAveragePrice() const;
 	double calculateAverageWeight() const;

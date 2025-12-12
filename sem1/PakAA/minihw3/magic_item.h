@@ -2,23 +2,24 @@
 #define MAGIC_ITEM_H
 
 #include <string>
-#include <variant>
 
 class MagicItem {
 public:
 	MagicItem(const std::string& item_name, int item_price, double item_weight);
 	virtual ~MagicItem() = default;
 
-	virtual std::variant<int, double, std::string> getSpecParam() const = 0;
+	// Виртуальный метод для получения специального параметра
+	virtual std::string getSpecialParam() const = 0;
 
-	std::string name() const { return name; }
-	int price() const { return price; }
-	double weight() const { return weight; }
+	// Геттеры с разными именами, чтобы избежать конфликта
+	std::string getName() const;
+	int getPrice() const;
+	double getWeight() const;
 
-private:
-	std::string name;
-	int price;
-	double weight;
+protected:
+	std::string name_;
+	int price_;
+	double weight_;
 };
 
 #endif  // MAGIC_ITEM_H
