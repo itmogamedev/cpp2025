@@ -40,3 +40,4 @@
 # debug information files
 *.dwo
 /sem2/KaralupaXV/homework_1/build
+*.back
