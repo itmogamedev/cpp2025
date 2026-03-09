@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LEXA\\source\\repos\\TestFVector\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{374A2B53-6C40-4562-B035-6746553C1BFB}|TestFVector\\TestFVector.vcxproj|C:\\Users\\LEXA\\source\\repos\\TestFVector\\TestFVector\\TestFVector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{374A2B53-6C40-4562-B035-6746553C1BFB}|TestFVector\\TestFVector.vcxproj|solutionrelative:TestFVector\\TestFVector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestFVector.cpp",
+              "DocumentMoniker": "C:\\Users\\LEXA\\source\\repos\\TestFVector\\TestFVector\\TestFVector.cpp",
+              "RelativeDocumentMoniker": "TestFVector\\TestFVector.cpp",
+              "ToolTip": "C:\\Users\\LEXA\\source\\repos\\TestFVector\\TestFVector\\TestFVector.cpp",
+              "RelativeToolTip": "TestFVector\\TestFVector.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-09T07:35:45.465Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
