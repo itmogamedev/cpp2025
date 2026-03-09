@@ -1,0 +1,27 @@
+Starry_Sky
+6
+Armor Invisibility_Cloak 200 1.2 40
+Scroll Scroll_Knowledge 500 3.6 Fount_of_Knowledge
+Weapon Bunny 500000 6.9 11037
+Armor Frost_Gloves 100 1.7 35
+Scroll Scroll_Truth 1700 0.1 Ultimate_Truth
+Scroll Scroll_of_Flirt 3107 0.9 Love-love
+
+Inking_Soul
+8
+Weapon Broomie 9999999 999.9 80
+Potion Yellow_Joy 2015 0.1 720.0
+Potion Green_Disgust 2015 0.1 401.1
+Armor Reminder_Scarf 999999999 2.5 10
+Potion Red_Anger 2015 0.9 656.0
+Potion Cyan_Sadness 2015 0.3 811.0
+Potion Orange_Amaze 2015 0.1 700.0
+Potion Blue_Fear 2015 0.5 656.0
+
+Nothing_White
+5
+Armor Hero_Scarf 1000000 2.0 60
+Potion Bento 100 1.0 20.0
+Scroll The_Great_Hero 10000000 1.0 Immobilization
+Scroll Scroll_Magic 100 1.0 Forest_of_Bones
+Scroll Scroll_Coolness 200000 1.0 Immobilization
