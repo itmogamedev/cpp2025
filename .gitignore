@@ -40,12 +40,3 @@
 # debug information files
 *.dwo
 
-.vs/
-*.dll
-*.obj
-*.pdb
-*.lib
-*.exe
-x64/
-Debug/
-Release/
