@@ -1,8 +1,0 @@
-build/
-*.o
-*.out
-*.dylib
-*.dll
-*.obj
-*.exe
-.DS_Store
