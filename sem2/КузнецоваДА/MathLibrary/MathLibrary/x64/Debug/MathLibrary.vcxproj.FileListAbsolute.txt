@@ -1,0 +1,2 @@
+C:\Users\kdaff\Desktop\c++\minihw1\MathLibrary\x64\Debug\MathLibrary.dll.lastcodeanalysissucceeded
+C:\Users\kdaff\Desktop\c++\minihw1\MathLibrary\MathLibrary\x64\Debug\NativeCodeAnalysis.read.1.tlog
