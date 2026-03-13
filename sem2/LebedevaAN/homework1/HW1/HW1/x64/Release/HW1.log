@@ -1,0 +1,51 @@
+﻿  pch.cpp
+  dllmain.cpp
+  task_1.cpp
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(4,7): warning C4273: 'Vec3::Vec3': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(12,5):
+      see previous definition of 'Vec3::Vec3'
+  
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(10,12): warning C4273: 'Vec3::operator +': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(13,10):
+      see previous definition of 'Vec3::operator +'
+  
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(14,12): warning C4273: 'Vec3::operator -': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(14,10):
+      see previous definition of 'Vec3::operator -'
+  
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(18,12): warning C4273: 'Vec3::operator *': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(15,10):
+      see previous definition of 'Vec3::operator *'
+  
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(21,14): warning C4273: 'Vec3::dotProduct': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(16,12):
+      see previous definition of 'Vec3::dotProduct'
+  
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(25,12): warning C4273: 'Vec3::crossProduct': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(17,10):
+      see previous definition of 'Vec3::crossProduct'
+  
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(31,14): warning C4273: 'Vec3::len': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(18,12):
+      see previous definition of 'Vec3::len'
+  
+C:\Users\User\source\repos\HW1\HW1\task_1.cpp(35,12): warning C4273: 'Vec3::getUnit': inconsistent dll linkage
+  (compiling source file '/task_1.cpp')
+      C:\Users\User\source\repos\HW1\HW1\task_1.h(19,10):
+      see previous definition of 'Vec3::getUnit'
+  
+     Creating library C:\Users\User\source\repos\HW1\x64\Release\HW1.lib and object C:\Users\User\source\repos\HW1\x64\Release\HW1.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 9 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  HW1.vcxproj -> C:\Users\User\source\repos\HW1\x64\Release\HW1.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
