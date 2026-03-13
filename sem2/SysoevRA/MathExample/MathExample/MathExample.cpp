@@ -2,7 +2,7 @@
 
 #include "MathLibrary.h"
 
-int main() {
+int math() {
   Vec3 a(1, 2, 3);
   Vec3 b(4, 5, 6);
 
@@ -31,5 +31,10 @@ int main() {
   std::cout << "normalize(a) = " << normA << std::endl;
   std::cout << "length(normalize(a)) = " << vectorLength(normA) << std::endl;
 
+  return 0;
+}
+
+int main() {
+  math();
   return 0;
 }
