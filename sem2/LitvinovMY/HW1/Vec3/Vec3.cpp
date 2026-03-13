@@ -47,15 +47,15 @@ double Vec3::length() const {
 
 Vec3 Vec3::normalized() const {
   double len = length();
-  if (len == 0) {
-    return *this * len;
+  if (len) {
+    return *this / len;
   }
   else {
     return Vec3();
   }
 }
 
-extern "C" DECLSPEC std::ostream& operator<<(std::ostream& os, const Vec3& v) {
+std::ostream& operator<<(std::ostream& os, const Vec3& v) {
   os << '(' << v.x << ' ' << v.y << ' ' << v.z << ')';
   return os;
 }
