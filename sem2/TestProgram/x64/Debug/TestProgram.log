@@ -1,0 +1,30 @@
+﻿  main.cpp
+C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(32,22): warning C4190: для "AddVectors" задано С-связывание, но возвращаемый "MathLibrary::Vec3" несовместим с языком С
+  (компиляция исходного файла "main.cpp")
+      C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(13,24):
+       см. объявление "MathLibrary::Vec3"
+  
+C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(33,22): warning C4190: для "SubtractVectors" задано С-связывание, но возвращаемый "MathLibrary::Vec3" несовместим с языком С
+  (компиляция исходного файла "main.cpp")
+      C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(13,24):
+       см. объявление "MathLibrary::Vec3"
+  
+C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(34,22): warning C4190: для "MultiplyByScalar" задано С-связывание, но возвращаемый "MathLibrary::Vec3" несовместим с языком С
+  (компиляция исходного файла "main.cpp")
+      C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(13,24):
+       см. объявление "MathLibrary::Vec3"
+  
+C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(36,22): warning C4190: для "CrossProduct" задано С-связывание, но возвращаемый "MathLibrary::Vec3" несовместим с языком С
+  (компиляция исходного файла "main.cpp")
+      C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(13,24):
+       см. объявление "MathLibrary::Vec3"
+  
+C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(38,22): warning C4190: для "NormalizeVector" задано С-связывание, но возвращаемый "MathLibrary::Vec3" несовместим с языком С
+  (компиляция исходного файла "main.cpp")
+      C:\Users\ПК\source\repos\sem2\TestProgram\MathLibrary.h(13,24):
+       см. объявление "MathLibrary::Vec3"
+  
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "__declspec(dllimport) public: __cdecl MathLibrary::Vec3::Vec3(double,double,double)" (__imp_??0Vec3@MathLibrary@@QEAA@NNN@Z) в функции main.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "__declspec(dllimport) public: struct MathLibrary::Vec3 __cdecl MathLibrary::Vec3::operator+(struct MathLibrary::Vec3 const &)const " (__imp_??HVec3@MathLibrary@@QEBA?AU01@AEBU01@@Z) в функции main.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ "class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl MathLibrary::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > &,struct MathLibrary::Vec3 const &)" (??6MathLibrary@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV12@AEBUVec3@0@@Z) в функции main.
+C:\Users\ПК\source\repos\sem2\MathLibrary\x64\Debug\TestProgram.exe : fatal error LNK1120: неразрешенных внешних элементов: 3
