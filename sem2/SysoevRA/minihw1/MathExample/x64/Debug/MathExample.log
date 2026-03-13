@@ -1,3 +1,0 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2189,5): warning MSB9008: указанный проект ..\..\MathLibrary\MathLibrary\MathLibrary.vcxproj не существует.
-  MathExample.cpp
-  MathExample.vcxproj -> C:\Users\Goodmornee\Downloads\CPP\cpp2025\sem2\SysoevRA\minihw1\x64\Debug\MathExample.exe
