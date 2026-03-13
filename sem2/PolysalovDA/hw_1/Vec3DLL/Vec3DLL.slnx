@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Vec3DLL.vcxproj" Id="9a6772c9-89da-4e32-8b0b-0319fe2718f1" />
+</Solution>
