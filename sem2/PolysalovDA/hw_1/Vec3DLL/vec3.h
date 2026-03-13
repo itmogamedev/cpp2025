@@ -5,7 +5,7 @@
 #define VEC3_API __declspec(dllimport)
 #endif
 
-#include <cmath>  // std::sqrt
+#include <cmath>
 #include <iostream>
 
 struct VEC3_API Vec3 {
@@ -18,13 +18,11 @@ struct VEC3_API Vec3 {
 
   float length() const;
   void normalize();
-  Vec3 normalized() const;
 
-  float dot(const Vec3& other) const;
-  Vec3 cross(const Vec3& other) const;
+  float scalarMultiply(const Vec3& other) const;
+  Vec3 vectorMultiply(const Vec3& other) const;
 };
 
-// свободные функции — без изменений, здесь порядок правильный
 VEC3_API Vec3 operator+(const Vec3& a, const Vec3& b);
 VEC3_API Vec3 operator-(const Vec3& a, const Vec3& b);
 VEC3_API Vec3 operator*(const Vec3& v, float scalar);
