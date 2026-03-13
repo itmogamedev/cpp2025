@@ -2,7 +2,7 @@
 
 #include "Vec3Lib.h"
 
-int main() {
+void test() {
   Vec3 vector1(1, 2, 3);
   Vec3 vector2(2, 5, 4);
   Vec3 vector3(vector2);
@@ -22,6 +22,9 @@ int main() {
   std::cout << "Сложение и вычитание векторов: " << (vector1 + vector2) << " "
             << (vector2 - vector3) << std::endl;
   std::cout << "Умножение вектора на скаляр: " << (vector1 * 2.4f) << std::endl;
+}
 
+int main() {
+  test();
   return 0;
 }
