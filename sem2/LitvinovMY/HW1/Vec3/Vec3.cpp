@@ -1,6 +1,9 @@
 #include "pch.h" 
+
 #include "Vec3.h"
+
 #include <cmath>
+
 
 Vec3::Vec3(double x, double y, double z) : x(x), y(y), z(z) {}
 
