@@ -1,0 +1,6 @@
+﻿  Vectors.cpp
+C:\Users\Елизавета\Desktop\MathLibrary\MathLibrary\Vectors.h(13,23): warning C4091: __declspec(dllexport): пропускается слева от "vectors", когда ни одна переменная не объявлена
+  (компиляция исходного файла "/Vectors.cpp")
+  
+     Создается библиотека C:\Users\Елизавета\Desktop\MathLibrary\x64\Debug\MathLibrary.lib и объект C:\Users\Елизавета\Desktop\MathLibrary\x64\Debug\MathLibrary.exp
+  MathLibrary.vcxproj -> C:\Users\Елизавета\Desktop\MathLibrary\x64\Debug\MathLibrary.dll
