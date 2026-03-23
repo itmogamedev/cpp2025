@@ -8,17 +8,18 @@
 #endif
 
 struct MATHLIBRARY_API Vec3 {
-    double x_coord;
-    double y_coord;
-    double z_coord;
-    Vec3();
-    Vec3(double x, double y, double z);
-    Vec3(const Vec3& other); 
-    Vec3 operator+(const Vec3& other) const;
-    Vec3 operator-(const Vec3& other) const;
-    Vec3 operator*(double scalar) const;
-    friend MATHLIBRARY_API std::ostream& operator<<(std::ostream& os, const Vec3& vec);
-    friend MATHLIBRARY_API Vec3 operator*(double scalar, const Vec3& vec);
+  double x_coord;
+  double y_coord;
+  double z_coord;
+  Vec3();
+  Vec3(double x, double y, double z);
+  Vec3(const Vec3& other);
+  Vec3 operator+(const Vec3& other) const;
+  Vec3 operator-(const Vec3& other) const;
+  Vec3 operator*(double scalar) const;
+  friend MATHLIBRARY_API std::ostream& operator<<(std::ostream& os,
+                                                  const Vec3& vec);
+  friend MATHLIBRARY_API Vec3 operator*(double scalar, const Vec3& vec);
 };
 
 MATHLIBRARY_API Vec3 addVectors(const Vec3& a, const Vec3& b);
