@@ -17,7 +17,6 @@ struct VEC3LIB_API Vec3 {
   Vec3(float x, float y, float z);
   Vec3(const Vec3& other);
   Vec3& operator=(const Vec3& other);
-  friend std::ostream& operator<<(std::ostream& os, const Vec3& v);
 
   float length() const;
   void normalize();
@@ -25,6 +24,11 @@ struct VEC3LIB_API Vec3 {
   float dot(Vec3& other) const;
   Vec3 cross(Vec3& other) const;
 };
+
+inline std::ostream& operator<<(std::ostream& os, const Vec3& v) {
+  os << "(" << v.x << ", " << v.y << ", " << v.z << ")";
+  return os;
+}
 
 VEC3LIB_API Vec3 operator+(const Vec3& a, const Vec3& b);
 VEC3LIB_API Vec3 operator-(const Vec3& a, const Vec3& b);

@@ -1,3 +1,5 @@
+#define VEC3LIBRARY_EXPORTS
+
 #include "pch.h"
 
 #include "Vec3Lib.h"
@@ -36,10 +38,6 @@ Vec3 operator*(const Vec3& a, float value) {
 }
 Vec3 operator*(float value, const Vec3& a) {
   return Vec3(a.x * value, a.y * value, a.z * value);
-}
-std::ostream& operator<<(std::ostream& os, const Vec3& a) {
-  os << "(" << a.x << ", " << a.y << ", " << a.z << ")";
-  return os;
 }
 float Vec3::length() const { return sqrt(x * x + y * y + z * z); }
 void Vec3::normalize() {
