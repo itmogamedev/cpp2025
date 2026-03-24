@@ -23,15 +23,15 @@ vector substract(vector& a, vector& b) { return a - b; }
 vector scalar(vector& a, double scalar) { return a * scalar; }
 
 double scalarMultiply(vector& a, vector& b) { 
-    return a.x * b.x + a.y * b.y + a.z * b.z; 
+  return a.x * b.x + a.y * b.y + a.z * b.z; 
 }
 
 vector vectorMultiply(vector& a, vector& b) { 
-    return vector(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x); 
+  return vector(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x); 
 }
 
 double length(vector& a) {
-    return std::sqrt(a.x * a.x + a.y * a.y + a.z * a.z); 
+  return std::sqrt(a.x * a.x + a.y * a.y + a.z * a.z); 
 }
 
 vector normalize(vector& a) { 
