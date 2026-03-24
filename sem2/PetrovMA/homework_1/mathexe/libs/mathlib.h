@@ -6,13 +6,13 @@
 namespace mathlib {
 
   struct Vec3 {
-      double x, y, z;
+    double x, y, z;
 
-      double length() const;
-      Vec3 normalize() const;
-      Vec3 operator+(const Vec3& other) const;
-      Vec3 operator-(const Vec3& other) const;
-      double operator*(const Vec3& other) const;
+    double length() const;
+    Vec3 normalize() const;
+    Vec3 operator+(const Vec3& other) const;
+    Vec3 operator-(const Vec3& other) const;
+    double operator*(const Vec3& other) const;
   };
 
   Vec3 vecSum(const Vec3& a, const Vec3& b);
