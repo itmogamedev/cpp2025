@@ -2,7 +2,7 @@
 #include <MathLibrary.h>
 
 int main() { 
-	double x1, x2, y1, y2, z1, z2;
+  double x1, x2, y1, y2, z1, z2;
 
   std::cout << "The first vector x, y, z: " << std::endl;
   std::cin >> x1 >> y1 >> z1;
