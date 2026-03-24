@@ -6,9 +6,9 @@
 #define EPSILON (0.000001)
 
 struct Vec3 {
-    float x;
-    float y;
-    float z;
+  float x;
+  float y;
+  float z;
 };
 
 void add(Vec3 *a, const Vec3 *b);
