@@ -27,6 +27,6 @@ void demonstrateVec3Operations() {
 }
 
 int main() {
-    demonstrateVec3Operations();
-    return 0;
+  demonstrateVec3Operations();
+  return 0;
 }
