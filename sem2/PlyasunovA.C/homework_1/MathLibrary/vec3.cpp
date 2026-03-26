@@ -1,14 +1,19 @@
 #include "pch.h"
 #include "vec3.h"
+
 #include <cmath>
 
 namespace math {
 
     Vec3::Vec3() : x(0.0), y(0.0), z(0.0) {}
 
-    Vec3::Vec3(double x, double y, double z) : x(x), y(y), z(z) {}
+    Vec3::Vec3(double x_val, double y_val, double z_val)
+        : x(x_val), y(y_val), z(z_val) {
+    }
 
-    Vec3::Vec3(const Vec3& other) : x(other.x), y(other.y), z(other.z) {}
+    Vec3::Vec3(const Vec3& other)
+        : x(other.x), y(other.y), z(other.z) {
+    }
 
     Vec3& Vec3::operator=(const Vec3& other) {
         if (this != &other) {
@@ -36,11 +41,9 @@ namespace math {
     }
 
     Vec3 cross(const Vec3& a, const Vec3& b) {
-        return Vec3(
-            a.y * b.z - a.z * b.y,
+        return Vec3(a.y * b.z - a.z * b.y,
             a.z * b.x - a.x * b.z,
-            a.x * b.y - a.y * b.x
-        );
+            a.x * b.y - a.y * b.x);
     }
 
     double length(const Vec3& v) {

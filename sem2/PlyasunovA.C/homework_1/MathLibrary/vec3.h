@@ -1,5 +1,5 @@
-#ifndef MATHLIBRARY_VEC3_H
-#define MATHLIBRARY_VEC3_H
+#ifndef MATHLIBRARY_VEC3_H_
+#define MATHLIBRARY_VEC3_H_
 
 #include <iostream>
 
@@ -17,7 +17,7 @@ namespace math {
 		double z;
 
 		Vec3();
-		Vec3(double x, double y, double z);
+		explicit Vec3(double x_val, double y_val, double z_val);
 		Vec3(const Vec3& other);
 
 		Vec3& operator=(const Vec3& other);
