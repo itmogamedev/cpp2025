@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0415\u043B\u0438\u0437\u0430\u0432\u0435\u0442\u0430\\Desktop\\MathClient2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3AABB7B-C60F-451C-AB2C-B3A6B0BC0657}|MathClient2.vcxproj|C:\\Users\\\u0415\u043B\u0438\u0437\u0430\u0432\u0435\u0442\u0430\\Desktop\\MathClient2\\MathClient2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E3AABB7B-C60F-451C-AB2C-B3A6B0BC0657}|MathClient2.vcxproj|solutionrelative:MathClient2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MathClient2.cpp",
+              "DocumentMoniker": "C:\\Users\\\u0415\u043B\u0438\u0437\u0430\u0432\u0435\u0442\u0430\\Desktop\\MathClient2\\MathClient2.cpp",
+              "RelativeDocumentMoniker": "MathClient2.cpp",
+              "ToolTip": "C:\\Users\\\u0415\u043B\u0438\u0437\u0430\u0432\u0435\u0442\u0430\\Desktop\\MathClient2\\MathClient2.cpp",
+              "RelativeToolTip": "MathClient2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-27T20:00:40.292Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
