@@ -10,12 +10,12 @@
 #include "pch.h"
 
 extern "C" struct Vec3 {
-	double x, y, z;
+  double x, y, z;
 
 	DECLSPEC Vec3(double x = 0, double y = 0, double z = 0);
 	DECLSPEC Vec3 addVec(Vec3 a);
 	DECLSPEC Vec3 subVec(Vec3 a);
-	DECLSPEC Vec3 multiplicVec(double scal);
+  DECLSPEC Vec3 multiplicVec(double scal);
 	DECLSPEC double dotProd(Vec3 a);
 	DECLSPEC Vec3 crossProd(Vec3 a);
 	DECLSPEC double lenVec();
