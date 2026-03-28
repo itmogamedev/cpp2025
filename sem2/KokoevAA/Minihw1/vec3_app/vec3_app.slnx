@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="../vec3_library/vec3_library/vec3_library.vcxproj" Id="3d746c6f-aa69-410f-b442-c6c52498281a" />
+  <Project Path="vec3_app/vec3_app.vcxproj" Id="798f1160-f8bd-4906-b5a9-e10330de0333" />
+</Solution>
