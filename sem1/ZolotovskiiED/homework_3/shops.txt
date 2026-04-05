@@ -1,0 +1,26 @@
+Shop: Dragon_Chest
+Items: 6
+Weapon Flame_Sword 1500 3.5 85
+Armor Valkyrie_Shield 800 5.2 60
+Potion Life_Elixir 300 0.1 50.0
+Scroll Lightning_Scroll 450 0.3 Chain_Lightning
+Weapon Spark_Dagger 650 0.8 42
+Potion Mana_Potion 120 0.2 15.5
+
+Shop: Moon_Bazaar
+Items: 6
+Weapon Shadow_Bow 1200 2.1 70
+Scroll Lightning_Scroll 450 0.3 Chain_Lightning
+Scroll Lightning_Scroll_2 470 0.25 Chain_Lightning
+Armor Light_Cuirass 500 3.0 30
+Potion Moon_Sleep_Potion 200 0.15 35.0
+Weapon Dawn_Mace 900 4.0 78
+
+Shop: Market_Square
+Items: 6
+Weapon Thunder_Axe 1100 4.5 92
+Armor Full_Armor 1600 12.0 120
+Potion Strength_Potion 350 0.2 25.0
+Scroll Healing_Scroll 300 0.2 Healing
+Weapon Smith_Hammer 950 6.3 88
+Scroll Protection_Scroll 400 0.28 Protective_Coating
