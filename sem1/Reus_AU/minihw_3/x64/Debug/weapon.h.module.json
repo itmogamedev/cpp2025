@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\weapon.h.obj",
+            "outputs": [
+                "C:\\Users\\Артем\\source\\repos\\ArcadiaShops\\ArcadiaShops\\x64\\Debug\\vc143.pdb",
+                "x64\\Debug\\",
+                "C:\\Users\\Артем\\source\\repos\\ArcadiaShops\\ArcadiaShops\\x64\\Debug\\weapon.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "weapon.h",
+                    "source-path": "c:\\users\\артем\\source\\repos\\arcadiashops\\arcadiashops\\weapon.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

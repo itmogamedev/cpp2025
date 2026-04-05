@@ -1,0 +1,35 @@
+=== Dragon's_chest ===
+Items: 5
+Weapon Sword_of_Flame 1500 3.5 85
+Armor Shield_of_Valkiria 800 5.2 60
+Potion Elixir_of_Life 300 0.1 50.5
+Weapon Rifle_of_Ice 3000 7.1 150
+Armor Dragon_God's_Armor 5500 10.4 350
+
+=== Moon_Bazaar ===
+Items: 7
+Scroll Book_of_Knowledge 3100 0.5 Charisma
+Scroll Scroll_of_Lightning 1500 0.3 Сhain_Lightning
+Potion Elixir_of_Blame 1200 0.2 346.3
+Armor Stormguard_Plate 4800 9.2 320
+Potion Thunder_Elixir 500 0.2 55.4
+Weapon Flamewhip_Lash 1900 3.9 115
+Armor Titan_Shoulderpads 3500 7.5 240
+
+=== Dragon's_Arsenal ===
+Items: 6
+Weapon Dragonfang_Dagger 900 2.1 75
+Armor Wyrmscale_Cloak 1200 3.8 110
+Potion Mana_Crystal 450 0.2 40.3
+Scroll Scroll_of_Frost_Nova 1400 0.28 Frost_Nova
+Weapon Vortex_Blade 3200 4.8 160
+Potion Essence_of_Fury 750 0.3 90.3
+
+=== Alchemist's_Lair ===
+Items: 6
+Armor Enchanted_Ringmail 1800 4.5 130
+Scroll Scroll_of_Meteor_Shower 2200 0.4 Fireball
+Weapon Frostbite_Bow 2000 4.2 120
+Scroll Scroll_of_Fireball 1200 0.25 Fireball
+Weapon Shadow_Staff 2700 5.5 135
+Potion Elixir_of_Clarity 600 0.25 75.7
