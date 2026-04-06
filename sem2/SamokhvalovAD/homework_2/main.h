@@ -8,6 +8,8 @@
 // Window settings
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
+#define WINDOW_TITLE "Circle Clicker"
+#define FRAME_RATE_LIMIT 60
 
 // Circle settings
 #define CIRCLE_COUNT 5
@@ -15,6 +17,8 @@
 #define CIRCLE_RADIUS_MAX 60
 #define CIRCLE_SPEED_MIN 2
 #define CIRCLE_SPEED_MAX 5
+#define POINTS_INCREASE 10
+#define POINTS_DECREASE 5
 
 // Color
 #define MAX_COLOR_VALUE 255

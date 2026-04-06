@@ -20,4 +20,5 @@ class Circle {
 
         bool checksCollision(int mouseX, int mouseY);
         void move();
+        void updateCircle();
 };

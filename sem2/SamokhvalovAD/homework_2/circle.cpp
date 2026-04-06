@@ -3,6 +3,11 @@
 
 
 Circle::Circle() {
+    updateCircle();
+}
+
+
+void Circle::updateCircle() {
     radius = RANDOM_FLOAT(CIRCLE_RADIUS_MIN, CIRCLE_RADIUS_MAX);
     x = RANDOM_NUMBER(0, WINDOW_WIDTH - ((int)radius * 2));
     y = RANDOM_NUMBER(0, WINDOW_HEIGHT - ((int)radius * 2));
@@ -21,20 +26,19 @@ bool Circle::checksCollision(int mouseX, int mouseY) {
 
 
 void Circle::move() {
-    std::cout << "Velocity: " << velocity.x << ", " << velocity.y << std::endl;
     if (x < 0) {
         velocity.x = -velocity.x;
-        x = 1;
+        x = 0;
     } if (x >= WINDOW_WIDTH - radius * 2) {
         velocity.x = -velocity.x;
-        x = WINDOW_WIDTH - radius * 2 - 1;
+        x = WINDOW_WIDTH - radius * 2;
     }
     if (y < 0) {
         velocity.y = -velocity.y;
-        y = 1;
+        y = 0;
     } if (y >= WINDOW_HEIGHT - radius * 2) {
         velocity.y = -velocity.y;
-        y = WINDOW_HEIGHT - radius * 2 - 1;
+        y = WINDOW_HEIGHT - radius * 2;
     }
     x += velocity.x * speed;
     y += velocity.y * speed;
