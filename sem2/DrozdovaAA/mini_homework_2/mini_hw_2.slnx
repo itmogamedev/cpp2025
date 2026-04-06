@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="mini_hw_2/mini_hw_2.vcxproj" Id="bfd5e063-223e-4ad3-a0bb-08bbcc8049a7" />
+</Solution>
