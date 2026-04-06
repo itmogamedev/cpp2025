@@ -1,9 +1,0 @@
-# 1) Собрать динамическую библиотеку (если нужно обновить)
-g++ -std=c++17 -fPIC -shared Vec3.cpp -o /Users/youosef18/DynamicLibrary/libvec3.dylib
-# 2) Собрать приложение, слинкованное с этой библиотекой
-g++ -std=c++17 vec3_main.cpp -I. \
-  -L"/Users/youosef18/DynamicLibrary" -lvec3 \
-  -Wl,-rpath,"/Users/youosef18/DynamicLibrary" \
-  -o build/vec3_app
-# 3) Запуск
-./build/vec3_app

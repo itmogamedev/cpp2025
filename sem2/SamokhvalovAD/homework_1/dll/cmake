@@ -1,5 +1,0 @@
-vec3_dll:
-    g++ -c vec3.cpp -o vec3.o
-    cp vec3.h ../program/vec3.h
-	g++ -fpic -shared vec3.o -o vec3.dll
-	cp vec3.dll ../program/vec3.dll

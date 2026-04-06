@@ -1,6 +1,0 @@
-#ifndef LIBRARY_LIBRARY_H
-#define LIBRARY_LIBRARY_H
-
-
-
-#endif // LIBRARY_LIBRARY_H

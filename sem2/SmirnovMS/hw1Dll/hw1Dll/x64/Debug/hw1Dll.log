@@ -1,6 +1,0 @@
-﻿  pch.cpp
-  dllmain.cpp
-  Vec3.cpp
-  Создание кода...
-     Создается библиотека C:\ITMO_C++\SmirnovMS\sem2\hw1Dll\x64\Debug\hw1Dll.lib и объект C:\ITMO_C++\SmirnovMS\sem2\hw1Dll\x64\Debug\hw1Dll.exp
-  hw1Dll.vcxproj -> C:\ITMO_C++\SmirnovMS\sem2\hw1Dll\x64\Debug\hw1Dll.dll
