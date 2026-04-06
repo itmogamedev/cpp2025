@@ -1,41 +1,19 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
+Debug/
+Release/
+x64/
+SFML/
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+*.lib             
+*.exe             
+*.pdb              
+*.obj             
+*.user            
+.vs/              
+mini_hw_1/*.dll
+mini_hw_1/*.lib
+mini_hw_2/*.dll
+mini_hw_2/*.lib
+Vec3LibTest/*.exe
+audio/
+fonts/
+*.sln
