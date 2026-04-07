@@ -4,14 +4,15 @@
 #include "circle.h"
 
 sf::CircleShape addCircle() {
-  int radius = 100;
-  int windowWidth = 1000;
-  int windowHeight = 700;
-  // создаём круг радиусом 10
-  sf::CircleShape circle(100.f);
-  circle.setOutlineThickness(5.f);
+  //ограничение для рандома
+  int windowWidth = win_w_stop;
+  int windowHeight = win_h_stop;
+
+  // создаём круг радиусом 100
+  sf::CircleShape circle(static_cast<float>(radius));
+  circle.setOutlineThickness(static_cast<float>(circle_count));
   circle.setOutlineColor(sf::Color::Red);
-  // позиция центра круга
+  //позиция центра круга
   circle.setOrigin(circle.getRadius(), circle.getRadius());
   float x = radius + (std::rand() % (windowWidth - 2 * radius));
   float y = radius + (std::rand() % (windowHeight - 2 * radius));
@@ -61,20 +62,20 @@ int notMain()
 {
   sf::Clock clock;
   std::vector<sf::CircleShape> circles;
-  std::vector<sf::Clock> clock_live(5);
-  std::vector<float> lives(5, 0.f);
+  std::vector<sf::Clock> clock_live(circle_count);
+  std::vector<float> lives(circle_count, 0.f);
   std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
 
   //спавн кругов в начале
-  for (int i = 0; i < 5; i++) {
+  for (int i = 0; i < circle_count; i++) {
     circles.push_back(addCircle());
   }
 
 
   //создание окошка
   sf::RenderWindow win(
-    sf::VideoMode(sf::VideoMode(1280, 720)),
+    sf::VideoMode(sf::VideoMode(win_w, win_h)),
     L"Домашний осу");
 
 
@@ -83,7 +84,7 @@ int notMain()
   if (!icon.loadFromFile("C:/Users/Admin/Desktop/meow/cpp2sem/miniHw2/image/water.png")) {
     return 1;
   }
-  win.setIcon(512, 512, icon.getPixelsPtr());
+  win.setIcon(icon_size, icon_size, icon.getPixelsPtr());
 
 
   //загрузка шрифта
@@ -96,26 +97,23 @@ int notMain()
   //стиль таймера
   sf::Text text_time;
   text_time.setFont(font);
-  text_time.setCharacterSize(30);
-  text_time.setPosition(sf::Vector2f(1000.f, 10.f));
+  text_time.setCharacterSize(text_size);
+  text_time.setPosition(sf::Vector2f(text_x, text_timer_y));
 
-  //стиль таймера
+  //стиль очков
   sf::Text text_point;
   text_point.setFont(font);
-  text_point.setCharacterSize(30);
-  text_point.setPosition(sf::Vector2f(1000.f, 50.f));
+  text_point.setCharacterSize(text_size);
+  text_point.setPosition(sf::Vector2f(text_x, text_points_y));
 
   //стиль конца игры
   sf::Text over;
   over.setFont(font);
-  over.setCharacterSize(50);
-  over.setPosition(sf::Vector2f(400.f, 300.f));
+  over.setCharacterSize(text_size_over);
+  over.setPosition(sf::Vector2f(text_over_x, text_over_y));
 
 
-  //спавн круга
-  sf::Clock lifeCircle;
-
-
+  //lfml ивенты
   while (win.isOpen()) {
     sf::Event event;
     while (win.pollEvent(event)) {
@@ -136,7 +134,7 @@ int notMain()
         }
 
         if (!hit) {
-          timer -= 5;
+          timer -= circle_count;
         }
       }
     }
@@ -163,7 +161,7 @@ int notMain()
     //рендер
     win.clear();
     if (game) {
-      for (int j = 0; j < 5; j++) {
+      for (int j = 0; j < circle_count; j++) {
         win.draw(circles[j]);
       }
 
