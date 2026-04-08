@@ -10,6 +10,7 @@
 #define WINDOW_HEIGHT 600
 #define WINDOW_TITLE "Circle Clicker"
 #define FRAME_RATE_LIMIT 60
+#define GAME_DURATION 60
 
 // Circle settings
 #define CIRCLE_COUNT 5
