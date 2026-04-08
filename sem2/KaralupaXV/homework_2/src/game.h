@@ -6,8 +6,8 @@
 
 class Game{
 public:
-	unsigned int screenWidth;
-	unsigned int screenHeight;
+	unsigned int screen_width;
+	unsigned int screen_height;
 	sf::RenderWindow window;
 	std::random_device rd; 
     std::mt19937 gen;
@@ -15,42 +15,20 @@ public:
 	int score;
 
 private:
-	static Game *instancePtr; 
-	Game() {
-		gen = std::mt19937(rd());
-		screenWidth = 800;
-		screenHeight = 600;
-		sf::ContextSettings settings;
-		settings.antiAliasingLevel = 8;
-		window = sf::RenderWindow( 
-			sf::VideoMode( { screenWidth, screenHeight } ), 
-			"Game", 
-			sf::Style::Titlebar | sf::Style::Close, 
-			sf::State::Windowed, 
-			settings 
-		);
-		window.setFramerateLimit(0);
-
-		timer = 60;
-		score = 0;
-	}
+	static Game *instance_ptr; 
+	Game();
   
 public:
 	Game(const Game &obj) = delete; 
 
 	static Game *getInstance() {
-		if (instancePtr == nullptr) {
-			instancePtr = new Game();
+		if (instance_ptr == nullptr) {
+			instance_ptr = new Game();
 		}
-		return instancePtr; 
+		return instance_ptr; 
 	}
 
-	int randrange(int min, int max) {
-		return std::uniform_int_distribution<>(min, max)(gen);
-	}
+	int randrange(int min, int max);
 };
-
-Game *Game::instancePtr = nullptr;
-
 
 #endif

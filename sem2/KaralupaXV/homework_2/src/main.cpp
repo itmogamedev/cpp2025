@@ -3,12 +3,14 @@
 #include "circle.h"
 #include <vector>
 
+const int number_of_circles = 5;
+
 Circle* newCircle() {
 	Game *game = Game::getInstance();
 	
 	return new Circle(
-		game->randrange(0, game->screenWidth), 
-		game->randrange(0, game->screenHeight), 
+		game->randrange(0, game->screen_width), 
+		game->randrange(0, game->screen_height), 
 		game->randrange(20, 50), 
 		Color::Blue,
 		game->randrange(200, 300),
@@ -30,7 +32,6 @@ int main() {
 	score_text.setPosition(sf::Vector2f(0, 30));
 
 	std::vector<Object*> objects;
-	const int number_of_circles = 5;
 	
 	for (int i = 0; i < number_of_circles; i++) {
 		objects.push_back(newCircle());
@@ -105,7 +106,7 @@ int main() {
 			game->window.draw(score_text);
 		}
 		else {
-			score_text.setPosition(sf::Vector2f(game->screenWidth / 2, game->screenHeight / 2));
+			score_text.setPosition(sf::Vector2f(game->screen_width / 2, game->screen_height / 2));
 			game->window.draw(score_text);
 		}
 		
