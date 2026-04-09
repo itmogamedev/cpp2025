@@ -39,14 +39,3 @@
 
 # debug information files
 *.dwo
-
-
-.DS_Store
-sem1/PolysalovDA/.vscode/settings.json
-sem1/PolysalovDA/homework_3/.vscode/settings.json
-sem1/PolysalovDA/homework_3/test
-sem2/PolysalovDA/hw_1/.vscode/settings.json
-sem2/PolysalovDA/hw_1/Vec3DynamicLibrary/include/math_utils.h
-sem2/PolysalovDA/hw_1/Vec3DynamicLibrary/src/main.cpp
-sem2/PolysalovDA/hw_1/Vec3DynamicLibrary/src/math_utils.cpp
-sem2/PolysalovDA/hw_2/code/build/
