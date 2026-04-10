@@ -14,7 +14,7 @@ FetchContent_Declare(SFML
 )
 FetchContent_MakeAvailable(SFML)
 
-add_executable(HW2 src/hw2.cpp)
+add_executable(HW2 src/hw2.cpp src/game.cpp)
 target_compile_features(HW2 PRIVATE cxx_std_17)
 target_link_libraries(HW2 PRIVATE SFML::Graphics)
 

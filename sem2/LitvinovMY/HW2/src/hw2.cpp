@@ -3,8 +3,10 @@
 
 #include "game.h"
 
+const std::string kDefaultFont = "/usr/share/fonts/liberation/LiberationSans-Regular.ttf";
+
 sf::RenderWindow initWindow() {
-  sf::VideoMode mode({800, 600});
+  sf::VideoMode mode({600, 240});
   std::string title = "Typing Simulator 2026";
 
   sf::RenderWindow window(mode, title);
@@ -14,7 +16,10 @@ sf::RenderWindow initWindow() {
   return window;
 }
 
-Game configureGame(int argc, char* argv[]) { return Game(); }
+Game configureGame(int argc, char* argv[]) {
+  if (argc > 1) return Game(argv[1]);
+  else return Game(kDefaultFont);
+}
 
 void processEvent(sf::RenderWindow& window, Game& game,
                   const sf::Event& event) {
@@ -25,6 +30,10 @@ void processEvent(sf::RenderWindow& window, Game& game,
   if (const auto* key_pressed = event.getIf<sf::Event::KeyPressed>()) {
     if (key_pressed->scancode == sf::Keyboard::Scancode::Enter) {
       game.startGame();
+      return;
+    }
+    if (key_pressed->scancode == sf::Keyboard::Scancode::Escape) {
+      window.close();
       return;
     }
   }
@@ -38,7 +47,7 @@ void gameLoop(sf::RenderWindow& window, Game& game) {
   while (window.isOpen()) {
     // Processing all events
     while (const std::optional event = window.pollEvent()) {
-      processEvent(window, game, event);
+      processEvent(window, game, *event);
     }
 
     // Drawing

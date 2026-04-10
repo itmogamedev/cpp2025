@@ -14,14 +14,16 @@ enum GamePhase {
 
 class Game : public sf::Drawable {
  public:
+  Game(std::string path);
+
   void processInput(char32_t char_entered);
   void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
   void updateTime();
   void startGame();
- 
-  private:
+
+ private:
   sf::Font font;
-  GamePhase phase;
+  GamePhase phase = kBegin;
   sf::Clock clock;
   sf::String word;
   int time = kStartTime;
