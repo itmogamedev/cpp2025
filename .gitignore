@@ -39,3 +39,44 @@
 
 # debug information files
 *.dwo
+.vs/
+.vscode/
+x64/
+Debug/
+Release/
+*.ipch
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.log
+# Visual Studio / VS Code
+**/.vs/
+**/.vscode/
+
+# Build folders
+**/x64/
+**/Debug/
+**/Release/
+
+# VS temporary files
+*.ipch
+*.pch
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.log
+*.tlog
+*.suo
+*.user
+*.VC.db
+*.vsidx
+*.recipe
+*.exe
+
+# Optional: if you do not want to commit copied SFML package
+**/SFML-3.0.2/
+
+# Optional: generated/copied runtime assets in build dirs
+**/x64/**
