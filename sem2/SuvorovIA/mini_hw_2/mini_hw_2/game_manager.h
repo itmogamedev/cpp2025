@@ -19,12 +19,8 @@ class GameManager {
   int score = 0;
   int past = -1;
   int loose_points = 5;
-  std::pair<int, int> circle_coordinates[5] = {{640, METER * 2},
-                                               {640 - 2 * METER, METER * 4},
-                                               {640 + 2 * METER, METER * 4},
-                                               {640 - 1 * METER, METER * 6},
-                                               {640 + 1 * METER, METER * 6}};
-  sf::CircleShape current_circle;
+  std::vector<sf::CircleShape> circles;
+  int max_circles = 5;
   sf::Font timer_font;
   sf::Font score_font;
   sf::Text timer_text;

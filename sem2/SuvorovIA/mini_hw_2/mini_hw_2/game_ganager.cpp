@@ -1,10 +1,13 @@
 #include "game_manager.h"
 
 void GameManager::initialize() {
-  current_circle.setFillColor(sf::Color::Green);
-  current_circle.setRadius(50);
-  current_circle.setPosition(
-      Utility::newCirclePosition(&past, circle_coordinates));
+  for (int i = 0; i < max_circles; i++) {
+    sf::CircleShape circle;
+    circle.setFillColor(sf::Color::Green);
+    circle.setRadius(50);
+    circle.setPosition(Utility::newCirclePosition());
+    circles.emplace_back(circle);
+  }
 
   timer_font.loadFromFile("fonts/165-font.ttf");
   score_font.loadFromFile("fonts/Schiffbauer-Regular.otf");
@@ -42,13 +45,17 @@ void GameManager::startGame() {
           event.mouseButton.button == sf::Mouse::Left) {
         sf::Vector2i mousePos = sf::Mouse::getPosition(window);
 
-        if (current_circle.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
-          current_circle.setPosition(
-              Utility::newCirclePosition(&past, circle_coordinates));
-          score++;
-          score_text.setString("SCORE: " + std::to_string(score));
-          hit_sound.play();
-        } else {
+        bool is_found = false;
+        for (sf::CircleShape &circle : circles) {
+          if (circle.getGlobalBounds().contains(mousePos.x, mousePos.y)) {
+            circle.setPosition(Utility::newCirclePosition());
+            score++;
+            score_text.setString("SCORE: " + std::to_string(score));
+            hit_sound.play();
+            is_found = true;
+          }
+        }
+        if (!is_found) {
           time_left -= loose_points;
           int_timer -= loose_points;
           timer_text.setFillColor(sf::Color::Red);
@@ -71,7 +78,7 @@ void GameManager::startGame() {
 
     window.clear();
     if (state == GameState::RUNNING) {
-      window.draw(current_circle);
+      for (sf::CircleShape circle : circles) window.draw(circle);
       window.draw(timer_text);
       window.draw(score_text);
     }

@@ -3,10 +3,10 @@
 #include <SFML/Graphics.hpp>
 #include <random>
 #include <utility>
+#include "constants.h"
 
 class Utility {
  public:
-  static int getRandomInt(int min, int max);
-  static sf::Vector2f newCirclePosition(int* _past,
-                                        std::pair<int, int>* coordinates);
+  static float getRandomFloat(int min, int max);
+  static sf::Vector2f newCirclePosition();
 };
