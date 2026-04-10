@@ -1,30 +1,15 @@
-// HWClient.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "task_1.h"
 
 int main() {
-    Vec3 a = Vec3(1, 2, 3);
-    Vec3 b = Vec3(-1, 3, 0);
-    double c = 2.5;
-    std::cout << a << "\n";
-    std::cout << a + b << "\n";
-    std::cout << a - b << "\n";
-    std::cout << a * c << "\n";
-    std::cout << a.dotProduct(b) << "\n";
-    std::cout << a.crossProduct(b) << "\n";
-    std::cout << a.len() << "\n";
-    std::cout << a.getUnit() << "\n";
-
+  Vec3 a = Vec3(1, 2, 3);
+  Vec3 b = Vec3(-1, 3, 0);
+  double c = 2.5;
+  std::cout << a << "\n";
+  std::cout << a + b << "\n";
+  std::cout << a - b << "\n";
+  std::cout << a * c << "\n";
+  std::cout << a.dotProduct(b) << "\n";
+  std::cout << a.crossProduct(b) << "\n";
+  std::cout << a.len() << "\n";
+  std::cout << a.getUnit() << "\n";
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
