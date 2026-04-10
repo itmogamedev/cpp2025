@@ -1,0 +1,54 @@
+﻿Shop: Orgrimmar_Armory
+Items_Count: 7
+Weapon Gorehowl 2500 4.8 120
+Weapon Doomhammer 2200 5.5 110
+Armor Plate_of_the_Damned 1800 12.3 95
+Armor Orcish_Battle_Harness 1200 8.7 75
+Potion Healing_Potion 150 0.2 30.0
+Scroll Scroll_of_Bloodlust 400 0.1 Bloodlust
+Scroll Scroll_of_Haste 350 0.1 Haste
+
+Shop: Stormwind_Magic_Emporium
+Items_Count: 5
+Weapon Frostmourne 5000 6.2 150
+Armor Crown_of_Lordaeron 3500 2.1 100
+Potion Mana_Potion 200 0.3 45.0
+Scroll Scroll_of_Blizzard 600 0.15 Blizzard
+Scroll Scroll_of_Polymorph 450 0.12 Polymorph
+
+Shop: Thunderbluff_Trading_Post
+Items_Count: 8
+Weapon Tauren_Chieftain_Axe 1800 7.5 95
+Weapon Spirit_Staff 1400 3.2 80
+Armor Ancestral_Mail 1600 9.8 85
+Armor Tribal_Leather_Vest 900 4.5 60
+Potion Elixir_of_Fortitude 180 0.25 35.0
+Potion Elixir_of_Agility 170 0.25 32.0
+
+Shop: Undercity_Black_Market
+Items_Count: 6
+Weapon Lich_King_Runeblade 4500 5.8 140
+Armor Death_Knight_Plate 3200 14.5 110
+Potion Plague_Elixir 250 0.4 40.0
+Scroll Scroll_of_Death_Coil 650 0.2 Death_Coil
+Scroll Scroll_of_Raise_Dead 700 0.22 Raise_Dead
+Scroll Scroll_of_Death_Coil 650 0.2 Death_Coil
+
+Shop: Ironforge_Smithy
+Items_Count: 9
+Weapon Ashkandi_Greatsword 3800 8.9 130
+Weapon Hammer_of_the_Naaru 2800 6.4 105
+Armor Dwarven_Full_Plate 2400 16.2 105
+Armor Mountain_King_Armor 2100 13.7 95
+Armor Steel_Pauldrons 1100 7.3 70
+Potion Dwarven_Ale 80 0.5 15.0
+Potion Elixir_of_Giants 320 0.35 55.0
+Scroll Scroll_of_Thunder_Clap 420 0.14 Thunder_Clap
+Scroll Scroll_of_Avatar 800 0.25 Avatar
+
+Shop: Dalaran_Arcane_Vault
+Items_Count: 4
+Weapon Staff_of_Antonidas 6000 4.1 160
+Armor Archmage_Robes 2900 1.8 90
+Potion Greater_Mana_Potion 280 0.28 50.0
+Scroll Scroll_of_Mass_Teleport 900 0.3 Mass_Teleport
