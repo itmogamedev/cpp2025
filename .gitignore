@@ -10,12 +10,20 @@
 # Precompiled Headers
 *.gch
 *.pch
+*.ipch
 
-# Linker files
+# Linker / debug files
 *.ilk
-
-# Debugger Files
 *.pdb
+*.idb
+*.log
+*.tlog
+*.vsidx
+*.VC.db
+*.recipe
+*.suo
+*.wsuo
+*.user
 
 # Compiled Dynamic libraries
 *.so
@@ -39,17 +47,7 @@
 
 # debug information files
 *.dwo
-.vs/
-.vscode/
-x64/
-Debug/
-Release/
-*.ipch
-*.obj
-*.pdb
-*.ilk
-*.exe
-*.log
+
 # Visual Studio / VS Code
 **/.vs/
 **/.vscode/
@@ -59,24 +57,5 @@ Release/
 **/Debug/
 **/Release/
 
-# VS temporary files
-*.ipch
-*.pch
-*.obj
-*.pdb
-*.ilk
-*.idb
-*.log
-*.tlog
-*.suo
-*.user
-*.VC.db
-*.vsidx
-*.recipe
-*.exe
-
 # Optional: if you do not want to commit copied SFML package
 **/SFML-3.0.2/
-
-# Optional: generated/copied runtime assets in build dirs
-**/x64/**

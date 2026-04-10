@@ -1,0 +1,5 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (hw_3.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Guild.cpp
+  hw_3.cpp
+  Создание кода...
+  hw_3.vcxproj -> C:\Users\Admin\source\repos\cpp2025HWs\sem1\NorinskyDA\homework_2\hw_3\x64\Debug\main_hw_3.exe

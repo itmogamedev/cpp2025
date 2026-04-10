@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\vec3_app",
+    "\\vec3_app\\vec3_app",
+    "\\vec3_library",
+    "\\vec3_library\\vec3_library",
+    "\\vec3_library\\vec3_library\\x64"
+  ],
+  "SelectedNode": "\\vec3_library\\vec3_library\\Vec3.h",
+  "PreviewInSolutionExplorer": false
+}
