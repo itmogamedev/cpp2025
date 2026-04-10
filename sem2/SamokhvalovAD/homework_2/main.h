@@ -8,9 +8,18 @@
 // Window settings
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
-#define WINDOW_TITLE "Circle Clicker"
+#define WINDOW_TITLE "OSU"
 #define FRAME_RATE_LIMIT 60
 #define GAME_DURATION 60
+#define FONT_PATH "sem2/SamokhvalovAD/homework_2/pixel.otf"
+#define TEXT_SIZE 24
+#define TIMER_TEXT_OFFSET 30
+#define SCORE_TEXT_OFFSET 30
+#define BEFORE_TIMER_TEXT "Time: "
+#define BEFORE_SCORE_TEXT "Score: "
+#define GAME_OVER_TEXT "Game Over!"
+#define FONT_ERROR_TEXT "Font error"
+
 
 // Circle settings
 #define CIRCLE_COUNT 5
@@ -20,6 +29,7 @@
 #define CIRCLE_SPEED_MAX 5
 #define POINTS_INCREASE 10
 #define POINTS_DECREASE 5
+#define INCREACE_TIME 4
 
 // Color
 #define MAX_COLOR_VALUE 255
