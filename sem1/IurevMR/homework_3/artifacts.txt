@@ -1,0 +1,24 @@
+Shop: Mystic_Corner
+Items: 5
+Weapon Sword_of_Truth 2500 4.5 120
+Armor Ether_Mantle 1800 1.2 45
+Potion Strength_Potion 150 0.5 300.0
+Scroll Fireball_Scroll 400 0.1 Explosion
+Scroll Ice_Arrow_Scroll 350 0.1 Freeze
+
+Shop: Dwarven_Forge
+Items: 6
+Weapon Axe_of_Fury 1200 6.0 95
+Weapon Hammer_of_Mountains 1400 8.5 110
+Armor Invincibility_Plate 3000 15.0 100
+Armor Viking_Helmet 500 2.5 30
+Potion Oblivion_Beer 50 0.5 60.0
+Weapon Traitor_Dagger 800 1.0 50
+
+Shop: Archmage_Tower
+Items: 5
+Scroll Teleport_Scroll 1000 0.2 Teleportation
+Scroll Healing_Scroll 200 0.1 Healing
+Scroll Minor_Healing_Scroll 100 0.1 Healing
+Potion Wisdom_Elixir 500 0.3 120.0
+Potion Mana_Essence 300 0.2 60.0

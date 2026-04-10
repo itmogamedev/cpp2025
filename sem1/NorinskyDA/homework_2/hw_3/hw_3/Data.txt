@@ -1,0 +1,22 @@
+id: 1
+name: Make
+role: magician
+level: 46
+reputation: 237
+rank: Ветеран
+---
+id: 2
+name: Jack
+role: warrior
+level: 32
+reputation: 320
+rank: Герой
+---
+id: 3
+name: Hary
+role: archer
+level: 78
+reputation: 286
+rank: Ветеран
+---
+
