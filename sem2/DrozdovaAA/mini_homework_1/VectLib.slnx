@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="VectLib/VectLib.vcxproj" Id="41b02cb4-32cb-4901-8498-d652566cd8a7" />
+  <Project Path="VectorUse/VectorUse.vcxproj" Id="3fcab211-c4c5-403d-a516-93b3ed3f7b42" />
+</Solution>
