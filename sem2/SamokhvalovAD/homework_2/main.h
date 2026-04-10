@@ -1,9 +1,9 @@
-#include <SFML/Graphics.hpp>
-#include <string>
-#include <cstdlib>
 #include <math.h>
-#include <iostream>
 
+#include <SFML/Graphics.hpp>
+#include <cstdlib>
+#include <iostream>
+#include <string>
 
 // Window settings
 #define WINDOW_WIDTH 800
@@ -20,7 +20,6 @@
 #define GAME_OVER_TEXT "Game Over!"
 #define FONT_ERROR_TEXT "Font error"
 
-
 // Circle settings
 #define CIRCLE_COUNT 5
 #define CIRCLE_RADIUS_MIN 30
@@ -35,4 +34,5 @@
 #define MAX_COLOR_VALUE 255
 
 #define RANDOM_NUMBER(min, max) (rand() % ((max) - (min) + 1)) + (min)
-#define RANDOM_FLOAT(min, max) (float)RANDOM_NUMBER(min, max) + (float)(rand()) / (float)(RAND_MAX)
+#define RANDOM_FLOAT(min, max) \
+  (float)RANDOM_NUMBER(min, max) + (float)(rand()) / (float)(RAND_MAX)
