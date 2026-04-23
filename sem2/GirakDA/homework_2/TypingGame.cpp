@@ -1,10 +1,10 @@
-#include "TypingGame.h"
-
 #include <cctype>
 #include <chrono>
 #include <iostream>
 #include <random>
 #include <thread>
+
+#include "TypingGame.h"
 
 TypingGame::TypingGame()
     : window(sf::VideoMode(800, 600), "Typing Trainer", sf::Style::Close),
