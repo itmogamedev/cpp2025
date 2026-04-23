@@ -10,12 +10,20 @@
 # Precompiled Headers
 *.gch
 *.pch
+*.ipch
 
-# Linker files
+# Linker / debug files
 *.ilk
-
-# Debugger Files
 *.pdb
+*.idb
+*.log
+*.tlog
+*.vsidx
+*.VC.db
+*.recipe
+*.suo
+*.wsuo
+*.user
 
 # Compiled Dynamic libraries
 *.so
@@ -40,3 +48,14 @@
 # debug information files
 *.dwo
 
+# Visual Studio / VS Code
+**/.vs/
+**/.vscode/
+
+# Build folders
+**/x64/
+**/Debug/
+**/Release/
+
+# Optional: if you do not want to commit copied SFML package
+**/SFML-3.0.2/
