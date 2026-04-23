@@ -1,10 +1,12 @@
+#include "GameCycle.h"
+
+#include <ctime>
 #include <iostream>
 #include <optional>
-#include <ctime>
-#include "GameCycle.h"
+
+#include "BouncingCircleShape.h"
 #include "Constants.h"
 #include "Timer.h"
-#include "BouncingCircleShape.h"
 
 // ===== Shortenings
 namespace SCREEN = Constants::SCREEN;
@@ -33,7 +35,7 @@ sf::Text scoreText(TEXT::font, TEXT::scoreWith0);
 void LOOP_REQ::centerText(sf::Text& text, const sf::Vector2f& position) {
   sf::FloatRect bounds = text.getLocalBounds();
   text.setOrigin(sf::Vector2f(bounds.size.x / SCREEN::centerDivider,
-    bounds.size.y / SCREEN::centerDivider));
+                              bounds.size.y / SCREEN::centerDivider));
   text.setPosition(position);
 }
 
@@ -48,8 +50,7 @@ void LOOP_REQ::handleMouseClick(const sf::Vector2i& clickPos) {
       it = bouncingShapes.erase(it);
       hitDetected = true;
       break;
-    }
-    else {
+    } else {
       ++it;
     }
   }
@@ -71,7 +72,7 @@ void LOOP_REQ::handleRestart() {
   score = 0;
   scoreText.setString(TEXT::scoreWith0);
   scoreText.setPosition(sf::Vector2f(wn.getSize().x - TEXT_POS::scoreTopRight.x,
-    TEXT_POS::scoreTopRight.y));
+                                     TEXT_POS::scoreTopRight.y));
 }
 
 void LOOP_REQ::handleGameOver() {
@@ -80,15 +81,17 @@ void LOOP_REQ::handleGameOver() {
 
   sf::Vector2u wnSize = wn.getSize();
   sf::Vector2f centerPos(wnSize.x / SCREEN::centerDivider,
-    wnSize.y / SCREEN::centerDivider);
+                         wnSize.y / SCREEN::centerDivider);
 
-  int32_t passedTimeMs = TIMER::seconds.asMilliseconds() - timer.getRemainingTimeAsMilliseconds();
+  int32_t passedTimeMs =
+      TIMER::seconds.asMilliseconds() - timer.getRemainingTimeAsMilliseconds();
   int seconds = passedTimeMs / TIMER::intPrecision;
   int hundredths = (passedTimeMs % TIMER::intPrecision) / 10;
 
   std::string timeStr = std::to_string(seconds);
   if (hundredths != 0) {
-    timeStr += "." + std::string(hundredths < 10 ? "0" : "") + std::to_string(hundredths);
+    timeStr += "." + std::string(hundredths < 10 ? "0" : "") +
+               std::to_string(hundredths);
   }
 
   // Create texts
@@ -123,7 +126,7 @@ void invokeLoop() {
 
   // Score text settings
   scoreText.setPosition(sf::Vector2f(wn.getSize().x - TEXT_POS::scoreTopRight.x,
-    TEXT_POS::scoreTopRight.y));
+                                     TEXT_POS::scoreTopRight.y));
   scoreText.setFillColor(sf::Color::Black);
 
   while (wn.isOpen()) {
@@ -133,12 +136,12 @@ void invokeLoop() {
         wn.close();
       }
 
-      if (const auto* mouseClick = evt->getIf<sf::Event::MouseButtonPressed>()) {
+      if (const auto* mouseClick =
+              evt->getIf<sf::Event::MouseButtonPressed>()) {
         if (mouseClick->button == sf::Mouse::Button::Left) {
           if (isMainScreenRunning) {
             LOOP_REQ::handleMouseClick(mouseClick->position);
-          }
-          else {
+          } else {
             LOOP_REQ::handleRestart();
           }
         }
@@ -146,7 +149,8 @@ void invokeLoop() {
     }
 
     // Check game end conditions
-    if (isMainScreenRunning && (bouncingShapes.empty() || timer.getRemainingTimeAsMilliseconds() <= 0)) {
+    if (isMainScreenRunning && (bouncingShapes.empty() ||
+                                timer.getRemainingTimeAsMilliseconds() <= 0)) {
       isMainScreenRunning = false;
     }
 
@@ -156,8 +160,7 @@ void invokeLoop() {
       LOOP_REQ::draw();
       wn.draw(scoreText);
       wn.display();
-    }
-    else {
+    } else {
       LOOP_REQ::handleGameOver();
     }
   }

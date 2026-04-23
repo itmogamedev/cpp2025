@@ -3,17 +3,17 @@
 #include "SFML/Graphics.hpp"
 
 class Timer : public sf::Time {
-private:
-	sf::Clock cl;
+ private:
+  sf::Clock cl;
 
-public:
-	Timer(sf::Time tm);
+ public:
+  Timer(sf::Time tm);
 
-	int32_t getRemainingTimeAsMilliseconds();
+  int32_t getRemainingTimeAsMilliseconds();
 
-	void start();
+  void start();
 
-	void stop();
+  void stop();
 
-	void draw(sf::RenderWindow&);
+  void draw(sf::RenderWindow&);
 };
