@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="HWClient/HWClient.vcxproj" Id="ce87bc00-1f7c-4440-8802-8102b4e3484f" />
+</Solution>
