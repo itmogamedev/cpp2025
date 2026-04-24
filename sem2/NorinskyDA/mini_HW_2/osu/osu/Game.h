@@ -7,7 +7,7 @@
 
 struct MovingCircle {
   sf::CircleShape shape;
-  sf::Vector2f velocity;  // Скорость движения
+  sf::Vector2f velocity;
 };
 
 class Game {

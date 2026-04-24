@@ -2,6 +2,7 @@
 
 #include <string>
 
+
 UIManager::UIManager(sf::Font& font)
     : scoreText(font, "Score: 0", 30),
       timerText(font, "Time: 30.0", 30),
