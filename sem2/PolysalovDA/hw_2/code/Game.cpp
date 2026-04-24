@@ -52,13 +52,13 @@ void Game::handleActions(const std::vector<Actions>& actions) {
 
 void Game::update() {
   auto now = std::chrono::steady_clock::now();
-  float deltaTime = std::chrono::duration<float>(now - last_time).count();
+  float delta_time = std::chrono::duration<float>(now - last_time).count();
   last_time = now;
 
   if (game_running) {
-    time_left -= deltaTime;
+    time_left -= delta_time;
     ui.updateTimer(time_left);
-
+    circles.update(delta_time, window.getSize());
     if (time_left <= 0) {
       game_running = false;
       ui.setGameOver(true, circles.getScore());

@@ -1,5 +1,6 @@
 #include "Circle.h"
 
+#include "Constants.h"
 Circle::Circle(float r) : radius(r), active(true) {
   shape.setRadius(radius);
   shape.setFillColor(sf::Color::Green);
@@ -43,4 +44,45 @@ void Circle::draw(sf::RenderTarget& target, sf::RenderStates states) const {
   if (active) {
     target.draw(shape, states);
   }
+}
+
+void Circle::setRandomVelocity() {
+  static std::random_device rd;
+  static std::mt19937 gen(rd());
+
+  std::uniform_real_distribution<float> speed_dist(SPEED_DIST_MIN,
+                                                   SPEED_DIST_MAX);
+  std::uniform_real_distribution<float> angle_dist(ANGLE_DIST_MIN,
+                                                   ANGLE_DIST_MAX);
+
+  float speed = speed_dist(gen);
+  float angle = angle_dist(gen);
+
+  velocity.x = std::cos(angle) * speed;
+  velocity.y = std::sin(angle) * speed;
+}
+
+void Circle::update(float delta_time, const sf::Vector2u& window_size) {
+  if (!active) return;
+
+  position += velocity * delta_time;
+
+  if (position.x - radius < 0) {
+    position.x = radius;
+    velocity.x = -velocity.x;
+  }
+  if (position.x + radius > window_size.x) {
+    position.x = window_size.x - radius;
+    velocity.x = -velocity.x;
+  }
+  if (position.y - radius < 0) {
+    position.y = radius;
+    velocity.y = -velocity.y;
+  }
+  if (position.y + radius > window_size.y) {
+    position.y = window_size.y - radius;
+    velocity.y = -velocity.y;
+  }
+
+  shape.setPosition(position);
 }

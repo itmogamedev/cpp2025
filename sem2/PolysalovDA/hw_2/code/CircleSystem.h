@@ -19,6 +19,7 @@ class CircleSystem : public sf::Drawable {
   CircleSystem(const sf::Vector2u& size);
   void initialize(unsigned int count);
   void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+  void update(float delta_time, const sf::Vector2u& window_size);
   bool checkHit(const sf::Vector2i& mouse_pos);
   int getScore() const { return score; }
   void reset();

@@ -9,6 +9,7 @@ void CircleSystem::initialize(unsigned int count) {
   for (int i = 0; i < count; ++i) {
     auto circle = std::make_unique<Circle>();
     trySetFreePosition(circle.get());
+    circle->setRandomVelocity();
     circles.push_back(std::move(circle));
   }
 }
@@ -58,4 +59,12 @@ void CircleSystem::draw(sf::RenderTarget& target,
 void CircleSystem::reset() {
   score = START_SCORE;
   initialize(CIRCLES_COUNT);
+}
+
+void CircleSystem::update(float delta_time, const sf::Vector2u& window_size) {
+  for (auto& circle : circles) {
+    if (circle->isActive()) {
+      circle->update(delta_time, window_size);
+    }
+  }
 }

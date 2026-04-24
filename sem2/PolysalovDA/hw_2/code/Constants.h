@@ -15,6 +15,10 @@
 #define TIME_FINE 1.0f
 #define START_TIME 30.0f
 #define FIND_FREE_POS_ATTEMPTS 100
+#define SPEED_DIST_MIN 150.f
+#define SPEED_DIST_MAX 300.f
+#define ANGLE_DIST_MIN 0.f
+#define ANGLE_DIST_MAX 6.28318f  // 2 * pi
 
 // WINDOW
 #define WINDOW_SIZE {800, 800}
