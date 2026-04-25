@@ -6,17 +6,17 @@
 #include "config.h"
 
 class Circle {
-public:
-	Circle(float window_width, float window_height);
-	void update(float dt, float window_width, float window_height);
-	void draw(sf::RenderWindow& window) const;
-	bool isClicked(const sf::Vector2i& mouse_pos) const;
-	void reposition(float window_width, float window_height);
+ public:
+  Circle(float window_width, float window_height);
+  void update(float dt, float window_width, float window_height);
+  void draw(sf::RenderWindow& window) const;
+  bool isClicked(const sf::Vector2i& mouse_pos) const;
+  void reposition(float window_width, float window_height);
 
-private:
-	sf::CircleShape shape;
-	sf::Vector2f velocity;
-	float radius;
+ private:
+  sf::CircleShape shape;
+  sf::Vector2f velocity;
+  float radius;
 };
 
 #endif

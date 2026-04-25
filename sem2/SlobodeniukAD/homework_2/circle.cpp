@@ -8,10 +8,9 @@ Circle::Circle(float window_width, float window_height) {
   shape.setRadius(radius);
   shape.setOrigin(sf::Vector2f(radius, radius));
   shape.setFillColor(CIRCLE_COLOR);
-
   shape.setPosition(sf::Vector2f(
-      static_cast<float>(rand() % static_cast<int>(window_width)),
-      static_cast<float>(rand() % static_cast<int>(window_height))));
+    static_cast<float>(rand() % static_cast<int>(window_width)),
+    static_cast<float>(rand() % static_cast<int>(window_height))));
 
   velocity.x = static_cast<float>((rand() % VELOCITY_RANGE) + VELOCITY_MIN);
   velocity.y = static_cast<float>((rand() % VELOCITY_RANGE) + VELOCITY_MIN);
@@ -31,7 +30,9 @@ void Circle::update(float dt, float window_width, float window_height) {
   shape.setPosition(pos);
 }
 
-void Circle::draw(sf::RenderWindow& window) const { window.draw(shape); }
+void Circle::draw(sf::RenderWindow& window) const { 
+  window.draw(shape); 
+}
 
 bool Circle::isClicked(const sf::Vector2i& mouse_pos) const {
   sf::Vector2f circle_pos = shape.getPosition();
@@ -42,8 +43,8 @@ bool Circle::isClicked(const sf::Vector2i& mouse_pos) const {
 
 void Circle::reposition(float window_width, float window_height) {
   shape.setPosition(sf::Vector2f(
-      static_cast<float>(rand() % static_cast<int>(window_width)),
-      static_cast<float>(rand() % static_cast<int>(window_height))));
+    static_cast<float>(rand() % static_cast<int>(window_width)),
+    static_cast<float>(rand() % static_cast<int>(window_height))));
 
   velocity.x = static_cast<float>((rand() % VELOCITY_RANGE) + VELOCITY_MIN);
   velocity.y = static_cast<float>((rand() % VELOCITY_RANGE) + VELOCITY_MIN);

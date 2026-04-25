@@ -17,34 +17,29 @@ static sf::Font loadDefaultFont() {
   return font;
 }
 
-Game::Game()
-    : window(sf::VideoMode({static_cast<unsigned int>(WINDOW_WIDTH),
-                            static_cast<unsigned int>(WINDOW_HEIGHT)}),
-             WINDOW_TITLE),
-      font(loadDefaultFont()),
-      score_text(font, "Score: 0", FONT_SIZE_SCORE),
-      timer_text(font,
-                 "Time: " + std::to_string(static_cast<int>(INITIAL_TIME)),
-                 FONT_SIZE_TIMER),
-      game_over_text(font, "Game Over!", FONT_SIZE_GAME_OVER),
-      remaining_time(INITIAL_TIME),
-      score(0),
-      is_game_over(false) {
-  std::srand(static_cast<unsigned>(std::time(nullptr)));
+Game::Game(): 
+  window(sf::VideoMode({static_cast<unsigned int>(WINDOW_WIDTH), static_cast<unsigned int>(WINDOW_HEIGHT)}), WINDOW_TITLE),
+  font(loadDefaultFont()),
+  score_text(font, "Score: 0", FONT_SIZE_SCORE),
+  timer_text(font, "Time: " + std::to_string(static_cast<int>(INITIAL_TIME)),FONT_SIZE_TIMER),
+  game_over_text(font, "Game Over!", FONT_SIZE_GAME_OVER),
+  remaining_time(INITIAL_TIME),
+  score(0),
+  is_game_over(false) {
+    std::srand(static_cast<unsigned>(std::time(nullptr)));
 
-  for (int i = 0; i < CIRCLES_COUNT; ++i) {
-    circles.emplace_back(WINDOW_WIDTH, WINDOW_HEIGHT);
-  }
+    for (int i = 0; i < CIRCLES_COUNT; ++i) {
+      circles.emplace_back(WINDOW_WIDTH, WINDOW_HEIGHT);
+    }
 
-  score_text.setFillColor(TEXT_COLOR);
-  score_text.setPosition({TEXT_POSITION_X, TEXT_POSITION_Y_SCORE});
+    score_text.setFillColor(TEXT_COLOR);
+    score_text.setPosition({TEXT_POSITION_X, TEXT_POSITION_Y_SCORE});
 
-  timer_text.setFillColor(TEXT_COLOR);
-  timer_text.setPosition({TEXT_POSITION_X, TEXT_POSITION_Y_TIMER});
+    timer_text.setFillColor(TEXT_COLOR);
+    timer_text.setPosition({TEXT_POSITION_X, TEXT_POSITION_Y_TIMER});
 
-  game_over_text.setFillColor(GAME_OVER_TEXT_COLOR);
-  game_over_text.setPosition(
-      {TEXT_POSITION_X_GAME_OVER, TEXT_POSITION_Y_GAME_OVER});
+    game_over_text.setFillColor(GAME_OVER_TEXT_COLOR);
+    game_over_text.setPosition({TEXT_POSITION_X_GAME_OVER, TEXT_POSITION_Y_GAME_OVER});
 }
 
 void Game::run() {
@@ -97,8 +92,7 @@ void Game::draw() {
   }
 
   score_text.setString("Score: " + std::to_string(score));
-  timer_text.setString("Time: " +
-                       std::to_string(static_cast<int>(remaining_time)));
+  timer_text.setString("Time: " + std::to_string(static_cast<int>(remaining_time)));
 
   window.draw(score_text);
   window.draw(timer_text);
