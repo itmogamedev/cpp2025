@@ -7,31 +7,31 @@
 #include "Ball.h"
 
 class GameSession {
-public:
-	GameSession();
-	void launch();
+ public:
+  GameSession();
+  void launch();
 
-private:
-	void pollInput();
-	void advance(float deltaTime);
-	void drawFrame();
-	void processClick(sf::Vector2i mouseCoord);
-	void spawnInitialBalls();
-	void updateDisplayTexts();
+ private:
+  void pollInput();
+  void advance(float deltaTime);
+  void drawFrame();
+  void processClick(sf::Vector2i mouseCoord);
+  void spawnInitialBalls();
+  void updateDisplayTexts();
 
-	sf::RenderWindow mainWindow_;
-	std::vector<Ball> balls_;
+  sf::RenderWindow mainWindow_;
+  std::vector<Ball> balls_;
 
-	int currentScore_;
-	float remainingTime_;
-	bool isActive_;
+  int currentScore_;
+  float remainingTime_;
+  bool isActive_;
 
-	sf::Font uiFont_;
-	sf::Text scoreDisplay_;
-	sf::Text timerDisplay_;
-	sf::Text gameoverDisplay_;
+  sf::Font uiFont_;
+  sf::Text scoreDisplay_;
+  sf::Text timerDisplay_;
+  sf::Text gameoverDisplay_;
 
-	sf::Clock frameClock_;
+  sf::Clock frameClock_;
 };
 
 #endif

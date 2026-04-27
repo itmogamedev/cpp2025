@@ -10,21 +10,21 @@
 #endif
 
 class MATHLIBRARY_API Vec3 {
-public:
-	double x, y, z;
+ public:
+  double x, y, z;
 
-	Vec3();
-	Vec3(double x_val, double y_val, double z_val);
+  Vec3();
+  Vec3(double x_val, double y_val, double z_val);
 
-	Vec3 operator+(const Vec3& other) const;
-	Vec3 operator-(const Vec3& other) const;
-	Vec3 operator*(double scalar) const;
+  Vec3 operator+(const Vec3& other) const;
+  Vec3 operator-(const Vec3& other) const;
+  Vec3 operator*(double scalar) const;
 
-	double dot(const Vec3& other) const;
-	Vec3 cross(const Vec3& other) const;
+  double dot(const Vec3& other) const;
+  Vec3 cross(const Vec3& other) const;
 
-	double length() const;
-	Vec3 normalized() const;
+  double length() const;
+  Vec3 normalized() const;
 };
 
 MATHLIBRARY_API Vec3 operator*(double scalar, const Vec3& vec);
