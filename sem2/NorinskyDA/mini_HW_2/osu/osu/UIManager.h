@@ -27,3 +27,4 @@ class UIManager {
 
   bool gameOverVisible;
 };
+
