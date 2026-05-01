@@ -13,7 +13,7 @@ Game::Game()
       score(0),
       timeLeft(30.0f),
       gameActive(true) {
-  if (!font.openFromFile("Font.otf")) {
+  if (!font.openFromFile("font.otf")) {
     std::cerr << "Error loading font!" << std::endl;
   }
 

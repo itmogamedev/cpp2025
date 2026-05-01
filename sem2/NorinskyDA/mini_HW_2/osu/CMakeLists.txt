@@ -22,6 +22,6 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "${CMAKE_SOURCE_DIR}/osu/Font.otf"
+        "${CMAKE_SOURCE_DIR}/osu/font.otf"
         $<TARGET_FILE_DIR:${PROJECT_NAME}>
 )

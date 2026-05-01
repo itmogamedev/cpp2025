@@ -53,4 +53,3 @@ void UIManager::draw(sf::RenderWindow& window) const {
     window.draw(restartText);
   }
 }
-
