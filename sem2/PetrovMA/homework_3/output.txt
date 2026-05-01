@@ -1,0 +1,24 @@
+initial:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+after deleting below threshold 15: 
+C++ programming is fun
+Lambda expressions
+A very long string just for testing purposes
+
+after deleting vowels: 
+C++ prgrmmng s fn
+Lmbd xprssns
+ vr lng strng jst fr tstng prpss
+
+search for word, found: Lambda expressions
+total char count: 61
+lengths: 
+17
+12
+32
