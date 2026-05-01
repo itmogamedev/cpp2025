@@ -13,32 +13,32 @@ const float PENALTY_TIME = 2.0f;
 const float BASE_SPEED = 150.0f;
 
 struct Target {
-    sf::CircleShape shape;
-    float speed_x;
-    float speed_y;
+  sf::CircleShape shape;
+  float speed_x;
+  float speed_y;
 };
 
 class Game {
-public:
-    Game();
-    void run();
+ public:
+  Game();
+  void run();
 
-private:
-    void processEvents();
-    void update(float delta_time);
-    void render();
-    void spawnTarget(int index);
-    void handleMouseClick(int mouse_x, int mouse_y);
+ private:
+  void processEvents();
+  void update(float delta_time);
+  void render();
+  void spawnTarget(int index);
+  void handleMouseClick(int mouse_x, int mouse_y);
 
-    sf::RenderWindow window;
-    std::vector<Target> targets;
-    sf::Font font;
-    sf::Text time_text;
-    sf::Text score_text;
-    sf::Text game_over_text;
+  sf::RenderWindow window;
+  std::vector<Target> targets;
+  sf::Font font;
+  sf::Text time_text;
+  sf::Text score_text;
+  sf::Text game_over_text;
 
-    int score;
-    float time_left;
-    bool is_game_over;
+  int score;
+  float time_left;
+  bool is_game_over;
 };
 #endif
