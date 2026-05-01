@@ -1,0 +1,14 @@
+initial: 
+21 2 -7 -49 -44 10 -43 47 15 7 36 90 44 -33 45 44 -12 4 -32 99 
+min: -49
+max: 99
+sorted: 
+-49 -44 -43 -33 -32 -12 -7 2 4 7 10 15 21 36 44 44 45 47 90 99 
+positive: 13
+negative: 7
+zero: 0
+average: 12.2
+after deleting less than average: 
+15 21 36 44 44 45 47 90 99 
+only unique values
+15 21 36 44 45 47 90 99 
