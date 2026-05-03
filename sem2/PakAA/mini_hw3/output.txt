@@ -1,0 +1,32 @@
+1) Original strings:
+  Dino Farm
+  I love 1C
+  AGUGUGAGA
+  SUMO TATAMII
+  NATIG  MY MILF
+  DANYA GO V SUMO TATAMI PLEASE!!!
+
+2) After removing strings shorter than 2:
+  Dino Farm
+  I love 1C
+  AGUGUGAGA
+  SUMO TATAMII
+  NATIG  MY MILF
+  DANYA GO V SUMO TATAMI PLEASE!!!
+
+3) After removing vowels:
+  Dn Frm
+   lv 1C
+  GGGG
+  SM TTM
+  NTG  M MLF
+  DN G V SM TTM PLS!!!
+
+4) Searching for word "I":
+  Not found
+
+5) Total character count (excluding '_'): 52
+
+6) String lengths:
+  [6, 6, 4, 6, 10, 20]
+
