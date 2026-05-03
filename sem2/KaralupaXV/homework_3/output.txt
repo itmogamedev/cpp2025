@@ -1,0 +1,23 @@
+Initial file: 
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+Lines after filtering: 
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+Lines after removing vowels: 
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+ vr lng strng jst fr tstng prpss
+
+Word long found in string: A very long string just for testing purposes
+Total length: 75
+Array of new lengths: 18 13 12 32 
