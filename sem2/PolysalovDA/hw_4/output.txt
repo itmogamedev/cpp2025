@@ -1,9 +1,9 @@
-Min: -39
-Max: 91
-Sorted numbers: -39 -35 -7 14 16 23 24 27 31 37 41 59 60 66 76 81 82 86 88 91 
-Negative count: 3
+Min: -48
+Max: 96
+Sorted numbers: -48 -31 -31 -23 -23 -22 -21 1 24 42 51 52 63 67 70 72 80 88 93 96 
+Negative count: 7
 Zero count: 0
-Positive count: 17
-Mid arithmetic: 41.05
-Filtered numbers (>= mid): 91 86 88 82 60 76 59 81 66 
-Sorted unique numbers (>= mid): 59 60 66 76 81 82 86 88 91 
+Positive count: 13
+Mid arithmetic: 30
+Filtered numbers (>= mid): 96 42 88 93 80 52 72 51 63 70 67 
+Sorted unique numbers (>= mid): 42 51 52 63 67 70 72 80 88 93 96 

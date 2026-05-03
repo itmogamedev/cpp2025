@@ -34,62 +34,62 @@ void writeToOutput(
   }
 }
 
+auto generateVector = [](auto& gen) {
+  std::uniform_int_distribution<> dis(-50, 100);
+  std::vector<int> vec(20);
+  std::generate(vec.begin(), vec.end(), [&]() { return dis(gen); });
+  return vec;
+};
+
+auto sortVector = [](const std::vector<int>& some_numbers) {
+  std::vector<int> result = some_numbers;
+  std::sort(result.begin(), result.end());
+  return result;
+};
+
+auto findExtremes = [](const std::vector<int>& some_numbers) {
+  auto [min_it, max_it] =
+      std::minmax_element(some_numbers.begin(), some_numbers.end());
+  return std::make_pair(*min_it, *max_it);
+};
+
+auto countPositive = [](const std::vector<int>& some_numbers) {
+  return std::count_if(some_numbers.begin(), some_numbers.end(),
+                       [](int num) { return num > 0; });
+};
+
+auto countNegative = [](const std::vector<int>& some_numbers) {
+  return std::count_if(some_numbers.begin(), some_numbers.end(),
+                       [](int num) { return num < 0; });
+};
+
+auto countZeros = [](const std::vector<int>& some_numbers) {
+  return std::count_if(some_numbers.begin(), some_numbers.end(),
+                       [](int num) { return num == 0; });
+};
+
+auto midArithmetic = [](const std::vector<int>& some_numbers) {
+  double sum = std::accumulate(some_numbers.begin(), some_numbers.end(), 0);
+  return sum / some_numbers.size();
+};
+
+auto removeThatLess = [](const std::vector<int>& some_numbers, double mid) {
+  std::vector<int> result;
+  std::copy_if(some_numbers.begin(), some_numbers.end(),
+               std::back_inserter(result),
+               [mid](int num) { return num >= mid; });
+  return result;
+};
+
+auto removeDuplicates = [](const std::vector<int>& some_numbers) {
+  std::vector<int> sorted = some_numbers;
+  std::sort(sorted.begin(), sorted.end());
+  std::vector<int> result;
+  std::unique_copy(sorted.begin(), sorted.end(), std::back_inserter(result));
+  return result;
+};
+
 auto processData = [](auto& gen) {
-  auto generateVector = [](auto& gen) {
-    std::uniform_int_distribution<> dis(-50, 100);
-    std::vector<int> vec(20);
-    std::generate(vec.begin(), vec.end(), [&]() { return dis(gen); });
-    return vec;
-  };
-
-  auto sortVector = [](const std::vector<int>& some_numbers) {
-    std::vector<int> result = some_numbers;
-    std::sort(result.begin(), result.end());
-    return result;
-  };
-
-  auto findExtremes = [](const std::vector<int>& some_numbers) {
-    auto [min_it, max_it] =
-        std::minmax_element(some_numbers.begin(), some_numbers.end());
-    return std::make_pair(*min_it, *max_it);
-  };
-
-  auto countPositive = [](const std::vector<int>& some_numbers) {
-    return std::count_if(some_numbers.begin(), some_numbers.end(),
-                         [](int num) { return num > 0; });
-  };
-
-  auto countNegative = [](const std::vector<int>& some_numbers) {
-    return std::count_if(some_numbers.begin(), some_numbers.end(),
-                         [](int num) { return num < 0; });
-  };
-
-  auto countZeros = [](const std::vector<int>& some_numbers) {
-    return std::count_if(some_numbers.begin(), some_numbers.end(),
-                         [](int num) { return num == 0; });
-  };
-
-  auto midArithmetic = [](const std::vector<int>& some_numbers) {
-    double sum = std::accumulate(some_numbers.begin(), some_numbers.end(), 0);
-    return sum / some_numbers.size();
-  };
-
-  auto removeThatLess = [](const std::vector<int>& some_numbers, double mid) {
-    std::vector<int> result;
-    std::copy_if(some_numbers.begin(), some_numbers.end(),
-                 std::back_inserter(result),
-                 [mid](int num) { return num >= mid; });
-    return result;
-  };
-
-  auto removeDuplicates = [](const std::vector<int>& some_numbers) {
-    std::vector<int> sorted = some_numbers;
-    std::sort(sorted.begin(), sorted.end());
-    std::vector<int> result;
-    std::unique_copy(sorted.begin(), sorted.end(), std::back_inserter(result));
-    return result;
-  };
-
   std::vector<int> numbers = generateVector(gen);
   auto [min, max] = findExtremes(numbers);
   std::vector<int> sorted_numbers = sortVector(numbers);
