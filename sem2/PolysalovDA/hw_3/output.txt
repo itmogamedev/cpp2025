@@ -19,13 +19,13 @@ C++ prgrmmng s fn
 Lmbd xprssns
 STL lgrthms
 Shrt
- vry lng strng jst fr tstng prpss
+ vr lng strng jst fr tstng prpss
 
-Search result: 0
+Search result: -1
 
-Total characters without vowels: 85
+Total characters without vowels: 84
 
-Lengths of strings: 
+Lengths of strings:
 11
 22
 18
