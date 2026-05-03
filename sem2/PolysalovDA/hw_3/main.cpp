@@ -6,13 +6,20 @@
 #include <string>
 #include <vector>
 
-void writeOutputFile(
-    const std::tuple<std::vector<std::string>, std::vector<std::string>,
-                     std::vector<std::string>, int, int, std::vector<int>>&
-        data_tuple,
-    std::ofstream& output_file) {
+struct ProcessedData {
+ public:
+  std::vector<std::string> data;
+  std::vector<std::string> filtered_data;
+  std::vector<std::string> removed_vowels_data;
+  int word_index;
+  int total_no_vowels;
+  std::vector<int> strings_lengths;
+};
+
+void writeOutputFile(const ProcessedData& processed_data,
+                     std::ofstream& output_file) {
   auto [data, filtered_data, removed_vowels_data, word_index, total_no_vowels,
-        strings_lengths] = data_tuple;
+        strings_lengths] = processed_data;
 
   if (output_file.is_open()) {
     output_file << "Original data:\n";
@@ -47,7 +54,6 @@ auto readInputFile = [](std::ifstream& input_file) -> std::vector<std::string> {
     while (std::getline(input_file, line)) {
       data.push_back(line);
     }
-    input_file.close();
   }
   return data;
 };
@@ -134,8 +140,12 @@ auto processData = [](const std::vector<std::string>& data, int barrier,
   int total_characters_no_vowels = countTotalCharacters(removed_vowels_data);
   std::vector<int> strings_lengths = countStringsLengths(data);
 
-  return std::make_tuple(data, filtered_data, removed_vowels_data, word_index,
-                         total_characters_no_vowels, strings_lengths);
+  return ProcessedData{data,
+                       filtered_data,
+                       removed_vowels_data,
+                       word_index,
+                       total_characters_no_vowels,
+                       strings_lengths};
 };
 
 int main() {
@@ -144,6 +154,7 @@ int main() {
   std::vector<std::string> data = readInputFile(input_file);
   int barrier = inputBarrier();
   std::string word = inputWord();
-  writeOutputFile(processData(data, barrier, word), output_file);
+  ProcessedData processed_data = processData(data, barrier, word);
+  writeOutputFile(processed_data, output_file);
   return 0;
 }
