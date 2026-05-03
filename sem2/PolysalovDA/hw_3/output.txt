@@ -1,0 +1,34 @@
+Original data:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+Filtered data:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+Data with vowels removed:
+Hll wrld
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+Shrt
+ vry lng strng jst fr tstng prpss
+
+Search result: 0
+
+Total characters without vowels: 85
+
+Lengths of strings: 
+11
+22
+18
+14
+5
+44
