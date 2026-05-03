@@ -3,9 +3,20 @@
 #include <iostream>
 #include <random>
 
-void writeToOutput(
-    const std::tuple<int, int, std::vector<int>, int, int, int, double,
-                     std::vector<int>, std::vector<int>>& data) {
+struct Data {
+ public:
+  int min;
+  int max;
+  std::vector<int> sorted_numbers;
+  int negative_count;
+  int zeros_count;
+  int positive_count;
+  double mid_arithmetic;
+  std::vector<int> filtered_numbers;
+  std::vector<int> unique_numbers;
+};
+
+void writeToOutput(const Data& data) {
   auto [min, max, sorted_numbers, negative_count, zeros_count, positive_count,
         mid_arithmetic, filtered_numbers, unique_numbers] = data;
 
@@ -93,17 +104,23 @@ auto processData = [](auto& gen) {
   std::vector<int> numbers = generateVector(gen);
   auto [min, max] = findExtremes(numbers);
   std::vector<int> sorted_numbers = sortVector(numbers);
-  auto [negative_count, zeros_count, positive_count] =
-      std::make_tuple(countNegative(sorted_numbers), countZeros(sorted_numbers),
-                      countPositive(sorted_numbers));
+  int negative_count = countNegative(numbers);
+  int zeros_count = countZeros(numbers);
+  int positive_count = countPositive(numbers);
   double mid_arithmetic = midArithmetic(sorted_numbers);
   std::vector<int> filtered_numbers = removeThatLess(numbers, mid_arithmetic);
   std::vector<int> unique_numbers =
       removeDuplicates(sortVector(filtered_numbers));
 
-  return std::make_tuple(min, max, sorted_numbers, negative_count, zeros_count,
-                         positive_count, mid_arithmetic, filtered_numbers,
-                         unique_numbers);
+  return Data{min,
+              max,
+              sorted_numbers,
+              negative_count,
+              zeros_count,
+              positive_count,
+              mid_arithmetic,
+              filtered_numbers,
+              unique_numbers};
 };
 
 int main() {
