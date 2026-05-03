@@ -1,0 +1,30 @@
+Исходный вектор строк:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+Вектор строк после удаления коротких строк:
+C++ programming is fun
+A very long string just for testing purposes
+
+Вектор строк после удаления гласных букв:
+C++ prgrmmng s fn
+ vr lng strng jst fr tstng prpss
+
+Результат поиска заданного слова:
+C++ programming is fun
+
+Общее количество символов без "_"
+49
+
+Вектор длин строк:
+11
+22
+18
+14
+5
+44
+
