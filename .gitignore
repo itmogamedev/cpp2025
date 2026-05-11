@@ -1,19 +1,8 @@
-Debug/
-Release/
-x64/
-SFML/
-*.dll
-*.lib             
-*.exe             
-*.pdb              
-*.obj             
-*.user            
-.vs/              
-mini_hw_1/*.dll
-mini_hw_1/*.lib
-mini_hw_2/*.dll
-mini_hw_2/*.lib
-Vec3LibTest/*.exe
-audio/
-fonts/
-*.sln
+# Игнорируем всё
+
+# Но исключаем файлы .txt и .cpp
+!*.txt
+!*.cpp
+
+# Также исключаем сам .gitignore (чтобы он попал в репозиторий)
+!.gitignore
