@@ -1,0 +1,29 @@
+------------------------------------------------------
+(-_-) Исходный вектор(-_-)
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+------------------------------------------------------
+(-_-) После удаления строк < 12 (-_-)
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+------------------------------------------------------
+(-_-) После замены пробелов на _ (-_-)
+C++_programming_is_fun
+Lambda_expressions
+STL_algorithms
+A_very_long_string_just_for_testing_purposes
+------------------------------------------------------
+(-_-) Результат поиска по STL (-_-)
+STL_algorithms
+------------------------------------------------------
+(-_-) Символов без _ (-_-)
+86
+------------------------------------------------------
+(-_-) Длины строк (-_-)
+22 18 14 44 
