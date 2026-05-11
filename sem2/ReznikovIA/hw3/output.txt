@@ -1,0 +1,23 @@
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+---
+C++ programming is fun
+Lambda expressions
+A very long string just for testing purposes
+---
+C++_programming_is_fun
+Lambda_expressions
+A_very_long_string_just_for_testing_purposes
+---
+A_very_long_string_just_for_testing_purposes
+---
+73
+---
+22
+18
+44
+---
