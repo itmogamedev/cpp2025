@@ -1,0 +1,53 @@
+========================================================
+             Результаты обработки
+========================================================
+
+--- Исходный Вектор Строк ---
+[1] Do you know what they call a quarter pounder with cheese in France?
+[2] They don't call it a quarter pounder with cheese?
+[3] No, they got the metric system, they wouldn't know what the fuck a quarter pounder is
+[4] So what they call it?
+[5] Royale with cheese
+[6] Royale with cheese? What they call a Big Mac?
+[7] Bg Mac's a Big Mac but they call it Le Big Mac
+[8] Le Big Maque! Hahahahah! What they call a whopper?
+[9] I dunno, I didn't go into Burger King
+
+--- Вектор После Фильтрации (Длина >= 1) ---
+[1] Do you know what they call a quarter pounder with cheese in France?
+[2] They don't call it a quarter pounder with cheese?
+[3] No, they got the metric system, they wouldn't know what the fuck a quarter pounder is
+[4] So what they call it?
+[5] Royale with cheese
+[6] Royale with cheese? What they call a Big Mac?
+[7] Bg Mac's a Big Mac but they call it Le Big Mac
+[8] Le Big Maque! Hahahahah! What they call a whopper?
+[9] I dunno, I didn't go into Burger King
+
+--- Финальный Вектор После Трансформации (Пробел -> _) ---
+[1] Do_you_know_what_they_call_a_quarter_pounder_with_cheese_in_France?
+[2] They_don't_call_it_a_quarter_pounder_with_cheese?
+[3] No,_they_got_the_metric_system,_they_wouldn't_know_what_the_fuck_a_quarter_pounder_is
+[4] So_what_they_call_it?
+[5] Royale_with_cheese
+[6] Royale_with_cheese?_What_they_call_a_Big_Mac?
+[7] Bg_Mac's_a_Big_Mac_but_they_call_it_Le_Big_Mac
+[8] Le_Big_Maque!_Hahahahah!_What_they_call_a_whopper?
+[9] I_dunno,_I_didn't_go_into_Burger_King
+
+--- Результат Поиска Слова ---
+В векторе найдена хотя бы одна строка, содержащая слово "cheese".
+
+========================================================
+Общее количество символов во всех строках (без учета '_'): 418
+
+--- Вектор Длин Строк ---
+[1] 67
+[2] 49
+[3] 85
+[4] 21
+[5] 18
+[6] 45
+[7] 46
+[8] 50
+[9] 37
