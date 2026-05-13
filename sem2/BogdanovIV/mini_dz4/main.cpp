@@ -1,5 +1,6 @@
 
 #include <algorithm>
+#include <ctime>
 #include <fstream>
 #include <iostream>
 #include <numeric>
@@ -42,7 +43,7 @@ int main() {
                   if (i < 0) {
                     ++less;
                     return;
-                  } else if (less > 0) {
+                  } else if (i > 0) {
                     ++greater;
                     return;
                   } else {
@@ -66,7 +67,7 @@ int main() {
                 [&out](int a) { out << a << ' '; });
   out << '\n';
 
-  Title("Without doubles");
+  Title("Without doubles");  // already sorted blin
   random_ints.erase(std::unique(random_ints.begin(), random_ints.end()),
                     random_ints.end());
   std::for_each(random_ints.begin(), random_ints.end(),
