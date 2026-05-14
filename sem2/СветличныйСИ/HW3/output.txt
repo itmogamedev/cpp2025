@@ -1,0 +1,26 @@
+Исходный вектор:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+после удаления коротких:
+C++ programming is fun
+Lambda expressions
+A very long string just for testing purposes
+
+Роскомнадзор запретил букву а...:
+C++ prgrmmng s fn
+Lmbd xprssns
+ vr lng strng jst fr tstng prpss
+
+поиск слова:
+Строка не найдена
+
+символов без '_':
+84
+
+вектор длин строк:
+22 18 44 
