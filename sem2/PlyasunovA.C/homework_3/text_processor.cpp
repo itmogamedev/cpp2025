@@ -9,7 +9,6 @@
 
 namespace {
 
-// Вывод вектора строк с заголовком в поток.
 void printStrings(std::ostream& out, const std::vector<std::string>& vec,
                   const std::string& header) {
   out << header << ":\n";
@@ -19,7 +18,6 @@ void printStrings(std::ostream& out, const std::vector<std::string>& vec,
   out << '\n';
 }
 
-// Удаляет из строки все гласные (a, e, i, o, u, y) в любом регистре.
 std::string removeVowels(const std::string& s) {
   std::string result = s;
   result.erase(std::remove_if(result.begin(), result.end(),
@@ -31,7 +29,6 @@ std::string removeVowels(const std::string& s) {
   return result;
 }
 
-// Запрашивает у пользователя порог длины и слово для поиска.
 void getUserInput(size_t& threshold, std::string& search_word) {
   std::cout << "Введите порог длины строки: ";
   std::cin >> threshold;
@@ -43,7 +40,6 @@ void getUserInput(size_t& threshold, std::string& search_word) {
 }  // namespace
 
 void run() {
-  // 1. Чтение исходного файла
   std::ifstream fin("input.txt");
   if (!fin) {
     std::cerr << "Не удалось открыть input.txt\n";
@@ -56,25 +52,21 @@ void run() {
   }
   fin.close();
 
-  // 2. Запрос параметров
   size_t threshold = 0;
   std::string search_word;
   getUserInput(threshold, search_word);
 
-  // 3. Удаление коротких строк (лямбда с захватом по значению)
   std::vector<std::string> filtered = original;
   auto new_end = std::remove_if(
       filtered.begin(), filtered.end(),
       [threshold](const std::string& s) { return s.length() < threshold; });
   filtered.erase(new_end, filtered.end());
 
-  // 4. Удаление гласных
   std::vector<std::string> no_vowels;
   no_vowels.reserve(filtered.size());
   std::transform(filtered.begin(), filtered.end(),
                  std::back_inserter(no_vowels), removeVowels);
 
-  // 5. Поиск строки с заданным словом (лямбда с захватом по ссылке)
   auto it = std::find_if(no_vowels.begin(), no_vowels.end(),
                          [&search_word](const std::string& s) {
                            return s.find(search_word) != std::string::npos;
@@ -86,7 +78,6 @@ void run() {
     search_result = "Слово \"" + search_word + "\" не найдено.";
   }
 
-  // 6. Подсчёт символов без '_'
   size_t total_chars_no_underscore = std::accumulate(
       no_vowels.begin(), no_vowels.end(), 0ULL,
       [](size_t sum, const std::string& s) {
@@ -94,14 +85,12 @@ void run() {
                                    [](char c) { return c != '_'; });
       });
 
-  // 7. Вектор длин строк
   std::vector<int> lengths;
   lengths.reserve(no_vowels.size());
   std::transform(
       no_vowels.begin(), no_vowels.end(), std::back_inserter(lengths),
       [](const std::string& s) { return static_cast<int>(s.length()); });
 
-  // 8. Запись результатов
   std::ofstream fout("output.txt");
   if (!fout) {
     std::cerr << "Не удалось создать output.txt\n";
