@@ -1,0 +1,10 @@
+Generated vector: 90 84 -3 -31 -23 -44 -20 74 35 30 39 94 95 19 48 89 63 6 48 -27 
+Min element: -44
+Max element: 95
+Sorted vector: -44 -31 -27 -23 -20 -3 6 19 30 35 39 48 48 63 74 84 89 90 94 95 
+Positive count: 14
+Negative count: 6
+Zero count: 0
+Average: 33.3
+After removing even numbers: -31 -27 -23 -3 19 35 39 63 89 95 
+Unique numbers vector: -31 -27 -23 -3 19 35 39 63 89 95 
