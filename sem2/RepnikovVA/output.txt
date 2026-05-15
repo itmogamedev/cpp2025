@@ -1,0 +1,6 @@
+Max: 90; Min: -39
+Sorted vector: -39 -25 -16 11 23 23 24 25 37 39 41 43 46 48 48 52 68 81 83 90 
+Neg: 3; Neutral: 0; Pos: 17
+Average: 35.099998
+Only odd numbers: -39 -25 11 23 23 25 37 39 41 43 81 83 
+Only unique odd numbers: -39 -25 11 23 25 37 39 41 43 81 83 
