@@ -55,6 +55,7 @@ void task4(std::mt19937& rng, std::ofstream& output) {
   float avg = static_cast<float>(sum) / numbers.size();
 
   output << avg << '\n';
+
   // 6.a. Remove all the even numbers
 
   std::erase_if(numbers, [](int& n) { return !(n % 2); });
@@ -62,6 +63,7 @@ void task4(std::mt19937& rng, std::ofstream& output) {
   write_numbers(numbers, output);
 
   // 7. Sort the vector again; create a vector only containing unique elements
+  
   std::vector<int> unique_numbers{*numbers.begin()};
   std::for_each(numbers.begin() + 1, numbers.end(), [&](int& n) {
     if (*unique_numbers.rbegin() != n) unique_numbers.push_back(n);
