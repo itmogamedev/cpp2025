@@ -16,7 +16,7 @@ bool isVowel(char ch) {
          lower_ch == 'o' || lower_ch == 'u' || lower_ch == 'y';
 }
 
-}
+}  // namespace
 
 void processTextFiles(const std::string& input_path,
                       const std::string& output_path) {
@@ -35,7 +35,6 @@ void processTextFiles(const std::string& input_path,
     original_lines.push_back(current_line);
   }
 
-  // Ввод параметров от пользователя
   size_t length_threshold = 0;
   std::cout << "Enter line length threshold: ";
   std::cin >> length_threshold;
@@ -44,7 +43,7 @@ void processTextFiles(const std::string& input_path,
   std::cout << "Enter word to search for: ";
   std::cin >> search_word;
 
-  // 2. Удаление коротких строк (Лямбда с захватом по значению [=])
+  // 2. Удаление коротких строк
   std::vector<std::string> filtered_lines = original_lines;
   filtered_lines.erase(
       std::remove_if(filtered_lines.begin(), filtered_lines.end(),
@@ -53,13 +52,13 @@ void processTextFiles(const std::string& input_path,
                      }),
       filtered_lines.end());
 
-  // 3. Вариант 2: Удаление всех гласных букв из каждой строки
+  // 3. Удаление всех гласных букв из каждой строки
   std::vector<std::string> no_vowels_lines = filtered_lines;
   for (auto& line : no_vowels_lines) {
     line.erase(std::remove_if(line.begin(), line.end(), isVowel), line.end());
   }
 
-  // 4. Поиск строки с заданным словом (Лямбда с захватом по ссылке [&])
+  // 4. Поиск строки с заданным словом
   std::string found_line = "Word not found";
   std::string target_word = search_word;
   auto search_iterator =
@@ -89,7 +88,7 @@ void processTextFiles(const std::string& input_path,
                    return static_cast<int>(str.length());
                  });
 
-  // ЗАПИСЬ В ФАЙЛ OUTPUT.TXT
+  // Запись в output.txt
 
   output_file << "=== Исходный вектор строк ===\n";
   for (const auto& line : original_lines) {
