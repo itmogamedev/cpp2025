@@ -1,0 +1,32 @@
+=== Original strings ===
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+=== Strings after removing short ones ===
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+=== Strings after removing vowels (Variant 2) ===
+Hll wrld
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+Shrt
+ vr lng strng jst fr tstng prpss
+
+Search result
+Word not found.
+
+Total characters without '_'
+84
+
+Vector of string lengths
+8 17 12 11 4 32 
