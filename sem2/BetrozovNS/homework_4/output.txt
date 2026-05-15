@@ -1,0 +1,24 @@
+=== Generated vector ===
+7 77 74 50 33 85 -48 94 3 -46 5 30 78 -3 -19 44 47 77 41 -19 
+
+=== Min and Max ===
+Min: -48
+Max: 94
+
+=== Sorted vector ===
+-48 -46 -19 -19 -3 3 5 7 30 33 41 44 47 50 74 77 77 78 85 94 
+
+=== Element counts ===
+Positive: 15
+Negative: 5
+Zero:     0
+
+=== Arithmetic mean ===
+30.5
+
+=== Vector after removing even numbers ===
+-19 -19 -3 3 5 7 33 41 47 77 77 85 
+
+=== Unique values (sorted) ===
+-19 -3 3 5 7 33 41 47 77 85 
+
