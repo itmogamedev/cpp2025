@@ -8,7 +8,7 @@
 
 void print_lines(std::vector<std::string> lines, std::ofstream& output) {
   std::for_each(lines.begin(), lines.end(),
-                [&](const std::string& str) { output << str << "\n"; });
+                [&](const std::string& str) { output << str << '\n'; });
 }
 
 void task3(std::ifstream& input, std::ofstream& output) {
@@ -58,11 +58,11 @@ void task3(std::ifstream& input, std::ofstream& output) {
 
   output << "\nSearch for word \"" << word << "\":\n";
   std::for_each(lines.begin(), lines.end(), [&](const std::string& str) {
-    if (str.find(word) != std::string::npos) output << str << "\n";
+    if (str.find(word) != std::string::npos) output << str << '\n';
   });
 
   // Count characters
-  
+
   std::vector<int> lengths;
   std::for_each(lines.begin(), lines.end(), [&](const std::string& str) {
     int n = 0;
@@ -73,9 +73,8 @@ void task3(std::ifstream& input, std::ofstream& output) {
   });
 
   output << "\nNumber of non-space characters on each line:\n";
-  std::for_each(lengths.begin(), lengths.end(), [&](const int& n) {
-    output << n << "\n";
-  });
+  std::for_each(lengths.begin(), lengths.end(),
+                [&](const int& n) { output << n << '\n'; });
 
   output << "\nTOTAL:\n";
   output << std::accumulate(lengths.begin(), lengths.end(), 0);
