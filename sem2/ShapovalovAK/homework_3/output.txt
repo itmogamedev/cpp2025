@@ -1,0 +1,34 @@
+
+Исходный вектор строк:
+
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+После удаления коротких строк:
+
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+После удаления гласных:
+
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+ vr lng strng jst fr tstng prpss
+
+Результат поиска слова 
+fn :
+
+Найдена строка: C++ prgrmmng s fn
+
+Общее количество символов: 
+72
+
+Вектор длин строк:
+17 12 11 32 
