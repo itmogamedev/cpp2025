@@ -1,4 +1,4 @@
-п»ї#include <windows.h>
+#include <windows.h>
 
 #include <algorithm>
 #include <fstream>
@@ -32,7 +32,7 @@ static void writeInts(std::ofstream& out, const std::string& title,
 static void runProcessing(int threshold, const std::string& search_word) {
   std::vector<std::string> original = readLines("input.txt");
 
-  // лямбда с захватом по значению
+  // Р»СЏРјР±РґР° СЃ Р·Р°С…РІР°С‚РѕРј РїРѕ Р·РЅР°С‡РµРЅРёСЋ
   std::vector<std::string> after_remove = original;
   auto it = std::remove_if(after_remove.begin(), after_remove.end(),
                            [threshold](const std::string& s) {
@@ -40,12 +40,12 @@ static void runProcessing(int threshold, const std::string& search_word) {
                            });
   after_remove.erase(it, after_remove.end());
 
-  // Замена пробелов на '_' (вариант 1)
+  // Р—Р°РјРµРЅР° РїСЂРѕР±РµР»РѕРІ РЅР° '_' (РІР°СЂРёР°РЅС‚ 1)
   std::vector<std::string> after_replace = after_remove;
   for (auto& line : after_replace)
     std::replace(line.begin(), line.end(), ' ', '_');
 
-  // лямбда с захватом по ссылке
+  // Р»СЏРјР±РґР° СЃ Р·Р°С…РІР°С‚РѕРј РїРѕ СЃСЃС‹Р»РєРµ
   auto found_it =
       std::find_if(after_replace.begin(), after_replace.end(),
                    [&search_word](const std::string& s) {
@@ -62,24 +62,24 @@ static void runProcessing(int threshold, const std::string& search_word) {
   for (const auto& line : after_replace) lengths.push_back((int)line.length());
 
   std::ofstream out("output.txt");
-  writeLines(out, "Исходный вектор строк", original);
-  writeLines(out, "После удаления коротких строк", after_remove);
-  writeLines(out, "После замены пробелов на '_'", after_replace);
-  out << "Результат поиска слова \"" << search_word << "\":\n";
-  out << (found_line.empty() ? "не найдено" : found_line) << "\n\n";
-  out << "Общее количество символов без '_': " << total_chars << "\n\n";
-  writeInts(out, "Вектор длин строк", lengths);
+  writeLines(out, "РСЃС…РѕРґРЅС‹Р№ РІРµРєС‚РѕСЂ СЃС‚СЂРѕРє", original);
+  writeLines(out, "РџРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ РєРѕСЂРѕС‚РєРёС… СЃС‚СЂРѕРє", after_remove);
+  writeLines(out, "РџРѕСЃР»Рµ Р·Р°РјРµРЅС‹ РїСЂРѕР±РµР»РѕРІ РЅР° '_'", after_replace);
+  out << "Р РµР·СѓР»СЊС‚Р°С‚ РїРѕРёСЃРєР° СЃР»РѕРІР° \"" << search_word << "\":\n";
+  out << (found_line.empty() ? "РЅРµ РЅР°Р№РґРµРЅРѕ" : found_line) << "\n\n";
+  out << "РћР±С‰РµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ Р±РµР· '_': " << total_chars << "\n\n";
+  writeInts(out, "Р’РµРєС‚РѕСЂ РґР»РёРЅ СЃС‚СЂРѕРє", lengths);
 }
 
 int main() {
   std::setlocale(LC_ALL, "Russian");
   int threshold;
   std::string search_word;
-  std::cout << "Порог длины: ";
+  std::cout << "РџРѕСЂРѕРі РґР»РёРЅС‹: ";
   std::cin >> threshold;
-  std::cout << "Слово для поиска: ";
+  std::cout << "РЎР»РѕРІРѕ РґР»СЏ РїРѕРёСЃРєР°: ";
   std::cin >> search_word;
   runProcessing(threshold, search_word);
-  std::cout << "Готово. Результат в output.txt\n";
+  std::cout << "Р“РѕС‚РѕРІРѕ. Р РµР·СѓР»СЊС‚Р°С‚ РІ output.txt\n";
   return 0;
 }
