@@ -1,0 +1,5 @@
+Hello world
+This is a test string
+Python programming
+C++ language
+ABC
