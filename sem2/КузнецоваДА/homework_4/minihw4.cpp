@@ -15,9 +15,9 @@ int main()
   std::generate(randNum.begin(), randNum.end(), [&]() { return uni(gen); });
 
   out << "Min: " << *(std::min_element(randNum.begin(), randNum.end()))
-      << std::endl;
+    << std::endl;
   out << "\nMax: " << *(std::max_element(randNum.begin(), randNum.end()))
-      << std::endl;
+    << std::endl;
 
   out << "\nSorted: ";
   std::sort(randNum.begin(), randNum.end());
