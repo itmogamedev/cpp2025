@@ -50,8 +50,7 @@ int main() {
   std::cout << "Input WORD witch you going to found: ";
   std::cin >> word;
 
-  auto findLineWithWord =
-      [&word](const std::vector<std::string>& vec) -> std::string {
+  auto find_word = [&word](const std::vector<std::string>& vec) -> std::string {
     auto it =
         std::find_if(vec.begin(), vec.end(), [&word](const std::string& str) {
           return str.find(word) != std::string::npos;
@@ -62,11 +61,10 @@ int main() {
       return "Строка не была найдена";
   };
 
-  std::string foundLine = findLineWithWord(after_remove);
+  std::string line_with_word = find_word(after_remove);
 
   // Подсчёт общего количества символов без '_'
-  auto countCharsWithoutUnderscore =
-      [](const std::vector<std::string>& vec) -> int {
+  auto char_count = [](const std::vector<std::string>& vec) -> int {
     int total = 0;
     for (const auto& str : vec) {
       for (char ch : str) {
@@ -78,10 +76,10 @@ int main() {
     return total;
   };
 
-  int totalChars = countCharsWithoutUnderscore(after_replace);
+  int totalChars = char_count(after_replace);
 
   // Создание вектора длин строк
-  auto createLengthsVector =
+  auto create_vec_of_length =
       [](const std::vector<std::string>& vec) -> std::vector<int> {
     std::vector<int> lengths;
     for (const auto& str : vec) {
@@ -90,49 +88,49 @@ int main() {
     return lengths;
   };
 
-  std::vector<int> lineLengths = createLengthsVector(after_replace);
+  std::vector<int> vec_of_length = create_vec_of_length(after_replace);
 
   ///////////////////////////////////////////////////////////////////
   // 3. Вывести в файл output.txt
   ///////////////////////////////////////////////////////////////////
-  std::ofstream outFile("output.txt");
-  if (!outFile.is_open()) {
+  std::ofstream out_file("output.txt");
+  if (!out_file.is_open()) {
     std::cerr << "Error with creating output.txt\n And it's can be my "
                  "fault...(but it's not))"
               << std::endl;
     return 1;
   }
   // удобная, *настраиваемая* лямбда для записи векторов строк в файл
-  auto printVector = [&outFile](const std::vector<std::string>& vec,
-                                const std::string& title) {
-    outFile << "\n\n" << title << ":\n";
+  auto print_str_vec = [&out_file](const std::vector<std::string>& vec,
+                                   const std::string& title) {
+    out_file << "\n\n" << title << ":\n";
     for (const auto& s : vec) {
-      outFile << "  " << s << "\n";
+      out_file << "  " << s << "\n";
     }
-    outFile << "\n";
+    out_file << "\n";
   };
 
   // удобная, *настраиваемая* лямбда для записи векторов чисел в файл
-  auto printSizeTVector = [&outFile](const std::vector<int>& vec,
-                                     const std::string& title) {
-    outFile << title << ":\n";
+  auto print_int_vec = [&out_file](const std::vector<int>& vec,
+                                   const std::string& title) {
+    out_file << title << ":\n";
     for (int len : vec) {
-      outFile << len << "; ";
+      out_file << len << "; ";
     }
-    outFile << "\n";
+    out_file << "\n";
   };
 
   // собсна запись в файл (не прям красивая, но какая есть)
-  printVector(lines, "Исходный вектор строк");
-  printVector(after_remove, "Вектор строк после удаления коротких строк");
-  printVector(after_replace, "Вектор строк после замены пробелов на '_'");
-  outFile << "Первая строка содержащая \"" << word << "\":\n";
-  outFile << "  " << foundLine << "\n\n";
-  outFile << "Общее количество символов без учёта '_' : " << totalChars
-          << "\n\n";
-  printSizeTVector(lineLengths, "Вектор длин строк");
+  print_str_vec(lines, "Исходный вектор строк");
+  print_str_vec(after_remove, "Вектор строк после удаления коротких строк");
+  print_str_vec(after_replace, "Вектор строк после замены пробелов на '_'");
+  out_file << "Первая строка содержащая \"" << word << "\":\n";
+  out_file << "  " << line_with_word << "\n\n";
+  out_file << "Общее количество символов без учёта '_' : " << totalChars
+           << "\n\n";
+  print_int_vec(vec_of_length, "Вектор длин строк");
 
   // усё
-  outFile.close();
+  out_file.close();
   return 0;
 }
