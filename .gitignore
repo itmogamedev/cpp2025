@@ -40,3 +40,8 @@
 # debug information files
 *.dwo
 
+mini_hw_3/mini_hw_3/.vs/mini_hw_3/FileContentIndex/71a1f4ba-8fb7-41e6-994a-8cdb1089fa48.vsidx
+/mini_hw_3
+*.tlog
+*.idb
+*.ipdb
