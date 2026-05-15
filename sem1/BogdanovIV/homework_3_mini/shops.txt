@@ -1,0 +1,46 @@
+SHOP Dragon_Hoard
+WEAPON Flameblade 1500 3.5 85
+WEAPON Storm_Axe 1200 4.8 95
+ARMOR Dragon_Scale 800 5.2 60
+POTION Healing_Draught 300 0.1 50.0
+SCROLL Fireball 400 0.2 Fire_Damage
+
+SHOP Moonlight_Emporium
+WEAPON Shadow_Bow 1200 2.1 70
+ARMOR Frost_Armor 950 6.1 75
+POTION Invisibility_Potion 350 0.15 30.0
+SCROLL Chain_Lightning 450 0.3 Chain_Lightning
+SCROLL Heal 380 0.25 Healing
+SCROLL Chain_Lightning 420 0.28 Chain_Lightning
+
+SHOP Solar_Outpost
+POTION Strength_Elixir 280 0.12 25.0
+POTION Stamina_Brew 320 0.18 40.0
+ARMOR Thunder_Plate 1100 7.3 80
+ARMOR Wisdom_Helm 700 3.2 55
+WEAPON Crystal_Dagger 900 1.2 45
+SCROLL Teleport 500 0.4 Teleportation
+
+SHOP Black_Market
+WEAPON Soul_Reaper 2000 8.5 150
+ARMOR Necro_Shield 600 9.1 45
+POTION Poison_Vial 150 0.08 15.5
+SCROLL Curse 280 0.15 Weakness
+WEAPON Blood_Dagger 750 2.3 65
+
+SHOP Celestial_Bazaar
+SCROLL Starfall 600 0.35 Meteor
+SCROLL Starfall 580 0.32 Meteor
+POTION Mana_Elixir 420 0.22 60.0
+ARMOR Celestial_Robe 1300 4.5 85
+WEAPON Moonblade 1100 3.8 88
+POTION Divine_Blessing 520 0.25 75.5
+
+SHOP Goblin_Stash
+WEAPON Rusty_Sword 100 5.2 15
+ARMOR Wooden_Shield 50 8.7 10
+POTION Goblin_Brew 80 0.3 5.0
+SCROLL Smoke_Bomb 120 0.1 Smoke_Screen
+WEAPON Crossbow 350 4.1 40
+ARMOR Leather_Vest 180 3.8 25
+POTION Health_Potion 200 0.2 20.0

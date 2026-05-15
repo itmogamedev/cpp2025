@@ -1,0 +1,48 @@
+/*
+<ShopName>
+<Type> <ItemName> <ItemPrice> <ItemWeight> <ItemSpecific>
+
+Types: 
+Weapon - Specific=Damage (int)
+Device - Specific=Duration (int)
+Ammo - Specific=Quantity (int)
+Goods - Specific=DeliveryPlace (string)
+*/
+
+Podish
+Weapon MACHOTINE_GUN_LIGHT 363 3 20
+Weapon SPEETLE_SYSTEM_LIGHT 1275 5 150
+Weapon GHORB_GEAR_LIGHT 964 4 70
+
+Device AMPUTATOR 1000 0 10
+Device DEGRADATOR 1000 0 10
+Device MECHOSCOPE 5000 1 1
+
+Goods PHLEGMA 1000 3 Podish
+
+
+
+Incubator
+Weapon MACHOTINE_GUN_LIGHT 360 3 20
+Weapon MACHOTINE_GUN_HEAVY 1210 5 80
+Weapon SPEETLE_SYSTEM_LIGHT 1280 5 150
+Weapon SPEETLE_SYSTEM_HEAVY 4125 12 400
+
+Device TERMINATOR 350 1 5
+Device TERMINATOR2 475 1 5
+
+Ammo SPEETLE_SYSTEM_AMMO0 30 1 5
+Ammo SPEETLE_SYSTEM_AMMO1 60 1 10
+
+Goods PHLEGMA 750 3 Podish
+
+
+
+B-Zone
+Weapon MACHOTINE_GUN_LIGHT 350 3 20
+Weapon MEDIGUN 850 3 -20
+
+Device AMPUTATOR 1000 0 10
+
+Goods NYMBOS 10 3 Incubator
+Goods PHLEGMA 500 3 Podish

@@ -1,0 +1,28 @@
+Shop: Shop1
+Items: 6
+Weapon W1 2200 3.4 90
+Weapon W2 1800 2.1 75
+Armor A2 2000 5.0 85
+Armor A2 2100 2.8 80
+Potion P1 400 0.3 45.0
+Scroll S1 900 0.10 Lighting
+
+Shop: Shop2
+Items: 7
+Weapon W3 2500 1.2 95
+Weapon W4 2700 3.0 100
+Armor A3 1500 2.2 60
+Armor A4 2800 3.5 90
+Potion P2 1900 0.2 70.0
+Scroll S2 1600 0.12 Blessing
+Scroll S3 3000 0.08 Curse
+
+Shop: Regedit_Shop
+Items: 7
+Weapon Meowmere 3000 4.0 110
+Weapon Reds_Throw 2800 3.2 100
+Armor Reds_Chestplate 2600 6.0 95
+Armor Reds_Wings 1900 2.7 70
+Potion Healing_Potion 1200 0.5 60.0
+Potion Restoration_Potion 1200 0.5 45.0
+Scroll Recall_Scroll 2200 0.15 Recall

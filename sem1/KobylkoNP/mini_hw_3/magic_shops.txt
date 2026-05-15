@@ -1,0 +1,20 @@
+Shop: Dragon_Coffer
+Items: 4
+Weapon Flame_Sword 1500 3.5 85
+Armor Valkyrie_Shield 800 5.2 60
+Potion Life_Elixir 300 0.1 50.0
+Weapon Storm_Axe 1200 2.9 95
+
+Shop: Moon_Bazaar
+Items: 3
+Weapon Shadow_Bow 1200 2.1 70
+Scroll Lightning_Scroll 450 0.3 Chain_Lightning
+Scroll Healing_Scroll 300 0.2 Healing
+
+Shop: Alchemy_Laboratory
+Items: 5
+Potion Strength_Potion 400 0.15 30.0
+Potion Invisibility_Elixir 600 0.12 45.5
+Armor Dragon_Mail 2000 8.7 85
+Scroll Teleportation_Scroll 800 0.4 Teleportation
+Scroll Fire_Scroll 350 0.25 Fireball

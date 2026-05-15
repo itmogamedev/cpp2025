@@ -1,0 +1,29 @@
+Shop: Dragons_Hoard
+Items: 7
+Weapon Flame_Sword 1500 3.5 85
+Armor Valkyrie_Shield 800 5.2 60
+Potion Life_Elixir 300 0.1 50.0
+Weapon Frost_Staff 2200 2.8 95
+Scroll Teleportation_Scroll 600 0.2 Teleport
+Potion Mana_Potion 250 0.15 45.5
+Armor Guardian_Chainmail 1100 8.0 75
+
+Shop: Lunar_Bazaar
+Items: 6
+Weapon Shadow_Bow 1200 2.1 70
+Scroll Lightning_Scroll 450 0.3 Chain_Lightning
+Weapon Assassins_Dagger 800 0.9 60
+Scroll Healing_Scroll 380 0.25 Healing
+Potion Antidote 150 0.12 30.0
+Scroll Lightning_Scroll 450 0.3 Chain_Lightning
+
+Shop: Starlight_Emporium
+Items: 8
+Armor Sages_Helmet 950 3.5 55
+Potion Strength_Potion 400 0.18 60.0
+Weapon Berserker_Axe 1800 6.5 110
+Scroll Fireball_Scroll 500 0.28 Fireball
+Armor Gloves_of_Dexterity 650 1.2 45
+Potion Invisibility_Elixir 700 0.22 80.0
+Weapon Light_Spear 1350 4.1 78
+Armor Speed_Boots 720 2.0 50
