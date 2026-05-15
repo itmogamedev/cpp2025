@@ -1,0 +1,11 @@
+﻿  Game.cpp
+  main.cpp
+  Utils.cpp
+  Создание кода...
+D:\ZolkovAB\Mini_HW2\MiniHW2\Game.h(3,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  (компиляция исходного файла "Game.cpp")
+  
+D:\ZolkovAB\Mini_HW2\MiniHW2\main.cpp(1,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+D:\ZolkovAB\Mini_HW2\MiniHW2\Utils.h(2,10): error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  (компиляция исходного файла "Utils.cpp")
+  
