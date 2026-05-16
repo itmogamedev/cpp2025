@@ -1,0 +1,20 @@
+3
+shop1 5
+a armor1 2 10.5 100
+a armor2 3 5 1
+s aboba 1 2 karma
+s f 89 98 death
+s b 2 1 karma
+shop2 6
+w gg 7 9 78
+a armor1 2 10.5 100
+a armor2 3 5 1
+s aboba 1 2 karma
+s f 89 98 death
+s b 2 1 karma
+shop3 5
+p w 1 2 3
+p t 9 8 7.5
+p q 1 2 5
+w gg 7 9 78
+a armor1 2 10.5 100
