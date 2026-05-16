@@ -1,0 +1,14 @@
+Sorted vector:
+-44 -40 -39 -36 -11 -2 6 34 54 57 58 58 62 75 79 80 83 95 95 98 
+
+Positive: 14
+Negative: 6
+Zero: 0
+
+Average: 38.1
+
+Vector after removing even numbers:
+-39 -11 57 75 79 83 95 95 
+
+Sorted unique vector:
+-39 -11 57 75 79 83 95 
