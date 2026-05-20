@@ -1,35 +1,36 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <vector>
 #include <memory>
+#include <vector>
+
 #include "Card.h"
 
 class Game {
-private:
-    sf::RenderWindow window;
-    sf::Font font;
-    std::vector<std::unique_ptr<Card>> cards;
+ private:
+  sf::RenderWindow window;
+  sf::Font font;
+  std::vector<std::unique_ptr<Card>> cards;
 
-    Card* firstCard;
-    Card* secondCard;
-    int moves;
-    int pairsFound;
-    int consecutiveMisses;
-    bool isWaiting;
-    sf::Clock delayClock;
+  Card* firstCard;
+  Card* secondCard;
+  int moves;
+  int pairsFound;
+  int consecutiveMisses;
+  bool isWaiting;
+  sf::Clock delayClock;
 
-    sf::Text movesText;
-    sf::Text gameOverText;
-    bool gameFinished;
+  sf::Text movesText;
+  sf::Text gameOverText;
+  bool gameFinished;
 
-    void initializeCards();
-    void handleMouseClick(float mouseX, float mouseY);
-    void checkMatch();
-    void resetSelection();
-    void shuffleRemainingCards();
-    void drawUI();
+  void initializeCards();
+  void handleMouseClick(float mouseX, float mouseY);
+  void checkMatch();
+  void resetSelection();
+  void shuffleRemainingCards();
+  void drawUI();
 
-public:
-    Game();
-    void run();
+ public:
+  Game();
+  void run();
 };
