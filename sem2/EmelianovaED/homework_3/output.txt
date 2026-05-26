@@ -1,0 +1,29 @@
+Lines in input.txt
+I didn't know what to write, so I collected funny phrases from the games.
+If you want guarantees, buy a toaster!
+I won't give you the stone.
+Oh, save him, Doctor! A pretty face is all he has!
+Wasted.
+I've seen some shit!
+
+Lines after delete short strings
+I didn't know what to write, so I collected funny phrases from the games.
+If you want guarantees, buy a toaster!
+I won't give you the stone.
+Oh, save him, Doctor! A pretty face is all he has!
+
+Lines after replace
+I_didn't_know_what_to_write,_so_I_collected_funny_phrases_from_the_games.
+If_you_want_guarantees,_buy_a_toaster!
+I_won't_give_you_the_stone.
+Oh,_save_him,_Doctor!_A_pretty_face_is_all_he_has!
+
+Result serch: I_won't_give_you_the_stone.
+
+Count char: 154
+
+Lens lines
+Line 1: 73 chars
+Line 2: 38 chars
+Line 3: 27 chars
+Line 4: 50 chars
