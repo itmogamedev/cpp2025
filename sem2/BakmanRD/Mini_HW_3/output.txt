@@ -1,0 +1,30 @@
+Original file:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+All the lines longer than 1 symbols
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+All the lines after the changes "_":
+Hll_wrld
+C++_prgrmmng_s_fn
+Lmbd_xprssns
+STL_lgrthms
+Shrt
+_vr_lng_strng_jst_fr_tstng_prpss
+
+Result of the search of the word "wrld": found: Hll_wrld
+
+Total symbol count w/o '_': 71
+
+The length of all the lines:
+8 17 12 11 4 32 
