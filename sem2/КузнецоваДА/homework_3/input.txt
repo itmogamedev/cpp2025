@@ -1,6 +1,0 @@
-Hello world
-C++ programming is kinda fun
-Try to understand lambda expressions
-Short
-A very long string for the universal balance
-How to survive when C++ exam is in a week
