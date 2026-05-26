@@ -1,0 +1,20 @@
+Original vector:
+-13 -35 -2 45 21 94 -5 59 49 4 -5 92 -25 -44 100 -16 -37 20 91 -41 
+
+Minimum element: -44
+Maximum element: 100
+
+Sorted vector:
+-44 -41 -37 -35 -25 -16 -13 -5 -5 -2 4 20 21 45 49 59 91 92 94 100 
+
+Positive elements: 10
+Negative elements: 10
+Zero elements: 0
+
+Average value: 17.6
+
+vector after removing elements smaller than average:
+20 21 45 49 59 91 92 94 100 
+
+Unique sorted vector:
+20 21 45 49 59 91 92 94 100 
