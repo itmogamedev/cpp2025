@@ -1,0 +1,20 @@
+Initial vector:
+70 -13 38 -19 35 22 30 -36 -29 -12 55 3 86 71 -22 32 85 46 10 42 
+
+Min element: -36
+Max element: 86
+
+Sorted vector:
+-36 -29 -22 -19 -13 -12 3 10 22 30 32 35 38 42 46 55 70 71 85 86 
+
+Positive: 14
+Negative: 6
+Zeros: 0
+
+Average: 24.7
+
+Filtered vector (>= average):
+70 38 35 30 55 86 71 32 85 46 42 
+
+Unique sorted vector:
+30 32 35 38 42 46 55 70 71 85 86 

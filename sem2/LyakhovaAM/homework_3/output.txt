@@ -1,0 +1,26 @@
+File input:
+It's a beautiful day outside...
+Birds are singing...
+Flowers are blooming...
+On days like this...kids like you...
+SHOULD BE BURNING IN HELL
+
+The length of the string, less than which the strings were deleted: 24
+File after that:
+It's a beautiful day outside...
+On days like this...kids like you...
+SHOULD BE BURNING IN HELL
+
+File after replacing symbols:
+It's_a_beautiful_day_outside...
+On_days_like_this...kids_like_you...
+SHOULD_BE_BURNING_IN_HELL
+
+Word 'HELL' found in string 3
+
+Number of symbols: 79
+
+Lengths of strings:
+31
+36
+25

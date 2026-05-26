@@ -1,0 +1,11 @@
+Min: -49, Max: 91
+Sort:
+-49 -44 -26 -26 -18 2 14 19 26 29 29 38 55 55 59 65 71 79 90 91 
+Negative numbers: 5
+Zeroes: 0
+Positive numbers: 15
+Arithmetic mean: 27.95
+Deleting even numbers:
+-49 19 29 29 55 55 59 65 71 79 91 
+Unique numbers:
+-49 19 29 55 59 65 71 79 91 

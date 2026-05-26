@@ -1,0 +1,10 @@
+min: -20
+max: 86
+sorted array: -20 -19 -5 5 14 27 30 34 38 38 38 51 53 62 62 64 67 73 75 86 
+numbers<0: 3
+numbers=0: 0
+numbers>0: 17
+average: 38.65
+filtered array: 51 53 62 62 64 67 73 75 86 
+unique array: 51 53 62 64 67 73 75 86 
+

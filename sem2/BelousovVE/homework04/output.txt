@@ -1,0 +1,24 @@
+Min: -40; Max: 95
+
+
+
+[ -40, -36, -36, -27, -20, -15, -12, 2, 17, 31, 32, 35, 43, 56, 65, 67, 76, 82, 85, 95 ]
+
+
+
+Positive: 13; Negative: 7; Zeros: 0
+
+
+
+Average number: 25
+
+
+
+Vector after deletion: [ 31, 32, 35, 43, 56, 65, 67, 76, 82, 85, 95 ]
+
+
+
+Sort vector after deletion and creation of new vector of unique numbers: [31, 32, 35, 43, 56, 65, 67, 76, 82, 85, 95 ]
+
+
+
