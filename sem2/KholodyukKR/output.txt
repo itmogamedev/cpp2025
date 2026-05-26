@@ -1,0 +1,26 @@
+Original vector of strings
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+Vector of strings after removing short lines
+C++ programming is fun
+Lambda expressions
+A very long string just for testing purposes
+
+Vector of strings after replacing spaces with "_"
+C++_programming_is_fun
+Lambda_expressions
+A_very_long_string_just_for_testing_purposes
+
+Search result for the specified word
+Found line: C++_programming_is_fun
+
+Total number of characters without "_"
+73
+
+Vector of string lengths
+22 18 44 
