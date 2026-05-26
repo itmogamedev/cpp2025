@@ -1,0 +1,10 @@
+Original vector: 40 45 -38 60 83 -30 -12 66 1 37 -10 46 22 25 65 84 -28 0 16 42 
+Minimum: -38
+Maximum: 84
+Sorted vector: -38 -30 -28 -12 -10 0 1 16 22 25 37 40 42 45 46 60 65 66 83 84 
+Zero count: 1
+Positive count: 14
+Negative count: 5
+Average: 25.7
+Elements less than average: -38 -30 -12 1 -10 22 25 -28 0 16 
+Unique elements: -38 -30 -28 -12 -10 0 1 16 22 25 37 40 42 45 46 60 65 66 83 84 
