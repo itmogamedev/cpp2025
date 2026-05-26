@@ -1,0 +1,32 @@
+=== РЕЗУЛЬТАТЫ ===
+
+1. Исходный вектор строк:
+  [0] "Hello world"
+  [1] "C++ programming is fun"
+  [2] "Lambda expressions"
+  [3] "STL algorithms"
+  [4] "Short"
+  [5] "A very long string just for testing purposes"
+  [6] ""
+
+Порог длины: 10
+2. После удаления коротких строк:
+  [0] "Hello world"
+  [1] "C++ programming is fun"
+  [2] "Lambda expressions"
+  [3] "STL algorithms"
+  [4] "A very long string just for testing purposes"
+
+3. После удаления гласных (Вариант 2):
+  [0] "Hll wrld"
+  [1] "C++ prgrmmng s fn"
+  [2] "Lmbd xprssns"
+  [3] "STL lgrthms"
+  [4] " vr lng strng jst fr tstng prpss"
+
+4. Поиск слова "C++":
+   Найдено: "C++ prgrmmng s fn"
+
+5. Общее количество символов (без '_'): 80
+
+6. Вектор длин строк: [8, 17, 12, 11, 32]
