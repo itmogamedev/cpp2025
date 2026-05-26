@@ -1,0 +1,15 @@
+Player controller script
+NPC AI behavior tree
+HP bar UI element
+Respawn point manager
+Quest system update
+Boss fight arena trigger
+Low poly tree model
+Inventory slot hover effect
+Main menu background music loop
+Save game data serializer
+FOV slider settings
+Critical hit chance calculator
+Ragdoll physics test
+Loot table randomizer
+Enemy spawn wave logic
