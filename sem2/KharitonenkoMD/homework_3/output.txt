@@ -1,0 +1,30 @@
+Original vector of strings
+  "Hello world"
+  "C++ programming is fun"
+  "Lambda expressions"
+  "STL algorithms"
+  "Short"
+  "A very long string just for testing purposes"
+
+After removing lines shorter than 6 characters
+  "Hello world"
+  "C++ programming is fun"
+  "Lambda expressions"
+  "STL algorithms"
+  "A very long string just for testing purposes"
+
+After removing vowels (a, e, i, o, u, y)  
+  "Hll wrld"
+  "C++ prgrmmng s fn"
+  "Lmbd xprssns"
+  "STL lgrthms"
+  " vr lng strng jst fr tstng prpss"
+
+  Search for word "Hll"  
+  Found in line: "Hll wrld"
+
+  Total character count (excluding '_')  
+  80
+
+  Vector of string lengths  
+  8 17 12 11 32 
