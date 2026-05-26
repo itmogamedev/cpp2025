@@ -1,0 +1,24 @@
+--- 1. Initial generated vector ---
+63 88 13 53 -29 20 -11 79 99 6 32 32 23 76 68 89 -36 27 20 9 
+
+--- 2. Min and Max elements ---
+Min: -36
+Max: 99
+
+--- 3. Sorted vector ---
+-36 -29 -11 6 9 13 20 20 23 27 32 32 53 63 68 76 79 88 89 99 
+
+--- 4. Element counts ---
+Positive: 17
+Negative: 3
+Zeros: 0
+
+--- 5. Arithmetic mean ---
+Mean: 36.05
+
+--- 6. Vector after removing even numbers ---
+-29 -11 9 13 23 27 53 63 79 89 99 
+
+--- 7. New vector with unique values ---
+-29 -11 9 13 23 27 53 63 79 89 99 
+
