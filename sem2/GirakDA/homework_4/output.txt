@@ -1,0 +1,20 @@
+Original vector:
+81 19 82 -26 40 -40 9 6 6 -36 -31 85 91 -23 -36 32 -29 40 51 -27 
+
+Minimum element: -40
+Maximum element: 91
+
+Sorted vector (ascending):
+-40 -36 -36 -31 -29 -27 -26 -23 6 6 9 19 32 40 40 51 81 82 85 91 
+
+Positive elements count: 12
+Negative elements count: 8
+Zero elements count: 0
+
+Arithmetic mean: 14.7
+
+Vector after removing even numbers:
+81 19 9 -31 85 91 -23 -29 51 -27 
+
+Vector with unique values:
+-31 -29 -27 -23 9 19 51 81 85 91 
