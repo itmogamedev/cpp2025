@@ -1,0 +1,14 @@
+min and max: -47 87
+
+sorted vector:
+-47 -42 -28 -24 -14 -12 8 12 16 20 42 59 59 60 67 68 71 75 80 87 
+
+positive: 14, negative: 6, zero: 0
+
+average: 27.85
+
+vector after removing evens:
+-47 59 59 67 71 75 87 
+
+unique values:
+-47 59 67 71 75 87 
