@@ -1,0 +1,30 @@
+===== SUMO TATAMI <3 <3 <3 =====
+
+===== Mini-homework 3 (Variant 1) =====
+
+1. Original lines from input.txt (4 lines):
+  [0] SUMO TATAMI is the best game, worthy of the Game Awards.
+  [1] The great Kondyusha is the best voice actor — give him an Oscar!
+  [2] May Danya Grishin punish me for not following Google style.
+  [3] SOLID is my bible.
+
+Threshold for short lines: 50
+
+2. After removing short lines (3 lines):
+  [0] SUMO TATAMI is the best game, worthy of the Game Awards.
+  [1] The great Kondyusha is the best voice actor — give him an Oscar!
+  [2] May Danya Grishin punish me for not following Google style.
+
+3. After replacing spaces with '_' (3 lines):
+  [0] SUMO_TATAMI_is_the_best_game,_worthy_of_the_Game_Awards.
+  [1] The_great_Kondyusha_is_the_best_voice_actor_—_give_him_an_Oscar!
+  [2] May_Danya_Grishin_punish_me_for_not_following_Google_style.
+
+4. Search for word "SUMO":
+  found in: SUMO_TATAMI_is_the_best_game,_worthy_of_the_Game_Awards.
+
+5. Total characters (excluding '_'): 150
+
+6. Line lengths (3 values):
+  [56, 66, 59]
+
