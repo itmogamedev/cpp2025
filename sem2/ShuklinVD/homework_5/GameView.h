@@ -1,28 +1,28 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+
 #include "GameModel.h"
 
-class GameView
-{
-public:
-    GameView(float screenWidth, float screenHeight);
+class GameView {
+ public:
+  GameView(float screen_width, float screen_height);
 
-    void loadResources();
-    void render(sf::RenderWindow& window, GameModel& model);
+  void loadResources();
+  void render(sf::RenderWindow& window, GameModel& model);
 
-private:
-    void drawBackground(sf::RenderWindow& window);
-    void drawHUD(sf::RenderWindow& window, GameModel& model);
-    void drawGameOver(sf::RenderWindow& window, GameModel& model);
+ private:
+  void drawBackground(sf::RenderWindow& window);
+  void drawHUD(sf::RenderWindow& window, GameModel& model);
+  void drawGameOver(sf::RenderWindow& window, GameModel& model);
 
-    float m_screenWidth;
-    float m_screenHeight;
+  float screen_width;
+  float screen_height;
 
-    sf::Texture m_shipTexture;
-    sf::Texture m_asteroidTexture;
-    sf::Texture m_backgroundTexture;
+  sf::Texture ship_texture;
+  sf::Texture asteroid_texture;
+  sf::Texture background_texture;
 
-    sf::Sprite m_backgroundSprite;
+  sf::Sprite background_sprite;
 
-    sf::Font m_font;
+  sf::Font font;
 };

@@ -1,54 +1,50 @@
 #pragma once
 #include <vector>
-#include "Ship.h"
+
 #include "Asteroid.h"
 #include "Bullet.h"
+#include "Ship.h"
 
-enum class GameState
-{
-    Playing,
-    GameOver
-};
+enum class GameState { Playing, GameOver };
 
-class GameModel
-{
-public:
-    GameModel(float screenWidth, float screenHeight);
+class GameModel {
+ public:
+  GameModel(float screen_width, float screen_height);
 
-    void reset();
-    void update(float deltaTime);
+  void reset();
+  void update(float delta_time);
 
-    void moveShipLeft(float deltaTime);
-    void moveShipRight(float deltaTime);
-    void shoot();
+  void moveShipLeft(float delta_time);
+  void moveShipRight(float delta_time);
+  void shoot();
 
-    const Ship& getShip() const;
-    const std::vector<Asteroid>& getAsteroids() const;
-    const std::vector<Bullet>& getBullets() const;
-    int getScore() const;
-    int getLives() const;
-    GameState getState() const;
+  const Ship& getShip() const;
+  const std::vector<Asteroid>& getAsteroids() const;
+  const std::vector<Bullet>& getBullets() const;
+  int getScore() const;
+  int getLives() const;
+  GameState getState() const;
 
-private:
-    void spawnAsteroid();
-    void updateBullets(float deltaTime);
-    void updateAsteroids(float deltaTime);
-    void checkCollisions();
-    void cleanupDeadObjects();
-    float currentCooldown() const;
+ private:
+  void spawnAsteroid();
+  void updateBullets(float delta_time);
+  void updateAsteroids(float delta_time);
+  void checkCollisions();
+  void cleanupDeadObjects();
+  float currentCooldown() const;
 
-    float m_screenWidth;
-    float m_screenHeight;
+  float screen_width;
+  float screen_height;
 
-    Ship m_ship;
-    std::vector<Asteroid> m_asteroids;
-    std::vector<Bullet> m_bullets;
+  Ship ship;
+  std::vector<Asteroid> asteroids;
+  std::vector<Bullet> bullets;
 
-    int m_score;
-    GameState m_state;
+  int score;
+  GameState state;
 
-    float m_shootTimer;
-    float m_spawnTimer;
-    float m_gameTime;
-    float m_spawnInterval;
+  float shoot_timer;
+  float spawn_timer;
+  float game_time;
+  float spawn_interval;
 };

@@ -1,14 +1,13 @@
 #pragma once
 #include "GameObject.h"
 
-class Bullet : public GameObject
-{
-public:
-    Bullet();
-    Bullet(float x, float y);
+class Bullet : public GameObject {
+ public:
+  Bullet();
+  Bullet(float x, float y);
 
-    void update(float deltaTime);
+  void update(float delta_time);
 
-private:
-    float m_speed;
+ private:
+  float speed;
 };

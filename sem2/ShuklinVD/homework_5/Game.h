@@ -1,24 +1,24 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+
 #include "GameModel.h"
 #include "GameView.h"
 
-class Game
-{
-public:
-    Game();
-    void run();
+class Game {
+ public:
+  Game();
+  void run();
 
-private:
-    void processEvents();
-    void handleInput(float deltaTime);
-    void update(float deltaTime);
-    void render();
+ private:
+  void processEvents();
+  void handleInput(float delta_time);
+  void update(float delta_time);
+  void render();
 
-    float m_screenWidth;
-    float m_screenHeight;
+  float screen_width;
+  float screen_height;
 
-    sf::RenderWindow m_window;
-    GameModel m_model;
-    GameView m_view;
+  sf::RenderWindow window;
+  GameModel model;
+  GameView view;
 };
