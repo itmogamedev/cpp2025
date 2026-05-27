@@ -12,8 +12,8 @@ const int kAsteroidRadius = 32;
 const int kWindowX = 800;
 const int kWindowY = 600;
 const int kFrameRate = 60;
-const float SHIP_SPEED = 400.f;
-const float PROJECTILE_SPEED = 600.f;
+const float kShipSpeed = 400.f;
+const float kProjectileSpeed = 600.f;
 const float kAsteroidSpeedBase = 20.f;
 const float kAsteroidSpeedIncrease = 10.f;
 const float kSpawnRateBase = 1.2f;
@@ -154,11 +154,11 @@ int main() {
       sf::Vector2f move(0.f, 0.f);
       if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A) ||
           sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left)) {
-        move.x -= SHIP_SPEED * dt;
+        move.x -= kShipSpeed * dt;
       }
       if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D) ||
           sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right)) {
-        move.x += SHIP_SPEED * dt;
+        move.x += kShipSpeed * dt;
       }
       sf::Vector2f new_pos = ship.sprite_.getPosition() + move;
       new_pos.x =
@@ -186,7 +186,7 @@ int main() {
       }
 
       for (auto& p : projectiles) {
-        p.shape_.move({0.f, -PROJECTILE_SPEED * dt});
+        p.shape_.move({0.f, -kProjectileSpeed * dt});
       }
       for (auto& a : asteroids) {
         a.sprite_.move(a.velocity_ * dt);
