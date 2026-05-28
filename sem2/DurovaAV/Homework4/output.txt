@@ -1,23 +1,23 @@
 *+- Generated vector -+*
--19 1 86 30 77 98 58 -26 96 -22 7 -42 -46 67 -13 11 -22 -42 -49 29 
+4 63 77 -41 -13 -24 84 99 -41 73 88 -7 55 -40 52 77 32 90 -37 16 
 
 *+- Min and max elements -+*
-Min: -49
-Max: 98
+Min: -41
+Max: 99
 
 *+- Sorted vector (ascending) -+*
--49 -46 -42 -42 -26 -22 -22 -19 -13 1 7 11 29 30 58 67 77 86 96 98 
+-41 -41 -40 -37 -24 -13 -7 4 16 32 52 55 63 73 77 77 84 88 90 99 
 
 *+- Count of elements -+*
-Positive: 11
-Negative: 9
+Positive: 13
+Negative: 7
 Zero: 0
 
 *+- Arithmetic mean -+*
-13.95
+30.35
 
 *+- After removing numbers less than average -+*
-29 30 58 67 77 86 96 98 
+32 52 55 63 73 77 77 84 88 90 99 
 
 *+- Unique values (sorted) -+*
-29 30 58 67 77 86 96 98 
+32 52 55 63 73 77 84 88 90 99 

@@ -1,0 +1,32 @@
+*+- Original lines -+*
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+*+- After removing short lines (porog = 5) -+*
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+*+- After removing vowels -+*
+Hll wrld
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+Shrt
+ vr lng strng jst fr tstng prpss
+
+*+- Search result for "fn" -+*
+C++ prgrmmng s fn
+
+*+- Total characters (excluding '_') -+*
+84
+
+*+- Lengths of strings -+*
+8 17 12 11 4 32 
