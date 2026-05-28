@@ -1,0 +1,40 @@
+Original vector of strings:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+This line has many spaces inside
+Google style uses two spaces
+Lambda can capture variables
+
+Vector of strings after removing short lines:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+This line has many spaces inside
+Google style uses two spaces
+Lambda can capture variables
+
+Vector of strings after replacing spaces with underscores:
+Hello_world
+C++_programming_is_fun
+Lambda_expressions
+STL_algorithms
+A_very_long_string_just_for_testing_purposes
+This_line_has_many_spaces_inside
+Google_style_uses_two_spaces
+Lambda_can_capture_variables
+
+Search result for the word "Lambda":
+Found line: Lambda_expressions
+
+Total number of characters without underscores:
+172
+
+Vector of line lengths:
+11 22 18 14 44 32 28 28 
+

@@ -1,0 +1,19 @@
+===== Mini-homework 4 (Variant 1) =====
+
+1. Generated vector (size = 20): [-13, 97, 14, 7, 73, -27, -45, 53, 17, 77, -48, 78, 84, -23, 73, -32, -39, 47, 92, 43]
+
+2. Minimum: -48
+   Maximum: 97
+
+3. Sorted vector (size = 20): [-48, -45, -39, -32, -27, -23, -13, 7, 14, 17, 43, 47, 53, 73, 73, 77, 78, 84, 92, 97]
+
+4. Positive count: 13
+   Negative count: 7
+   Zero count:     0
+
+5. Arithmetic mean: 26.4
+
+6. After removing even numbers (size = 14): [-45, -39, -27, -23, -13, 7, 17, 43, 47, 53, 73, 73, 77, 97]
+
+7. Sorted unique values (size = 13): [-45, -39, -27, -23, -13, 7, 17, 43, 47, 53, 73, 77, 97]
+

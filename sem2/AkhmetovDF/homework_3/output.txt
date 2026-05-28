@@ -1,0 +1,34 @@
+Original vector of strings
+1: Hello world
+2: C++ programming is fun
+3: Lambda expressions
+4: STL algorithms
+5: Short
+6: A very long string just for testing purposes
+
+After removing short strings (threshold = 6)
+1: Hello world
+2: C++ programming is fun
+3: Lambda expressions
+4: STL algorithms
+5: A very long string just for testing purposes
+
+After replacing spaces with '_'
+1: Hello_world
+2: C++_programming_is_fun
+3: Lambda_expressions
+4: STL_algorithms
+5: A_very_long_string_just_for_testing_purposes
+
+Search result for word "C++"
+Line containing the word: "C++_programming_is_fun"
+
+Total number of characters (excluding '_')
+96
+
+Vector of string lengths (after all transformations)
+1: 11
+2: 22
+3: 18
+4: 14
+5: 44

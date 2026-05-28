@@ -1,0 +1,40 @@
+Исходный прочитанный вектор: 
+
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+После целевой длины: 
+
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+После удаления гласных по словарю: 
+
+Hll wrld
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+ vr lng strng jst fr tstng prpss
+
+Результат поиска заданного слова:
+
+STL lgrthms
+
+Общее количество символов без “_”: 
+
+80
+
+Вектор длин строк: 
+
+8
+17
+12
+11
+32

@@ -1,0 +1,35 @@
+         THE ORIGINAL ROW VECTOR         
+1. "Hello world"
+2. "C++ programming is fun"
+3. "Lambda expressions"
+4. "STL algorithms"
+5. "Short"
+6. "A very long string just for testing purposes"
+
+         AFTER REMOVING SHORT LINES (length >= 10)         
+1. "Hello world"
+2. "C++ programming is fun"
+3. "Lambda expressions"
+4. "STL algorithms"
+5. "A very long string just for testing purposes"
+
+         AFTER REPLACING SPACES WITH '_'         
+1. "Hello_world"
+2. "C++_programming_is_fun"
+3. "Lambda_expressions"
+4. "STL_algorithms"
+5. "A_very_long_string_just_for_testing_purposes"
+
+         SEARCH RESULT         
+Found: "Hello world"
+
+         TOTAL NUMBER OF SYMBOLS (without '_')         
+96
+
+         VECTOR OF LINE LENGTHS         
+1. 11 symbols -> "Hello world"
+2. 22 symbols -> "C++ programming is fun"
+3. 18 symbols -> "Lambda expressions"
+4. 14 symbols -> "STL algorithms"
+5. 5 symbols -> "Short"
+6. 44 symbols -> "A very long string just for testing purposes"

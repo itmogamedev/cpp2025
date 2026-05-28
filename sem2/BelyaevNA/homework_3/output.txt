@@ -1,0 +1,34 @@
+Original vector:
+Player controller script
+NPC AI behavior tree
+HP bar UI element
+Respawn point manager
+Quest system update
+Boss fight arena trigger
+Low poly tree model
+Inventory slot hover effect
+Main menu background music loop
+Save game data serializer
+FOV slider settings
+Critical hit chance calculator
+Ragdoll physics test
+Loot table randomizer
+Enemy spawn wave logic
+
+After removing strings shorter than 25:
+Inventory slot hover effect
+Main menu background music loop
+Save game data serializer
+Critical hit chance calculator
+
+After replacing spaces with '_':
+Inventory_slot_hover_effect
+Main_menu_background_music_loop
+Save_game_data_serializer
+Critical_hit_chance_calculator
+
+Search result for "spawn": Not found
+
+Total characters without '_': 100
+
+Vector of line lengths: 27 31 25 30 

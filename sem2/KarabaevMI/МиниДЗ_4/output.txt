@@ -1,0 +1,21 @@
+Generated vector (20 ints in [-50, 100]):
+  -1 54 51 23 51 47 51 -35 -19 17 0 85 -39 77 -27 47 -50 60 5 16 
+
+Min: -50
+Max: 85
+
+Sorted ascending:
+  -50 -39 -35 -27 -19 -1 0 5 16 17 23 47 47 51 51 51 54 60 77 85 
+
+Positive count: 13
+Negative count: 6
+Zero count:     1
+
+Average: 20.65
+
+After removing even numbers (Variant 1):
+  -39 -35 -27 -19 -1 5 17 23 47 47 51 51 51 77 85 
+
+Sorted unique values:
+  -39 -35 -27 -19 -1 5 17 23 47 51 77 85 
+

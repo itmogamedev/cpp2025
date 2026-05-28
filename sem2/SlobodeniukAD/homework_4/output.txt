@@ -1,0 +1,8 @@
+Generated vector: -13 31 59 -3 -12 18 11 -11 67 48 -8 98 88 -1 99 85 -21 0 54 -47 
+Min element: -47
+Max element: 99
+Sorted vector: -47 -21 -13 -12 -11 -8 -3 -1 0 11 18 31 48 54 59 67 85 88 98 99 
+Positive: 11, Negative: 8, Zero: 1
+Average: 27.1
+Vector after removing elements less than average: 31 48 54 59 67 85 88 98 99 
+Unique elements vector: 31 48 54 59 67 85 88 98 99 

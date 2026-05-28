@@ -1,0 +1,30 @@
+Исходный вектор строк:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+После удаления коротких строк:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+После замены пробелов на '_':
+Hello_world
+C++_programming_is_fun
+Lambda_expressions
+STL_algorithms
+A_very_long_string_just_for_testing_purposes
+
+Результат поиска слова "Lambda":
+Lambda_expressions
+
+Общее количество символов без '_': 96
+
+Вектор длин строк:
+11 22 18 14 44
+

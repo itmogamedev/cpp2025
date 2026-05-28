@@ -1,0 +1,21 @@
+1. vector: 
+25 89 66 62 85 62 36 50 56 57 10 66 -41 33 98 31 -3 94 85 -25 
+
+2. min: -41
+max: 98
+
+3. sorted:
+-41 -25 -3 10 25 31 33 36 50 56 57 62 62 66 66 85 85 89 94 98 
+
+4. count of positive elements: 17
+count of negative elements: 3
+count of zero elements: 0
+
+5. average: 46.8
+
+6. without even:
+-41 -25 -3 25 31 33 57 85 85 89 
+
+7. sorted unique:
+-41 -25 -3 25 31 33 57 85 89 
+

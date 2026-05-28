@@ -1,0 +1,30 @@
+Исходный вектор строк:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+Вектор строк после удаления коротких строк:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+Вектор строк после удаления гласных:
+Hll wrld
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+ vr lng strng jst fr tstng prpss
+
+Результат поиска заданного слова:
+Short
+
+Общее количество символов без пробелов:
+67
+
+Длины строк:
+8 17 12 11 32 

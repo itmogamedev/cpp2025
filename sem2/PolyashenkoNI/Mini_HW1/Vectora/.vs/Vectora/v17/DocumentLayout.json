@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VS projects\\Vectora\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64849FD0-89F7-430D-8D03-9E3A0BB607EF}|Vectora.vcxproj|D:\\VS projects\\Vectora\\Vectora.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64849FD0-89F7-430D-8D03-9E3A0BB607EF}|Vectora.vcxproj|solutionrelative:Vectora.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Vectora.cpp",
+              "DocumentMoniker": "D:\\VS projects\\Vectora\\Vectora.cpp",
+              "RelativeDocumentMoniker": "Vectora.cpp",
+              "ToolTip": "D:\\VS projects\\Vectora\\Vectora.cpp",
+              "RelativeToolTip": "Vectora.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-11T21:42:23.862Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+﻿  vector.cpp
+D:\VS projects\Dll1\vector.cpp(6,7): warning C4273: Vec3::Vec3: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(14,3):
+      см. предыдущее определение "Vec3::Vec3"
+  
+D:\VS projects\Dll1\vector.cpp(8,6): warning C4273: operator +: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(16,23):
+      см. предыдущее определение "operator +"
+  
+D:\VS projects\Dll1\vector.cpp(12,6): warning C4273: operator -: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(17,23):
+      см. предыдущее определение "operator -"
+  
+D:\VS projects\Dll1\vector.cpp(16,6): warning C4273: operator *: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(18,23):
+      см. предыдущее определение "operator *"
+  
+D:\VS projects\Dll1\vector.cpp(20,6): warning C4273: operator *: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(19,23):
+      см. предыдущее определение "operator *"
+  
+D:\VS projects\Dll1\vector.cpp(22,15): warning C4273: operator <<: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(20,32):
+      см. предыдущее определение "operator <<"
+  
+D:\VS projects\Dll1\vector.cpp(27,13): warning C4273: Vec3::lenght: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(22,9):
+      см. предыдущее определение "Vec3::lenght"
+  
+D:\VS projects\Dll1\vector.cpp(29,12): warning C4273: Vec3::normalizator: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(23,8):
+      см. предыдущее определение "Vec3::normalizator"
+  
+D:\VS projects\Dll1\vector.cpp(38,12): warning C4273: Vec3::normalezd: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(24,8):
+      см. предыдущее определение "Vec3::normalezd"
+  
+D:\VS projects\Dll1\vector.cpp(44,13): warning C4273: Vec3::scalyarMulti: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(25,9):
+      см. предыдущее определение "Vec3::scalyarMulti"
+  
+D:\VS projects\Dll1\vector.cpp(48,12): warning C4273: Vec3::veсMulti: несовместимое связывание dll
+  (компиляция исходного файла "/vector.cpp")
+      D:\VS projects\Dll1\vector.h(26,8):
+      см. предыдущее определение "Vec3::veсMulti"
+  
+     Создается библиотека D:\VS projects\Dll1\x64\Debug\Dll1.lib и объект D:\VS projects\Dll1\x64\Debug\Dll1.exp
+  Dll1.vcxproj -> D:\VS projects\Dll1\x64\Debug\Dll1.dll

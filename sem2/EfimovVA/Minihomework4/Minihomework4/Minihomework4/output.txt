@@ -1,0 +1,24 @@
+Generated vector
+34 2 100 -11 -10 16 -41 21 76 66 3 -35 80 40 -37 98 44 89 -17 -3 
+
+Min and Max
+Min: -41
+Max: 100
+
+Sorted vector
+-41 -37 -35 -17 -11 -10 -3 2 3 16 21 34 40 44 66 76 80 89 98 100 
+
+Counts
+Positive: 13
+Negative: 7
+Zeroes: 0
+
+Arithmetic Mean
+25.75
+
+Vector after removing elements < mean
+34 40 44 66 76 80 89 98 100 
+
+Sorted unique vector
+34 40 44 66 76 80 89 98 100 
+

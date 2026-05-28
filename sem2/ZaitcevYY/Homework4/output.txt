@@ -1,0 +1,14 @@
+Start: 
+94 -40 -40 -5 32 93 72 6 -30 50 90 6 4 49 30 94 34 78 32 42 
+Min: -40
+Max: 94
+Sorted: 
+-40 -40 -30 -5 4 6 6 30 32 32 34 42 49 50 72 78 90 93 94 94 
+Positive: 16
+Negative: 4
+Zero: 0
+Average: 34.55
+After deleting all those less than average: 
+42 49 50 72 78 90 93 94 94 
+Only unique values
+42 49 50 72 78 90 93 94 

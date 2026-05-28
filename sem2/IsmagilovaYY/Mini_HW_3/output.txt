@@ -1,0 +1,34 @@
+Результаты: 
+
+Исходный вектор:
+Строка 1: "Hello world" (длина: 11)
+Строка 2: "C++ programming is fun" (длина: 22)
+Строка 3: "Lambda expressions" (длина: 18)
+Строка 4: "STL algorithms" (длина: 14)
+Строка 5: "Short" (длина: 5)
+Строка 6: "A very long string just for testing purposes" (длина: 44)
+
+Вектор строк после удаления коротких (порог = 10):
+Строка 1: "Hello world" (длина: 11)
+Строка 2: "C++ programming is fun" (длина: 22)
+Строка 3: "Lambda expressions" (длина: 18)
+Строка 4: "STL algorithms" (длина: 14)
+Строка 5: "A very long string just for testing purposes" (длина: 44)
+
+Вектор строк после замены пробелов на "_" (Вариант 1):
+Строка 1: "Hello_world"
+Строка 2: "C++_programming_is_fun"
+Строка 3: "Lambda_expressions"
+Строка 4: "STL_algorithms"
+Строка 5: "A_very_long_string_just_for_testing_purposes"
+
+Поиск слова "programming":
+----------------------------------------
+Слово найдено в строке: "C++_programming_is_fun"
+
+Общее количество символов (без учёта символов '_'):
+Всего символов: 96
+
+Вектор длин строк (после замены пробелов):
+----------------------------------------
+[ 11, 22, 18, 14, 44 ]

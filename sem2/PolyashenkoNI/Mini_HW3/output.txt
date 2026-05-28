@@ -1,0 +1,30 @@
+Original vector of strings:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+Vector of strings after removing short strings:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+Vector of strings after replacing spaces with "_":
+Hello_world
+C++_programming_is_fun
+Lambda_expressions
+STL_algorithms
+Short
+A_very_long_string_just_for_testing_purposes
+
+Result of search for the word "Short": Short
+
+Total number of characters in all strings (without "_"): 101
+
+Vector of string lengths:
+11 22 18 14 5 44

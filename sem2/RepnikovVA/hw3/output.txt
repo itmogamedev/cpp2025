@@ -1,0 +1,6 @@
+Input vector: {Hello world; C++ programming is fun; Lambda expressions; STL algorithms; Short; A very long string just for testing purposes}
+Strings with length over 20: {Hello world; Lambda expressions; STL algorithms; Short}
+Spaces changed to _ : {Hello_world; Lambda_expressions; STL_algorithms; Short}
+String that contains word World: 
+Total number of characters without _ : 45
+Vector of strings lengths: {10; 17; 13; 5}
