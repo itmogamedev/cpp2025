@@ -1,0 +1,32 @@
+original vector:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+ vector after removing short lines:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+ vector after replacing spaces with '_': 
+Hello_world
+C++_programming_is_fun
+Lambda_expressions
+STL_algorithms
+Short
+A_very_long_string_just_for_testing_purposes
+
+ search result for word 'Hello' 
+Hello_world
+
+ total characters without '_': 
+101
+
+ vector of string lengths: 
+11 22 18 14 5 44 

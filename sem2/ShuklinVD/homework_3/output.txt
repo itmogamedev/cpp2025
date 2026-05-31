@@ -1,0 +1,31 @@
+=== Исходный вектор строк ===
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+
+=== После удаления коротких строк (длина < 10) ===
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+=== После удаления гласных ===
+Hll wrld
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+ vr lng strng jst fr tstng prpss
+
+=== Поиск слова "C++" в исходных строках ===
+C++ programming is fun
+
+=== Общее число символов (без пробелов, в новых строках) ===
+67
+
+=== Вектор длин строк (новых) ===
+8 17 12 11 32 
