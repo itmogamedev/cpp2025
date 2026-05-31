@@ -1,0 +1,14 @@
+Minimum element: -47
+Maximum element: 84
+
+Sorted vector: -47 -40 -8 -6 13 21 21 33 33 35 41 44 47 50 57 73 75 78 79 84 
+
+Positive elements: 16
+Negative elements: 4
+Zero elements: 0
+
+Arithmetic mean: 34.15
+
+Vector after removing even numbers: -47 13 21 21 33 33 35 41 47 57 73 75 79 
+
+Unique sorted vector: -47 13 21 33 35 41 47 57 73 75 79 

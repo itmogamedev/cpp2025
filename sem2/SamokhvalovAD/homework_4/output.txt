@@ -1,0 +1,21 @@
+Generated vector:
+73 27 -4 71 -48 93 23 1 4 48 -19 13 -22 72 74 -28 81 46 42 1 
+
+Minimum element: -48
+Maximum element: 93
+
+Sorted vector:
+-48 -28 -22 -19 -4 1 1 4 13 23 27 42 46 48 71 72 73 74 81 93 
+
+Positive elements: 15
+Negative elements: 5
+Zero elements: 0
+
+Average value: 27.40
+
+Vector after deleting elements less than average:
+73 71 93 48 72 74 81 46 42 
+
+Unique sorted vector after step 6:
+42 46 48 71 72 73 74 81 93 
+

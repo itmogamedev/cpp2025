@@ -1,0 +1,14 @@
+1. vec:
+-32 -45 -34 92 94 35 36 -34 81 35 22 94 91 -45 97 41 29 67 58 -46 
+2. min: -46
+   max: 97
+3. sorted:
+-46 -45 -45 -34 -34 -32 22 29 35 35 36 41 58 67 81 91 92 94 94 97 
+4. pos: 14
+   neg: 6
+   zero: 0
+5. avrageå: 31.8
+6. vector after removing elements lower than average:
+35 35 36 41 58 67 81 91 92 94 94 97 
+7. vec with unique elements:
+35 36 41 58 67 81 91 92 94 97 

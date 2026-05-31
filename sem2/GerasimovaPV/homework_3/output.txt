@@ -1,0 +1,32 @@
+=== ORIGINAL STRINGS ===
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+=== AFTER REMOVING SHORT STRINGS ===
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+=== AFTER REMOVING VOWELS (VARIANT 2) ===
+Hll wrld
+C++ prgrmmng s fn
+Lmbd xprssns
+STL lgrthms
+Shrt
+ vr lng strng jst fr tstng prpss
+
+=== SEARCH RESULT ===
+Short
+
+=== TOTAL CHARACTERS (no '_') ===
+84
+
+=== LENGTHS ===
+8 17 12 11 4 32 

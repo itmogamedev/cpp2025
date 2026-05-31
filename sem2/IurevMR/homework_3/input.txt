@@ -1,0 +1,9 @@
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+This line has many spaces inside
+Google style uses two spaces
+Lambda can capture variables

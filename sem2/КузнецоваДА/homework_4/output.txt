@@ -1,0 +1,16 @@
+Min: -45
+
+Max: 93
+
+Sorted: -45 -39 -33 -10 -9 -6 0 5 8 17 19 25 31 49 63 64 66 83 90 93 
+
+Number of positive numbers: 13
+
+Number of negative numbers: 6
+
+Number of zeroes: 1
+
+Average: 23.55
+
+Without numbers smaller than average: 25 31 49 63 64 66 83 90 93 
+Unique vector: 25 31 49 63 64 66 83 90 93 

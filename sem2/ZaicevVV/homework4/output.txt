@@ -1,0 +1,9 @@
+Min: -23
+Max: 99
+Sorted vector: -23 -7 -5 -3 1 16 19 34 35 39 48 50 61 62 68 76 80 89 90 99 
+Positive count: 16
+Negative count: 4
+Zero count: 0
+Average: 41.45
+Vector without even numbers: -23 -7 -5 -3 1 19 35 39 61 89 99 
+Unique sorted vector: -23 -7 -5 -3 1 19 35 39 61 89 99 

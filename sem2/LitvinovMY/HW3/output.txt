@@ -1,0 +1,30 @@
+Input file:
+Hate.
+Let me tell you how much I've come to hate you since I began to live.
+There are 387.44 million miles of printed circuits in wafer thin layers that fill my complex.
+If the word 'hate' was engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate I feel for humans at this micro-instant.
+For you.
+Hate.
+Hate.
+
+After short lines were removed:
+Let me tell you how much I've come to hate you since I began to live.
+There are 387.44 million miles of printed circuits in wafer thin layers that fill my complex.
+If the word 'hate' was engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate I feel for humans at this micro-instant.
+
+Spaces replaced with underscores:
+Let_me_tell_you_how_much_I've_come_to_hate_you_since_I_began_to_live.
+There_are_387.44_million_miles_of_printed_circuits_in_wafer_thin_layers_that_fill_my_complex.
+If_the_word_'hate'_was_engraved_on_each_nanoangstrom_of_those_hundreds_of_millions_of_miles_it_would_not_equal_one_one-billionth_of_the_hate_I_feel_for_humans_at_this_micro-instant.
+
+Search for word "hate":
+Let_me_tell_you_how_much_I've_come_to_hate_you_since_I_began_to_live.
+If_the_word_'hate'_was_engraved_on_each_nanoangstrom_of_those_hundreds_of_millions_of_miles_it_would_not_equal_one_one-billionth_of_the_hate_I_feel_for_humans_at_this_micro-instant.
+
+Number of non-space characters on each line:
+54
+78
+150
+
+TOTAL:
+282

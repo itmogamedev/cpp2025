@@ -1,0 +1,32 @@
+original vector:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+Short
+A very long string just for testing purposes
+
+vector after delete short words:
+Hello world
+C++ programming is fun
+Lambda expressions
+STL algorithms
+A very long string just for testing purposes
+
+vector after replacing spaces with '_':
+Hello_world
+C++_programming_is_fun
+Lambda_expressions
+STL_algorithms
+A_very_long_string_just_for_testing_purposes
+
+search result STL:
+STL_algorithms
+
+simbols count without '_': 96
+lengths:
+11
+22
+18
+14
+44
