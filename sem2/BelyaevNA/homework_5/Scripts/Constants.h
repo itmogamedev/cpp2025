@@ -1,0 +1,66 @@
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
+#define CARD_SIZE 120
+#define GRID_SIZE 4
+#define GAP 15
+#define WINDOW_WIDTH 600
+#define WINDOW_HEIGHT 700
+#define DELAY_SECONDS 1.0f
+#define TOTAL_PAIRS 8
+#define TOTAL_CARDS 16
+#define MAX_ERRORS_BEFORE_SHUFFLE 2
+#define CHAIN_BONUS_TIME 2.0f
+
+#define TEXTURE_SIZE 100u
+#define CARD_PADDING 10.0f
+#define CARD_OUTLINE 3.0f
+#define STAR_COUNT 100
+#define STAR_SIZE 2.0f
+#define TITLE_SIZE 48
+#define LINE_WIDTH 560.0f
+#define LINE_THICKNESS 2.0f
+#define LINE_X 20.0f
+#define LINE_Y 80.0f
+#define UI_FONT_SIZE 20
+#define CHAIN_FONT_SIZE 24
+#define WIN_FONT_SIZE 30
+#define WIN_PANEL_WIDTH 400.0f
+#define WIN_PANEL_HEIGHT 150.0f
+#define UI_Y_OFFSET 60.0f
+#define UI_X_PADDING 10.0f
+#define SCORE_X 450.0f
+#define CHAIN_X 250.0f
+#define TITLE_Y 20.0f
+#define GRID_Y_OFFSET 20
+
+#define COLOR_BG_R 30
+#define COLOR_BG_G 30
+#define COLOR_BG_B 60
+#define COLOR_MATCH_R 0
+#define COLOR_MATCH_G 100
+#define COLOR_MATCH_B 0
+#define COLOR_GOLD_R 255
+#define COLOR_GOLD_G 215
+#define COLOR_GOLD_B 0
+#define COLOR_COVER_R 138
+#define COLOR_COVER_G 43
+#define COLOR_COVER_B 226
+#define COLOR_STAR 255
+#define COLOR_SKY_R 10
+#define COLOR_SKY_G 10
+#define COLOR_SKY_B 40
+#define COLOR_PANEL_A 200
+#define COLOR_CHAIN_R 255
+#define COLOR_CHAIN_G 100
+#define COLOR_CHAIN_B 100
+#define COLOR_TEXT 255
+#define COLOR_TEXT_G 200
+#define COLOR_TEXT_B 200
+
+#define SCORE_PER_PAIR 100
+#define QUESTION_SIZE 60
+#define QUESTION_X 30.0f
+#define QUESTION_Y 10.0f
+
+#endif
