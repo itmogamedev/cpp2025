@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{1E645774-6F4B-4FD0-B874-4F3E8A496E77}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E3D241B5-3B79-4CC1-96D0-1D9BC81F927A}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{2206648F-3A58-4E00-96EB-480E40212BD6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="asteroid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="randomsystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="asteroid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="randomsystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\fonts\clacon2.ttf">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assets\sprites\alien1.png">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assets\sprites\alien2.png">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assets\sprites\alien3.png">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assets\sprites\alien4.png">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assets\sprites\alien5.png">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assets\sprites\player.png">
+      <Filter>Assets</Filter>
+    </None>
+  </ItemGroup>
+</Project>
