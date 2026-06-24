@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\VS projects\\Mini_HW5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|D:\\VS projects\\Mini_HW5\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|solutionrelative:Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|D:\\VS projects\\Mini_HW5\\Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|solutionrelative:Card.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|D:\\VS projects\\Mini_HW5\\Mini_HW5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|solutionrelative:Mini_HW5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|D:\\VS projects\\Mini_HW5\\Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|solutionrelative:Card.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|D:\\VS projects\\Mini_HW5\\Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{130962A8-C10C-490C-9BCE-BD09A4157A7C}|Mini_HW5.vcxproj|solutionrelative:Game.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "D:\\VS projects\\Mini_HW5\\Game.cpp",
+              "RelativeDocumentMoniker": "Game.cpp",
+              "ToolTip": "D:\\VS projects\\Mini_HW5\\Game.cpp",
+              "RelativeToolTip": "Game.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-28T18:27:17.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Card.cpp",
+              "DocumentMoniker": "D:\\VS projects\\Mini_HW5\\Card.cpp",
+              "RelativeDocumentMoniker": "Card.cpp",
+              "ToolTip": "D:\\VS projects\\Mini_HW5\\Card.cpp",
+              "RelativeToolTip": "Card.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-28T18:25:26.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Game.h",
+              "DocumentMoniker": "D:\\VS projects\\Mini_HW5\\Game.h",
+              "RelativeDocumentMoniker": "Game.h",
+              "ToolTip": "D:\\VS projects\\Mini_HW5\\Game.h",
+              "RelativeToolTip": "Game.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-28T18:24:20.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Card.h",
+              "DocumentMoniker": "D:\\VS projects\\Mini_HW5\\Card.h",
+              "RelativeDocumentMoniker": "Card.h",
+              "ToolTip": "D:\\VS projects\\Mini_HW5\\Card.h",
+              "RelativeToolTip": "Card.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-28T18:23:39.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mini_HW5.cpp",
+              "DocumentMoniker": "D:\\VS projects\\Mini_HW5\\Mini_HW5.cpp",
+              "RelativeDocumentMoniker": "Mini_HW5.cpp",
+              "ToolTip": "D:\\VS projects\\Mini_HW5\\Mini_HW5.cpp",
+              "RelativeToolTip": "Mini_HW5.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-28T18:11:35.59Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
